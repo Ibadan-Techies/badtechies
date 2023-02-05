@@ -18,7 +18,7 @@ jobs:
       - name: take an issue
         uses: bdougie/take-action@main
         with:
-          message: Thanks for taking this on! If you have not already, join the conversation our Discord is coming!
+          message: Thanks for taking this on and trying to contribute to the Ibadan Techies! If you have not already, consider joining the club as a member. You can start from joining the conversation on our Discord (coming soon!) or Twitter.
           issueCurrentlyAssignedMessage: Thanks for being interested in this issue. It looks like this ticket is already assigned to a contributor. Please communicate with the assigned contributor to confirm the status of the issue.
           trigger: .take
           token: ${{ secrets.GITHUB_TOKEN }}
