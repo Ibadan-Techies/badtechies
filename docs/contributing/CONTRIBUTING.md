@@ -5,6 +5,7 @@ The objective here is to help you contribute quickly and follow our standard of 
 😊 We can't wait to see your contribution.
 
 ## General workflow
+Before you decide to work on an issue, pick the issue up by writing a comment of `.take` on the issue. Else, you won't be regarded as the trusted assignee.
 1. Clone down the main branch to your local machine (there are other alternatives like cloud, codespaces etc we really do not mind where).
 ```bash
 git clone https://github.com/***
