@@ -1,5 +1,9 @@
 <div align="center">
-    <img alt="Ibadan Techies Club Logo" src="./docs/logo/logo.avif" width="300px" height="340px">
+    <picture>
+        <source srcset="./docs/logo/logo.avif" type="image/avif">
+        <img src="./docs/logo/logo.jpg" alt="Ibadan Techies CLub Logo" width="300px">
+    </picture>
+   
 </div>
 
 # Badtechies &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)]  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
