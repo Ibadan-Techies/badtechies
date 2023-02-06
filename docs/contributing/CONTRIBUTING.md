@@ -1,28 +1,31 @@
 # Contributing to the Ibadan Techies Club Website
 Hey First timer 👋,
 Thanks for visiting here. It sure means you are probably thinking of making some great contribution to us.
-The objective here is to help you contribute quickly and follow our standard of doing it. Please kindly [read out code of conduct](./CODE-OF-CONDUCT.md)
-😊 We can't wait to see your contribution.
+The objective here is to help you contribute quickly and follow our standard of doing so. Please kindly [read our code of conduct](./CODE-OF-CONDUCT.md)
+😊 We can't wait to see your thoughtful contribution.
 
 ## General workflow
-1. Clone down the main branch to your local machine (there are other alternatives like cloud, codespaces etc we really do not mind where).
+Before you decide to work on an issue, pick the issue up by writing a comment with `.take` on the issue. Else, you won't be regarded as the trusted assignee. 
+
+If you've been assigned to an issue:
+1. Clone down the main branch to your local machine (there are other alternatives like cloud, codespaces, codesanbox etc we really do not care where).
 ```bash
-git clone https://github.com/***
+git clone https://github.com/Ibadan-Techies/badtechies.git
 cd badtechies
-// see the package.json for how to run code
+// see the package.json for how to run the code
 ```
-2. Create a branch with a your name and a number followed by what you are implementing.
-    - use descriptive text like 'bug' or 'feature' in the branch name. For example sekx-bug-XXX.
+2. Create a branch with your name followed by what you are implementing.
+    - use descriptive text like 'bug' or 'feature' in the branch name. For example sekx-bug-XXXx.
 3. Make commits to your branch (preferably on every successful working code completion).
     - again use a descriptive text describing what you've done.
 4. When you've finished with your fix or feature, bug or whatever:
-```bash
-    git pull --rebase origin main
-```
+	```bash
+   		 git pull --rebase origin main
+	```
     - fix any merge conflicts before pushing to origin
 5. Your pull request will be reviewed by another maintainer. The point of code reviews is to help keep the codebase clean and of high quality and, equally as important, to help you grow as a programmer. If your code reviewer requests you make a change you don't understand, ask them why.
     - Fix any issues raised by your code reviwer, and push your fixes as a single new commit.
-    - Once the pull request has been reviewed, it will be merged by another member of the team. Do not merge your own commits.
+    - Once the pull request has been reviewed, it will be merged by another member of the team. Do not merge your own commits 👿.
 
 ### Commit Message Guidelines
 * Commit messages should be written in the present tense; e.g. "Fix continuous integration script".
@@ -46,7 +49,7 @@ before doing this*. If there are no conflicts, this should just roll all
 of your changes back on top of the changes from upstream, leading to a
 nice, clean, linear commit history.
 
->   If there are conflicting changes, git will start yelling at you part way
+>   If there are conflicting changes, git will start yelling 😬 at you part way
     through the rebasing process. Git will pause rebasing to allow you to sort
     out the conflicts. You do this the same way you solve merge conflicts,
     by checking all of the files git says have been changed in both histories
@@ -94,9 +97,9 @@ Hurray, Thanks for contributing 🤣!
 1. Uphold code standard:
     - Keep your code [DRY].
     - Apply the [boy scout rule], etc
-2. Run the [tests] before submitting a pull request.
+2. Run the [tests] locally before submitting a pull request.
 3. Automated Tests are very, very important to US. Submit tests if your pull request contains
-   new, testable behavior.
+   new, testable behavior. We strongly encourage you to write test where logics apply in your code (give it a try!).
 4. Always review your code first. Do this by leaving comments in your coding noting questions, or interesting things for the reviewer.
 5. Always communicate. Whether it is in the issue or the pull request, keeping the lines of communication helps everyone around you.
 6. Always leave screenshots for visuals changes if you implement a design.
