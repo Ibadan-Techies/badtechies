@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import { Button } from '../components/Button'
-import { ArrowRight } from '@/assets/svg'
 
 export default function Home() {
   return (
