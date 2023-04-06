@@ -35,7 +35,7 @@ const Button = <T extends undefined | boolean>({
 }: React.PropsWithChildren<TButtonPropsWithRequiredBorder<T>>) => {
   const buttonClass = clsx(
     // Base style
-    `rounded ${style.width} ${style.height} py-3.5 px-5 text-lg/[18px]`,
+    `rounded ${style.width} ${style.height} py-3.5 px-5 text-lg/[18px] flex items-center justify-around`,
     {
       // Styles for Outline
       [`border-solid border ${style.color} ${style.border}`]: outline,
