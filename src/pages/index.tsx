@@ -1,5 +1,5 @@
-import Head from "next/head";
-import { ArrowDecLeft } from "../assets/svg";
+import Head from 'next/head'
+import { Button } from '../components/Button'
 
 export default function Home() {
   return (
@@ -12,5 +12,5 @@ export default function Home() {
       </Head>
       <header>Hello "Ibadan" Techies Club</header>
     </>
-  );
+  )
 }
