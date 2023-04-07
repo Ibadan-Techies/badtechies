@@ -3,9 +3,9 @@ import { Logo } from '../Logo'
 
 const Footer = () => {
   return (
-    <footer className="bg-[#121212] text-white py-6 text-base/[16px] font-medium">
+    <footer className="bg-[#121212] text-white py-6 text text-ibtc-grey font-medium">
       <div className="flex justify-between px-20 py-10 border-y">
-        <Logo_ />
+        <Logo width="w-[120px]" height="h-[118.67px]" />
         <MoreList />
         <Others />
       </div>
@@ -17,18 +17,10 @@ const Footer = () => {
   )
 }
 
-function Logo_() {
-  return (
-    <div className="relative w-[120px] h-[118.67px]">
-      <Logo />
-    </div>
-  )
-}
-
 function MoreList() {
   return (
     <div className="flex flex-col gap-6">
-      <header className="h-[24px] text-2xl/[16px] font-semibold">
+      <header className="h-[24px] text-2xl leading-6 text-white font-semibold">
         Learn More
       </header>
       <ul className="flex flex-col gap-4">
@@ -48,13 +40,15 @@ function MoreList() {
 
 function Others() {
   return (
-    <div className="font-semibold/[16px] w-[391px]">
+    <div className="w-[391px]">
       <p className="pb-10">
         This Human development is backed by Jason Palmer, Ije, Zakk, and Mark
         Techson.
       </p>
       <p className="flex flex-col gap-[16px]">
-        <span className="text-xl/[20px]">Want to get in touch?</span>
+        <span className="text-xl leading-5 text-white">
+          Want to get in touch?
+        </span>
         <span>Message on twitter.com @badtechys</span>
       </p>
     </div>
