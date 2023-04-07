@@ -11,4 +11,17 @@
   .text {
     @apply text-base leading-4;
   }
+
+  .xer23_1212 {
+    height: calc(40rem - 5.7rem);
+  }
+
+  .spexXtext {
+    font-size: calc(2.1rem + 1vw);
+    line-height: calc(2.1rem + 1vw);
+  }
+
+  .wrapper {
+    @apply 2xl:container w-11/12;
+  }
 }

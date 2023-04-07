@@ -5,10 +5,10 @@ import Button from '../Button/button'
 
 const NavigationBar = () => {
   return (
-    <nav className="h-[90px] bg-[#2D65BC] flex items-center">
-      <div className="px-20 flex items-center justify-between w-full">
+    <nav className="h-[5.6rem] bg-ibtc-blue flex items-center justify-center">
+      <div className="wrapper flex items-center justify-between">
         <Logo width="w-[70px]" height="h-[69.22px]" />
-        <div className="flex items-center text text-white justify-between w-8/12">
+        <div className="flex items-center text text-white gap-20 xl:gap-44 ">
           <ul className="flex gap-6 items-center">
             {list.map((item, index) => (
               <li key={index}>{item}</li>

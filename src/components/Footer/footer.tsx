@@ -4,10 +4,12 @@ import { Logo } from '../Logo'
 const Footer = () => {
   return (
     <footer className="bg-[#121212] text-white py-6 text text-ibtc-grey font-medium">
-      <div className="flex justify-between px-20 py-10 border-y">
-        <Logo width="w-[120px]" height="h-[118.67px]" />
-        <MoreList />
-        <Others />
+      <div className="flex items-center justify-center border-y">
+        <div className="flex justify-between py-10 wrapper">
+          <Logo width="w-[120px]" height="h-[118.67px]" />
+          <MoreList />
+          <Others />
+        </div>
       </div>
       <p className="text-center pt-6">
         &copy; Ibadan Tech Community is a registered non - profit backed by the
