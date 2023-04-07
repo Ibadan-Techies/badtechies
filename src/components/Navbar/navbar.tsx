@@ -9,12 +9,12 @@ const NavigationBar = () => {
       <div className="px-20 flex items-center justify-between w-full">
         <Logo width="w-[70px]" height="h-[69.22px]" />
         <div className="flex items-center text text-white justify-between w-8/12">
-          <ul className="flex gap-6">
+          <ul className="flex gap-6 items-center">
             {list.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
           </ul>
-          <div className="flex gap-2">
+          <div className="flex gap-2 items-center">
             <Button
               outline
               style={{
