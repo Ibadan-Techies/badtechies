@@ -8,7 +8,7 @@
     @apply font-medium text-[55px]/[55px];
   }
 
-  p {
-    @apply text-sm/[19.12px];
+  .text {
+    @apply text-base leading-4;
   }
 }
