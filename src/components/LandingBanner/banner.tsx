@@ -7,9 +7,9 @@ const Banner = () => {
   return (
     <div className="xer23_1212 bg-ibtc-blue flex items-center justify-center">
       <div className="wrapper h-4/5 flex items-end">
-        <ArrowDecRight className="relative w-[7.8rem] bottom-[10%]" />
+        <ArrowDecRight className="relative basis-[fit-content] bottom-[10%] flex-shrink-0" />
         <Main />
-        <ArrowDecLeft className="relative w-[7.8rem] bottom-[10%]" />
+        <ArrowDecLeft className="relative basis-[fit-content] bottom-[10%] flex-shrink-0" />
       </div>
     </div>
   )
@@ -17,7 +17,7 @@ const Banner = () => {
 
 function Main() {
   return (
-    <div className="w-full h-full font-medium self-center text-center flex flex-col justify-between">
+    <div className="flex-shrink-1 h-full font-medium self-center text-center flex flex-col justify-between">
       <div className="flex flex-col gap-6">
         <p className="text-white">
           <span className="py-2.5 px-4 bg-ibtc-blue-dark">

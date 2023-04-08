@@ -3,7 +3,6 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 type TString = `${string}-${string}`
-type THover = ``
 type TButtonProps<T = undefined | boolean> = {
   href?: string
   outline?: T

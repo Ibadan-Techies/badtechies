@@ -17,8 +17,8 @@
   }
 
   .spexXtext {
-    font-size: calc(2.1rem + 1vw);
-    line-height: calc(2.1rem + 1vw);
+    font-size: calc(2rem + 1.8vw);
+    line-height: calc(2rem + 1.8vw);
   }
 
   .wrapper {
