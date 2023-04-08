@@ -10,10 +10,8 @@ type TButtonProps<T = undefined | boolean> = {
     color: TString
     border?: T extends true ? TString : never
     background?: T extends boolean ? never : TString
-    width: TString
     hoverColor?: `hover:${string}-${string}`
     hoverBg?: `hover:${string}-${string}`
-    height: TString
   }
   type?: 'button' | 'submit'
 }
@@ -37,7 +35,7 @@ const Button = <T extends undefined | boolean>({
 }: React.PropsWithChildren<TButtonPropsWithRequiredBorder<T>>) => {
   const buttonClass = clsx(
     // Base style
-    `rounded ${style.width} ${style.height} py-3.5 px-5 text-lg/[18px] flex items-center justify-around ${style.hoverBg} ${style.hoverColor}`,
+    `rounded py-3.5 px-5 text-lg/[18px] flex items-center justify-around ${style.hoverBg} ${style.hoverColor}`,
     {
       // Styles for Outline
       [`border-solid border ${style.color} ${style.border}`]: outline,

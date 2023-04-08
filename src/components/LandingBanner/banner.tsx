@@ -39,8 +39,6 @@ function Main() {
             key={index}
             style={{
               color: 'text-[#121212]',
-              width: 'w-[21rem]',
-              height: 'h-[4.5rem]',
               background: 'bg-[#F3D6A5]',
               hoverBg: 'hover:bg-[#EAB862]',
               hoverColor: 'hover:text-white',
