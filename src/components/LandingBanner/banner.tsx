@@ -38,7 +38,7 @@ function Main() {
           <Button
             key={index}
             style={{
-              color: 'text-[#121212]',
+              color: 'text-ibtc-black',
               background: 'bg-[#F3D6A5]',
               hoverBg: 'hover:bg-[#EAB862]',
               hoverColor: 'hover:text-white',

@@ -3,6 +3,7 @@ import Footer from '@/components/Footer/footer'
 import NavigationBar from '@/components/Navbar/navbar'
 import LandingBanner from '@/components/LandingBanner/banner'
 import AboutUs from '@/components/LandingAboutUs/about'
+import Events from '@/components/LandingEvent/event'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <NavigationBar />
       <LandingBanner />
       <AboutUs />
+      <Events />
       <Footer />
     </>
   )
