@@ -19,8 +19,6 @@ const NavigationBar = () => {
               outline
               style={{
                 border: 'border-transparent',
-                width: 'w-[99px]',
-                height: 'h-[44px]',
                 color: 'text-white',
               }}
             >
@@ -29,8 +27,6 @@ const NavigationBar = () => {
             <Button
               style={{
                 background: 'bg-black',
-                width: 'w-[91px]',
-                height: 'h-[44px]',
                 color: 'text-white',
               }}
             >
