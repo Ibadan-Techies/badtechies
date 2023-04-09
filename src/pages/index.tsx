@@ -4,6 +4,7 @@ import NavigationBar from '@/components/Navbar/navbar'
 import LandingBanner from '@/components/LandingBanner/banner'
 import AboutUs from '@/components/LandingAboutUs/about'
 import Events from '@/components/LandingEvent/event'
+import Gallery from '@/components/Gallery/gallery'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <LandingBanner />
       <AboutUs />
       <Events />
+      <Gallery />
       <Footer />
     </>
   )

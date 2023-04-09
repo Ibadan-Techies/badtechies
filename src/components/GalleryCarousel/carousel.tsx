@@ -9,6 +9,24 @@ const sources = [
     '/gallery/grid1_10195.png',
     '/gallery/grid1_9354f93.png',
   ],
+  [
+    '/gallery/grid2_1.png',
+    '/gallery/grid2_2.png',
+    '/gallery/grid2_3.png',
+    '/gallery/grid2_4.png',
+  ],
+  [
+    '/gallery/grid3_1.png',
+    '/gallery/grid3_2.png',
+    '/gallery/grid3_3.png',
+    '/gallery/grid3_4.png',
+  ],
+  [
+    '/gallery/grid4_1.png',
+    '/gallery/grid4_2.png',
+    '/gallery/grid4_3.png',
+    '/gallery/grid4_4.png',
+  ],
 ]
 
 const Items = sources.map((item, index) => {
@@ -31,11 +49,7 @@ function GalleryGrid({ content }: { content: string[] }) {
 }
 
 const Carousel = () => (
-  <div className="_body">
-    <div className="_wrapper">
-      <AliceCarousel autoHeight infinite mouseTracking items={Items} />
-    </div>
-  </div>
+  <AliceCarousel autoHeight infinite mouseTracking items={Items} />
 )
 
 export default Carousel
