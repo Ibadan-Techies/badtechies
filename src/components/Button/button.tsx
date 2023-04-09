@@ -6,6 +6,7 @@ type TString = `${string}-${string}`
 type TButtonProps<T = undefined | boolean> = {
   href?: string
   outline?: T
+  label?: boolean
   style: {
     color: TString
     border?: T extends true ? TString : never
@@ -30,17 +31,21 @@ const Button = <T extends undefined | boolean>({
   href,
   outline = undefined,
   children,
+  label,
   style,
   type = 'button',
 }: React.PropsWithChildren<TButtonPropsWithRequiredBorder<T>>) => {
   const buttonClass = clsx(
     // Base style
-    `rounded py-3.5 px-5 text-lg/[18px] flex items-center justify-around ${style.hoverBg} ${style.hoverColor}`,
+    `rounded py-3.5 px-5 flex items-center justify-around ${style.hoverBg} ${style.hoverColor}`,
     {
       // Styles for Outline
       [`border-solid border ${style.color} ${style.border}`]: outline,
       // Styles for Bold
       [`border-0 ${style.background} ${style.color}`]: !outline,
+      // Styles for Label
+      ['text-lg/[18px]']: !label,
+      ['text-[13px]/[18.2px]']: label,
     }
   )
 

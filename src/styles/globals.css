@@ -25,12 +25,16 @@
     backdrop-filter: blur(25px);
   }
 
+  ._body {
+    @apply flex items-center justify-center;
+  }
+
   .spexXtext {
     font-size: calc(2rem + 1.8vw);
     line-height: calc(2rem + 1.8vw);
   }
 
-  .wrapper {
+  ._wrapper {
     @apply 2xl:container w-11/12;
   }
 }

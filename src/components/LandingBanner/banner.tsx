@@ -5,8 +5,8 @@ import { datax } from './datax'
 
 const Banner = () => {
   return (
-    <div className="xer23_1212 bg-ibtc-blue flex items-center justify-center">
-      <div className="wrapper h-4/5 flex items-end">
+    <div className="xer23_1212 bg-ibtc-blue _body">
+      <div className="_wrapper h-4/5 flex items-end">
         <ArrowDecRight className="relative basis-[fit-content] bottom-[10%] flex-shrink-0" />
         <Main />
         <ArrowDecLeft className="relative basis-[fit-content] bottom-[10%] flex-shrink-0" />
