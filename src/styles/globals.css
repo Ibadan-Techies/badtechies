@@ -16,6 +16,15 @@
     height: calc(40rem - 5.7rem);
   }
 
+  ._bg-blur {
+    background: linear-gradient(
+      122.22deg,
+      rgba(255, 255, 255, 0.08) 3.95%,
+      rgba(255, 255, 255, 0.06) 69.33%
+    );
+    backdrop-filter: blur(25px);
+  }
+
   .spexXtext {
     font-size: calc(2rem + 1.8vw);
     line-height: calc(2rem + 1.8vw);
