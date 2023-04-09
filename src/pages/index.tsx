@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import Footer from '@/components/Footer/footer'
 import NavigationBar from '@/components/Navbar/navbar'
-// import LandingBanner from '@/components/LandingBanner/banner'
-// import AboutUs from '@/components/LandingAboutUs/about'
+import LandingBanner from '@/components/LandingBanner/banner'
+import AboutUs from '@/components/LandingAboutUs/about'
+import Events from '@/components/LandingEvent/event'
 
 export default function Home() {
   return (
@@ -14,8 +15,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavigationBar />
-      {/* <LandingBanner />
-      <AboutUs /> */}
+      <LandingBanner />
+      <AboutUs />
+      <Events />
       <Footer />
     </>
   )

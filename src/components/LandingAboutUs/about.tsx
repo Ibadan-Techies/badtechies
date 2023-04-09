@@ -9,10 +9,11 @@ import Frame from './frame'
 const AboutUs = () => {
   return (
     <div className="pt-[4rem]">
-      <div className="flex flex-col items-center justify-center">
-        <div className="flex flex-col  wrapper gap-5">
+      <div className="flex-col _body">
+        <div className="flex flex-col  _wrapper gap-5">
           <span className="">
             <Button
+              label
               style={{
                 color: 'text-ibtc-blue',
                 background: 'bg-ibtc-blue-light',
