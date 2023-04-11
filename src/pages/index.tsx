@@ -5,6 +5,7 @@ import LandingBanner from '@/components/LandingBanner/banner'
 import AboutUs from '@/components/LandingAboutUs/about'
 import Events from '@/components/LandingEvent/event'
 import Gallery from '@/components/Gallery/gallery'
+import Unique from '@/components/LandingUnique/unique'
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <AboutUs />
       <Events />
       <Gallery />
+      <Unique />
       <Footer />
     </>
   )
