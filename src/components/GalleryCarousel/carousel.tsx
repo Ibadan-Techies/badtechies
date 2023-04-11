@@ -1,33 +1,7 @@
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
 import { ShortImage, LongImage } from './component'
-
-const sources = [
-  [
-    '/gallery/grid1_2d36.png',
-    '/gallery/grid1_8f83.png',
-    '/gallery/grid1_10195.png',
-    '/gallery/grid1_9354f93.png',
-  ],
-  [
-    '/gallery/grid2_1.png',
-    '/gallery/grid2_2.png',
-    '/gallery/grid2_3.png',
-    '/gallery/grid2_4.png',
-  ],
-  [
-    '/gallery/grid3_1.png',
-    '/gallery/grid3_2.png',
-    '/gallery/grid3_3.png',
-    '/gallery/grid3_4.png',
-  ],
-  [
-    '/gallery/grid4_1.png',
-    '/gallery/grid4_2.png',
-    '/gallery/grid4_3.png',
-    '/gallery/grid4_4.png',
-  ],
-]
+import { sources } from './sources'
 
 const Items = sources.map((item, index) => {
   return <GalleryGrid content={item} key={index} data-value={index + 1} />
