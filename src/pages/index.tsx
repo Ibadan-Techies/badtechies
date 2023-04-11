@@ -6,6 +6,7 @@ import AboutUs from '@/components/LandingAboutUs/about'
 import Events from '@/components/LandingEvent/event'
 import Gallery from '@/components/Gallery/gallery'
 import Unique from '@/components/LandingUnique/unique'
+import FAQ from '@/components/FAQ/faq-index'
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Events />
       <Gallery />
       <Unique />
+      <FAQ />
       <Footer />
     </>
   )
