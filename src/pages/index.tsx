@@ -1,11 +1,12 @@
 import Head from 'next/head'
 import Footer from '@/components/Footer/footer'
 import NavigationBar from '@/components/Navbar/navbar'
-import LandingBanner from '@/components/LandingBanner/banner'
-import AboutUs from '@/components/LandingAboutUs/about'
-import Events from '@/components/LandingEvent/event'
-import Gallery from '@/components/Gallery/gallery'
-import Unique from '@/components/LandingUnique/unique'
+// import LandingBanner from '@/components/LandingBanner/banner'
+// import AboutUs from '@/components/LandingAboutUs/about'
+// import Events from '@/components/LandingEvent/event'
+// import Gallery from '@/components/Gallery/gallery'
+// import Unique from '@/components/LandingUnique/unique'
+import FAQ from '@/components/FAQ/faq-index'
 
 export default function Home() {
   return (
@@ -17,11 +18,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavigationBar />
-      <LandingBanner />
+      {/* <LandingBanner />
       <AboutUs />
       <Events />
       <Gallery />
-      <Unique />
+      <Unique /> */}
+      <FAQ />
       <Footer />
     </>
   )
