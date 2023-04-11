@@ -5,6 +5,9 @@ export const LongImage = ({ src }: { src: string }) => (
     <Image
       src={src}
       fill
+      sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
       alt=""
       className="object-cover object-center rounded-[10px]"
     />
@@ -18,6 +21,9 @@ export const ShortImage = ({ src }: { src: string }) => (
       fill
       alt=""
       className="object-cover object-center rounded-[10px]"
+      sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
     />
   </div>
 )

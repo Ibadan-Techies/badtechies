@@ -11,7 +11,10 @@ function FAQ() {
   return (
     <div className="text-white p-[2.8rem] flex flex-col gap-[13px] w-11/12">
       {FAQs.map((faq, index) => (
-        <div className="bg-ibtc-blue rounded w-full py-[25px] px-[50px]">
+        <div
+          className="bg-ibtc-blue rounded w-full py-[25px] px-[50px]"
+          key={index}
+        >
           <button
             className="flex items-center justify-between w-full text-[29px] leading-[29px] font-medium text-left focus:outline-none focus:shadow-outline-gray font-semibold"
             onClick={() => handleClick(index)}

@@ -8,6 +8,9 @@ const EventCard = ({ src, topic }: { src: string; topic: string }) => {
         alt=""
         fill
         className="object-cover object-center rounded-[0.625rem]"
+        sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
       />
       <div className="absolute opacity-0 hover:opacity-100 text-white bottom-0 top-0 left-0 right-0 transition ease-in-out delay-150 duration-300">
         <section className="font-semibold _bg-blur px-3 pt-5 pb-4 absolute bottom-0 w-full rounded-[0.625rem]">

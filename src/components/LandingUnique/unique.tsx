@@ -11,10 +11,13 @@ const Unique = () => {
         <div className="w-full relative h-[27.5rem]">
           <Image
             fill
-            object-cover
-            object-center
+            className="object-cover
+            object-center"
             src="/UniqueChess.png"
             alt=""
+            sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
           />
         </div>
       </div>
