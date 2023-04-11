@@ -34,7 +34,7 @@ const CardGroup = () => {
 
 const Header = () => (
   <div className="flex justify-between items-center">
-    <header className="header text-white">Events</header>
+    <header className="_header text-white">Events</header>
     <span>
       <Button
         outline

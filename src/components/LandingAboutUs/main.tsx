@@ -2,7 +2,7 @@ import Button from '../Button/button'
 
 const Main = () => (
   <div className="flex gap-16">
-    <p className="header text-ibtc-black">
+    <p className="_header text-ibtc-black">
       A community of tech enthusiasts based in the heart of Ibadan, Nigeria.
     </p>
     <div className="gap-[3rem] flex flex-col text-[#4F4F4F]">
