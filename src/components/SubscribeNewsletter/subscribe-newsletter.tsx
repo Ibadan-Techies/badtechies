@@ -3,11 +3,9 @@ import Button from '../Button/button'
 
 function SubscribeNewsLetter() {
   return (
-    <div className="w-full relative bg-ibtc-light-yellow flex flex-col items-center justify-center min-h-[26rem] gap-[2rem]">
+    <div className="w-full relative bg-ibtc-light-yellow flex flex-col items-center justify-center min-h-[26rem] gap-[4rem]">
       <div className="text-center space-y-[1rem]">
-        <h2 className="text-[2rem] lg:text-[3.438rem] font-[500] m-0 p-0">
-          Stay up to date with Us!
-        </h2>
+        <h2 className="_header text-[#000000]">Stay up to date with Us!</h2>
         <p className="text-ibtc-grey-2">
           Subscribe to our newsletter for latest news, projects and updates
         </p>
