@@ -8,7 +8,7 @@ import Frame from './frame'
 
 const AboutUs = () => {
   return (
-    <div className="pt-[4rem]">
+    <div className="pt-[4rem] relative flex flex-col gap-60 min-h-[43rem] overflow-hidden">
       <div className="flex-col _body">
         <div className="flex flex-col  _wrapper gap-5">
           <span className="">
@@ -25,10 +25,8 @@ const AboutUs = () => {
           <MainContent />
         </div>
       </div>
-      <div className="flex 2xl:justify-around gap-80 items-baseline">
-        <OceanOrnament className="text-2xl" />
-        <Frame />
-      </div>
+      <OceanOrnament className="text-2xl absolute left-0 bottom-0 mt-10" />
+      <Frame />
     </div>
   )
 }

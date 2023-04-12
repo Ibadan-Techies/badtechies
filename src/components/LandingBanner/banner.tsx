@@ -6,7 +6,7 @@ import { datax } from './datax'
 const Banner = () => {
   return (
     <div className="xer23_1212 bg-ibtc-blue _body">
-      <div className="_wrapper h-4/5 flex items-end">
+      <div className="_wrapper flex items-end">
         <ArrowDecRight className="relative basis-[fit-content] bottom-[10%] flex-shrink-0" />
         <Main />
         <ArrowDecLeft className="relative basis-[fit-content] bottom-[10%] flex-shrink-0" />
@@ -17,14 +17,14 @@ const Banner = () => {
 
 function Main() {
   return (
-    <div className="flex-shrink-1 h-full font-medium self-center text-center flex flex-col justify-between">
-      <div className="flex flex-col gap-6">
+    <div className="flex-shrink-1 h-full font-medium self-center text-center flex flex-col gap-14">
+      <div className="flex flex-col gap-9">
         <p className="text-white">
           <span className="py-2.5 px-4 bg-ibtc-blue-dark">
             Black Talents in Africa do not have an equal ground in tech
           </span>
         </p>
-        <p className="spexXtext leading-[3.75rem] text-white">
+        <p className="_spexXtext text-white">
           We believe Black Tech Talents should be amplified especially the works
           they are doing. Do You?
         </p>

@@ -16,7 +16,7 @@ function FAQ() {
           key={index}
         >
           <button
-            className="flex items-center justify-between w-full text-[29px] leading-[29px] font-medium text-left focus:outline-none focus:shadow-outline-gray font-semibold"
+            className="flex items-center justify-between w-full text-[29px] leading-[29px] text-left font-semibold"
             onClick={() => handleClick(index)}
           >
             {faq.question}
@@ -40,22 +40,22 @@ const FAQs = [
     question:
       'Are there any requirements needed to join the Ibadan Techies Club?',
     answer:
-      'Answer: “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. Duis sit amet sodales felis. Duis nunc eros, mattis at dui ac, convallis semper risus. In adipiscing ultrices tellus, in suscipit massa vehicula eu.”',
+      '"No, there are no restriction to join this community of awesomeness except being in tech. The club is targeted at pro and newbies who are finding their paths in the industry. Our programmes are broadly categorized as Virtual and In-person, if you meet this criteria you are welcome to join. However, on the verge to becoming a card carrying member it comes with some responbilities and rights. Learn more about being a Member of IBTC.”',
   },
   {
     question: 'Is the Ibadan Techies Club only for specific tracks in Tech?',
     answer:
-      'Answer: “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. Duis sit amet sodales felis. Duis nunc eros, mattis at dui ac, convallis semper risus. In adipiscing ultrices tellus, in suscipit massa vehicula eu.”',
+      '"The club is not limited to specifics tracks in Tech. Presently, we have the Design Sub-Community, Engineering Sub-community, Data Sub-community and Tech Creatives. Whatever, your field you should fall into those four Sub-communities.”',
   },
   {
     question: 'Is the club only open to people living in Ibadan?',
     answer:
-      'Answer: “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. Duis sit amet sodales felis. Duis nunc eros, mattis at dui ac, convallis semper risus. In adipiscing ultrices tellus, in suscipit massa vehicula eu.”',
+      "No, we are open to everyone. Our audiences are Black tech talents in Africa, and not limiting to Ibadan. Ibadan, only applies as in the brand and name. If you can't make it to our in-person events, you can always join our virtual events or get a glimpse of the events on youtube”",
   },
   {
     question: 'Can I refer someone to join the club?',
     answer:
-      'Answer: “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. Duis sit amet sodales felis. Duis nunc eros, mattis at dui ac, convallis semper risus. In adipiscing ultrices tellus, in suscipit massa vehicula eu.”',
+      '“Well the answer is Yes and No. Yes that if you are not a member yet, you can invite anyone to join the events. But only members can refer someone to become a member or attend members-only events.”',
   },
 ]
 

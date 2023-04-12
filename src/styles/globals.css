@@ -16,7 +16,7 @@
   }
 
   .xer23_1212 {
-    height: calc(40rem - 5.7rem);
+    min-height: calc(40rem - 5.7rem);
   }
 
   ._bg-blur {
@@ -32,9 +32,9 @@
     @apply flex items-center justify-center;
   }
 
-  .spexXtext {
-    font-size: calc(2rem + 1.8vw);
-    line-height: calc(2rem + 1.8vw);
+  ._spexXtext {
+    font-size: calc(1.5rem + 1.8vw);
+    line-height: calc(1.5rem + 1.8vw);
   }
 
   ._wrapper {

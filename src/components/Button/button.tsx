@@ -3,49 +3,61 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 type TString = `${string}-${string}`
-type TButtonProps<T = undefined | boolean> = {
-  href?: string
-  outline?: T
-  label?: boolean
-  style: {
-    color: TString
-    border?: T extends true ? TString : never
-    background?: T extends boolean ? never : TString
-    hoverColor?: `hover:${string}-${string}`
-    hoverBg?: `hover:${string}-${string}`
-  }
-  type?: 'button' | 'submit'
+
+interface TStyleProps {
+  color: TString
+  hoverColor?: `hover:${string}-${string}`
+  hoverBg?: `hover:${string}-${string}`
+  fontSize?: TString
 }
 
-type RequiredBorder<T> = T extends true
-  ? {
-      style: {
-        border: TString
-      }
+interface WithBorder extends TStyleProps {
+  border: TString
+  background?: never
+}
+
+interface WithOutBorder extends TStyleProps {
+  border?: never
+  background?: TString
+}
+type Props =
+  | {
+      outline: true
+      href?: string
+      label?: boolean
+      type?: 'button' | 'submit'
+      style: WithBorder
     }
-  : {}
+  | {
+      outline?: never | false
+      href?: string
+      label?: boolean
+      type?: 'button' | 'submit'
+      style: WithOutBorder
+    }
 
-type TButtonPropsWithRequiredBorder<T> = TButtonProps<T> & RequiredBorder<T>
-
-const Button = <T extends undefined | boolean>({
+const Button = ({
   href,
   outline = undefined,
   children,
   label,
   style,
   type = 'button',
-}: React.PropsWithChildren<TButtonPropsWithRequiredBorder<T>>) => {
+}: React.PropsWithChildren<Props>) => {
   const buttonClass = clsx(
     // Base style
-    `rounded py-3.5 px-5 flex items-center justify-around ${style.hoverBg} ${style.hoverColor}`,
+    `lg:py-3.5 lg:px-5 py-2.5 px-1 rounded font-medium flex items-center justify-around ${
+      style.hoverBg || ''
+    } ${style.hoverColor || ''}`,
     {
       // Styles for Outline
-      [`border-solid border ${style.color} ${style.border}`]: outline,
+      [`border-solid border ${style.color || ''} ${style.border || ''}`]:
+        outline,
       // Styles for Bold
-      [`border-0 ${style.background} ${style.color}`]: !outline,
+      [`border-0 ${style.background || ''} ${style.color || ''}`]: !outline,
       // Styles for Label
-      ['text-lg/[18px]']: !label,
-      ['text-[13px]/[18.2px]']: label,
+      [style.fontSize || 'text-lg/[18px]']: !label,
+      [style.fontSize || 'text-[13px]/[18.2px]']: label,
     }
   )
 
