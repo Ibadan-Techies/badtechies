@@ -1,39 +1,25 @@
 import Image from 'next/image'
+import OvalImageFrame from '../OvalFrame/oval-frame'
 
 const Frame = () => {
   return (
-    <div className="flex items-baseline">
-      <div className="relative w-[12.5rem] h-[13rem] rounded-[5rem] z-40 left-4">
-        <Image
-          fill
-          src={'/abOval1.jpg'}
-          alt=""
-          className="rounded-tr-[5rem]"
-          sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+    <div className="flex items-baseline xl:w-[40rem] w-[20rem] h-[16rem] absolute bottom-0 xl:right-12 right-1">
+      <div className="relative -bottom-10">
+        <OvalImageFrame
+          bgColor="green"
+          src="https://res.cloudinary.com/dfliypjzt/image/upload/v1681297044/gallery/ogb1_kxukql.png"
         />
       </div>
-      <div className="relative w-[12.5rem] h-[18.5rem]">
-        <Image
-          fill
-          src={'/abOval3.jpg'}
-          alt=""
-          sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+      <div className="relative bottom-10">
+        <OvalImageFrame
+          bgColor="red"
+          src="https://res.cloudinary.com/dfliypjzt/image/upload/v1681297044/gallery/thegangshit_bqixgy.png"
         />
       </div>
-      <div className="relative w-[12.5rem] h-[15rem]">
-        <Image
-          fill
-          src={'/abOval2.png'}
-          alt=""
-          sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
-        />
-      </div>
+      <OvalImageFrame
+        bgColor="yellow"
+        src="https://res.cloudinary.com/dfliypjzt/image/upload/v1681297043/gallery/meku_d8ruqd.png"
+      />
     </div>
   )
 }

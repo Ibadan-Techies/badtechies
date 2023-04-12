@@ -13,11 +13,11 @@ const Unique = () => {
             fill
             className="object-cover
             object-center"
-            src="/UniqueChess.png"
+            src="/uniqueChess.png"
             alt=""
             sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
-              33vw"
+              40vw"
           />
         </div>
       </div>
