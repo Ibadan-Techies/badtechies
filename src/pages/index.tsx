@@ -7,6 +7,7 @@ import Events from '@/components/LandingEvent/event'
 import Gallery from '@/components/Gallery/gallery'
 import Unique from '@/components/LandingUnique/unique'
 import FAQ from '@/components/FAQ/faq-index'
+import SubscribeNewsLetter from '@/components/SubscribeNewsletter/subscribe-newsletter'
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <Events />
       <Gallery />
       <Unique />
+      <SubscribeNewsLetter />
       <FAQ />
       <Footer />
     </>
