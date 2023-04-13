@@ -1,0 +1,36 @@
+name: Build and Test
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2.5.0
+        with:
+          node-version: '14.x'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Test
+        run: npm test
+
+      - name: Check status of build and tests
+        if: ${{ job.status == 'success' }}
+        run: echo "Build and tests succeeded."
+
+      - name: Check status of build and tests
+        if: ${{ job.status != 'success' }}
+        run: echo "Build and tests failed. Cannot merge pull request to main branch." && exit 1
