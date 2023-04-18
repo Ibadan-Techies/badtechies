@@ -15,7 +15,7 @@
     @apply text-base leading-4;
   }
 
-  .xer23_1212 {
+  ._xer23_1212 {
     min-height: calc(40rem - 5.7rem);
   }
 
@@ -33,8 +33,8 @@
   }
 
   ._spexXtext {
-    font-size: calc(1.5rem + 1.8vw);
-    line-height: calc(1.5rem + 1.8vw);
+    font-size: calc(1.7rem + 2vw);
+    line-height: calc(1.7rem + 2vw);
   }
 
   ._wrapper {

@@ -5,11 +5,11 @@ import { datax } from './datax'
 
 const Banner = () => {
   return (
-    <div className="xer23_1212 bg-ibtc-blue _body">
+    <div className="_xer23_1212 bg-ibtc-blue _body">
       <div className="_wrapper flex items-end">
-        <ArrowDecRight className="relative basis-[fit-content] bottom-[10%] flex-shrink-0" />
+        <ArrowDecRight className="relative basis-[fit-content] bottom-[1.2rem] flex-shrink-0 hidden lg:block" />
         <Main />
-        <ArrowDecLeft className="relative basis-[fit-content] bottom-[10%] flex-shrink-0" />
+        <ArrowDecLeft className="relative basis-[fit-content] bottom-[1.2rem] flex-shrink-0 hidden lg:block" />
       </div>
     </div>
   )
@@ -17,8 +17,8 @@ const Banner = () => {
 
 function Main() {
   return (
-    <div className="flex-shrink-1 h-full font-medium self-center text-center flex flex-col gap-14">
-      <div className="flex flex-col gap-9">
+    <div className="flex-shrink-1 font-medium self-center text-center flex flex-col gap-[3.685rem]">
+      <div className="flex flex-col gap-6 text-lg leading-[1.125rem]">
         <p className="text-white">
           <span className="py-2.5 px-4 bg-ibtc-blue-dark">
             Black Talents in Africa do not have an equal ground in tech
@@ -33,7 +33,7 @@ function Main() {
           ground in tech have joined us
         </p>
       </div>
-      <div className="flex self-center gap-10 mt-14">
+      <div className="flex self-center gap-10">
         {datax.map((data, index) => (
           <Button
             key={index}
