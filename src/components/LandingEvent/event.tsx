@@ -1,15 +1,6 @@
 import Button from '../Button/button'
 import EventCard from '../EventCard/eventcard'
-
-const datax = [
-  ['/EventCard/event11.png', 'What developers need to know about JWTs'],
-  ['/EventCard/event12.png', 'Design SCC Technical Meetup'],
-  [
-    '/EventCard/event13.png',
-    'Deploying resilient systems with Kubernetes on Google Cloud',
-  ],
-  ['/EventCard/event14.jpg', 'Being a black woman in Tech'],
-]
+import { datax } from './datax'
 
 const Events = () => {
   return (
@@ -26,7 +17,7 @@ const CardGroup = () => {
   return (
     <div className="flex 2xl:justify-between gap-3 w-full self-center">
       {datax.map((data, index) => (
-        <EventCard key={index} src={data[0]} topic={data[1]} />
+        <EventCard key={index} details={data} />
       ))}
     </div>
   )
