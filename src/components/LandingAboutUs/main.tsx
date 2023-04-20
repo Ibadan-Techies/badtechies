@@ -24,6 +24,8 @@ const Main = () => (
           style={{
             background: 'bg-ibtc-blue',
             color: 'text-white',
+            hoverBg: 'hover:bg-ibtc-blue-darker',
+            hoverColor: 'hover:text-ibtc-grey',
           }}
         >
           Join Now
