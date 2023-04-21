@@ -5,7 +5,7 @@ import Button from '../Button/button'
 
 const NavigationBar = () => {
   return (
-    <nav className="h-[5.6rem] bg-ibtc-blue _body">
+    <nav className="h-[5.6rem] bg-ibtc-blue _body max-lg:hidden">
       <div className="_wrapper flex items-center justify-between">
         <Logo width="w-[70px]" height="h-[69.22px]" />
         <div className="flex items-center text text-white gap-20 xl:gap-44 ">
