@@ -1,9 +1,10 @@
 import * as React from 'react'
 import { Logo } from '../Logo'
+import { LinkedIn, Twitter } from '@/assets/svg'
 
 const Footer = () => {
   return (
-    <footer className="bg-ibtc-black text-white py-6 text text-ibtc-grey font-medium">
+    <footer className="bg-ibtc-black py-6 text text-ibtc-grey font-medium">
       <div className="_body border-y">
         <div className="flex justify-between py-10 _wrapper">
           <Logo width="w-[120px]" height="h-[118.67px]" />
@@ -33,7 +34,12 @@ function MoreList() {
           'Terms and Disclaimer',
           'Transparency',
         ].map((item, index) => (
-          <li key={index}>{item}</li>
+          <li
+            key={index}
+            className="hover:text-ibtc-brown-light cursor-pointer"
+          >
+            {item}
+          </li>
         ))}
       </ul>
     </div>
@@ -51,7 +57,10 @@ function Others() {
         <span className="text-xl leading-5 text-white">
           Want to get in touch?
         </span>
-        <span>Message on twitter.com @badtechys</span>
+        <span className="flex gap-2">
+          <Twitter className="fill-white hover:fill-ibtc-blue" />
+          <LinkedIn className="fill-white hover:fill-ibtc-blue" />
+        </span>
       </p>
     </div>
   )

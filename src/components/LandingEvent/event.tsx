@@ -32,6 +32,8 @@ const Header = () => (
         style={{
           color: 'text-white',
           border: 'text-white',
+          hoverBg: 'hover:bg-white',
+          hoverColor: 'hover:text-ibtc-black'
         }}
       >
         View all
