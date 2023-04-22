@@ -9,7 +9,7 @@ function FAQ() {
   }
 
   return (
-    <div className="text-white lg:p-[2.8rem] p-[14px] lg:w-11/12 flex flex-col gap-[13px] w-full">
+    <div className="text-white lg:p-[2.8rem] md:p-[14px] lg:w-11/12 flex flex-col gap-[13px] w-full">
       {FAQs.map((faq, index) => (
         <div
           className="bg-ibtc-blue rounded w-full py-[25px] lg:px-[50px] px-4"

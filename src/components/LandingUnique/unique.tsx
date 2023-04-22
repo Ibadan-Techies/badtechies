@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { OvalOrnament } from '@/assets/svg'
 
 import { useWindowSize } from '@/utilities/hooks'
+import clsx from 'clsx'
 
 const UniqueWrapper = ({ mobile }: { mobile?: boolean }) => (
   <div className="bg-[#F5FAFA] _body py-5">
@@ -29,7 +30,7 @@ function Nav() {
   const size = useWindowSize()
   const max_table_screen = Number(size.width) < 1024 ? true : false
   return (
-    <div className="flex items-center justify-between">
+    <div className={clsx('flex items-center justify-between', 'pt-6')}>
       <span className="h-[9.5rem] w-[8.6rem] lg:block hidden"></span>
       <span className="flex justify-center items-center _header">
         What makes us Unique

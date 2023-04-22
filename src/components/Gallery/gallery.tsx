@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Children } from 'react'
 import Carousel from '../GalleryCarousel/carousel'
 import { ShortImage, LongImage } from '../GalleryCarousel/component'
 import { sources } from '../GalleryCarousel/sources'
@@ -31,29 +31,34 @@ const Gallery = () => {
   const max_table_screen = Number(size.width) < 764 ? true : false
   if (max_table_screen) {
     return (
-      <div className="_body bg-[#FDF6F2] _3434ERR">
-        <div className="_wrapper pt-14">
-          <header className="_header text-ibtc-black pb-10">Gallery</header>
-          <div>
-            <Carousel
-              items={sources[r].map((item, index) => (
-                <div key={index} className="h-[25rem] w-full">
-                  <div className="flex w-full h-full">
-                    <ShortImage src={item} />
-                  </div>
+      <GalleryWrapper>
+        <div>
+          <Carousel
+            items={sources[r].map((item, index) => (
+              <div key={index} className="h-[25rem] w-full">
+                <div className="flex w-full h-full">
+                  <ShortImage src={item} />
                 </div>
-              ))}
-            />
-          </div>
+              </div>
+            ))}
+          />
         </div>
-      </div>
+      </GalleryWrapper>
     )
   }
   return (
-    <div className="_body bg-[#FDF6F2] _3434ERR">
+    <GalleryWrapper>
+      <Carousel items={Items} />
+    </GalleryWrapper>
+  )
+}
+
+function GalleryWrapper({ children }: React.PropsWithChildren) {
+  return (
+    <div className="_body bg-[#FDF6F2] _3434ERR py-6">
       <div className="_wrapper pt-14">
         <header className="_header text-ibtc-black pb-10">Gallery</header>
-        <Carousel items={Items} />
+        {children}
       </div>
     </div>
   )
