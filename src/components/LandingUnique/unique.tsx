@@ -44,7 +44,9 @@ function Content() {
     <div className="flex flex-col lg:flex-row lg:gap-4 w-full">
       {datax.map((data, index) => (
         <section key={index} className="w-full lg:w-[33%] mb-10">
-          <header className="_header2 text-ibtc-black mb-5">{data[0]}</header>
+          <header className="_header2 text-ibtc-black md:mb-5 mb-4">
+            {data[0]}
+          </header>
           <p className="text-[#4F4F4F] text-base leading-[22.4px]">{data[1]}</p>
         </section>
       ))}

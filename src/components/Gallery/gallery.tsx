@@ -31,10 +31,10 @@ const Gallery = () => {
   const max_table_screen = Number(size.width) < 764 ? true : false
   if (max_table_screen) {
     return (
-      <div className="_body bg-[#FDF6F2]">
+      <div className="_body bg-[#FDF6F2] _3434ERR">
         <div className="_wrapper pt-14">
           <header className="_header text-ibtc-black pb-10">Gallery</header>
-          <div className="_3434ERR">
+          <div>
             <Carousel
               items={sources[r].map((item, index) => (
                 <div key={index} className="h-[25rem] w-full">
@@ -50,7 +50,7 @@ const Gallery = () => {
     )
   }
   return (
-    <div className="_body bg-[#FDF6F2]">
+    <div className="_body bg-[#FDF6F2] _3434ERR">
       <div className="_wrapper pt-14">
         <header className="_header text-ibtc-black pb-10">Gallery</header>
         <Carousel items={Items} />
