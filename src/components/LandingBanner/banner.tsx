@@ -23,7 +23,7 @@ function Main() {
             Black Talents in Africa do not have an equal ground in tech
           </span>
         </p>
-        <p className="_spexXtext max-lg:text-[38px] max-lg:leading-10 text-white">
+        <p className="_spexXtext max-sm:text-3xl max-sm:leading-8 text-white">
           We believe Black Tech Talents should be amplified, especially the
           works they are doing. Do You?
         </p>
