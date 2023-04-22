@@ -1,11 +1,11 @@
 import Button from '../Button/button'
 
 const Main = () => (
-  <div className="flex gap-16">
+  <div className="flex lg:gap-16 gap-4 max-lg:flex-col">
     <p className="_header text-ibtc-black">
       A community of tech enthusiasts based in the heart of Ibadan, Nigeria.
     </p>
-    <div className="gap-[3rem] flex flex-col text-[#4F4F4F]">
+    <div className="lg:gap-[2.3rem] gap-7 flex flex-col text-[#4F4F4F]">
       <p className="text leading-[22.4px]">
         We are a diverse group of professionals, students, entrepreneurs, and
         hobbyists who share a common passion for all things tech.
@@ -19,7 +19,7 @@ const Main = () => (
         pressing challenges, and we are committed to leveraging our skills and
         expertise to create positive change.
       </p>
-      <span>
+      <span className="lg:w-fit">
         <Button
           style={{
             background: 'bg-ibtc-blue',

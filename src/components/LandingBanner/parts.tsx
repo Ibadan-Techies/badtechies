@@ -9,12 +9,10 @@ const datax = [
 export const ButtonGroup = () => {
   return (
     <div
-      className={clsx({
-        // desktop
-        'flex self-center gap-10': true,
-        // mobile
-        'max-lg:flex-col gap-6': true,
-      })}
+      className={clsx(
+        'flex self-center gap-10 lg:w-[45rem]',
+        'max-md:flex-col gap-6 w-full'
+      )}
     >
       {datax.map((data, index) => (
         <Button

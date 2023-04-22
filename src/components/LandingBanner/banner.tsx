@@ -1,7 +1,6 @@
 import { ArrowDecLeft, ArrowDecRight } from '@/assets/svg'
 import * as React from 'react'
 import { ButtonGroup } from './parts'
-import clsx from 'clsx'
 
 const Banner = () => {
   return (
@@ -17,10 +16,10 @@ const Banner = () => {
 
 function Main() {
   return (
-    <div className="flex-shrink-1 font-medium self-center text-center flex flex-col gap-[3.685rem]">
-      <div className="flex flex-col gap-6 text-lg leading-[1.125rem]">
+    <div className="flex-shrink-1 font-medium self-center text-center flex flex-col gap-[25px] lg:gap-[3.685rem]">
+      <div className="flex flex-col gap-[22px] lg:gap-6 text-lg leading-[1.125rem]">
         <p className="text-white">
-          <span className="py-2.5 px-4 bg-ibtc-blue-dark max-lg:text-xs max-lg:leading-3 w-fit">
+          <span className="py-2.5 px-4 bg-ibtc-blue-dark max-lg:text-xs max-lg:leading-3 lg:w-fit max-sm:block">
             Black Talents in Africa do not have an equal ground in tech
           </span>
         </p>

@@ -3,7 +3,7 @@ import OvalImageFrame from '../OvalFrame/oval-frame'
 
 const Frame = () => {
   return (
-    <div className="flex items-baseline xl:w-[40rem] w-[20rem] h-[16rem] absolute bottom-0 xl:right-12 right-1">
+    <div className="flex items-baseline xl:w-[40rem] lg:w-[20rem] lg:h-[16rem] lg:m-0 my-10 lg:absolute lg:bottom-0 xl:right-12 lg:right-1 w-fit gap-3 self-center">
       <div className="relative -bottom-10">
         <OvalImageFrame
           bgColor="green"

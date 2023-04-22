@@ -15,7 +15,7 @@ export const LongImage = ({ src }: { src: string }) => (
 )
 
 export const ShortImage = ({ src }: { src: string }) => (
-  <div className="relative flex flex-col w-[31rem] h-1/2">
+  <div className="relative flex flex-col lg:w-[31rem] w-full lg:h-1/2 h-full">
     <Image
       src={src}
       fill
