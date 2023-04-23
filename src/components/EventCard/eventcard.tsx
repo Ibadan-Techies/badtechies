@@ -7,7 +7,7 @@ const EventCard = ({
   details: { imgSrc: string; topic: string; date: string; speaker: string }
 }) => {
   return (
-    <div className="relative w-[19.6rem] h-[21.1875rem]">
+    <div className="relative lg:w-[19.6rem] w-full lg:h-[25.1875rem] h-[23rem]">
       <Image
         src={imgSrc}
         alt=""

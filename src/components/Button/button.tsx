@@ -46,7 +46,7 @@ const Button = ({
 }: React.PropsWithChildren<Props>) => {
   const buttonClass = clsx(
     // Base style
-    `lg:py-3.5 lg:px-5 py-2.5 px-1 rounded font-medium flex items-center justify-around ${
+    `lg:py-3.5 lg:px-5 py-6 w-full px-6 rounded font-medium flex items-center justify-around ${
       style.hoverBg || ''
     } ${style.hoverColor || ''}`,
     {
@@ -56,8 +56,8 @@ const Button = ({
       // Styles for Bold
       [`border-0 ${style.background || ''} ${style.color || ''}`]: !outline,
       // Styles for Label
-      [style.fontSize || 'text-lg/[18px]']: !label,
-      [style.fontSize || 'text-[13px]/[18.2px]']: label,
+      [style.fontSize || 'md:text-lg/[18px] text-base/[20px]']: !label,
+      [style.fontSize || 'text-[13px]/[18.2px] py-[10px] px-[13.5px]']: label,
     }
   )
 

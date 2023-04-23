@@ -9,18 +9,18 @@ function FAQ() {
   }
 
   return (
-    <div className="text-white p-[2.8rem] flex flex-col gap-[13px] w-11/12">
+    <div className="text-white lg:p-[2.8rem] md:p-[14px] lg:w-11/12 flex flex-col gap-[13px] w-full">
       {FAQs.map((faq, index) => (
         <div
-          className="bg-ibtc-blue rounded w-full py-[25px] px-[50px]"
+          className="bg-ibtc-blue rounded w-full py-[25px] lg:px-[50px] px-4"
           key={index}
         >
           <button
-            className="flex items-center justify-between w-full text-[29px] leading-[29px] text-left font-semibold"
+            className="flex lg:items-center justify-between w-full lg:text-[29px] lg:leading-[29px] text-left font-semibold text-base leading-4"
             onClick={() => handleClick(index)}
           >
-            {faq.question}
-            <span className="ml-2">
+            <span>{faq.question}</span>
+            <span className="ml-2 max-lg:relative max-lg:top-1">
               <ArrowDown />
             </span>
           </button>

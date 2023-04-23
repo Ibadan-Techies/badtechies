@@ -5,10 +5,10 @@
 /* custom typography */
 @layer base {
   ._header {
-    @apply font-medium xl:text-[3.4rem]/[3.4rem] text-[2.4rem]/[2.4rem];
+    @apply font-medium xl:text-[3.4rem]/[3.4rem] md:text-[2.5rem]/[2.5rem] text-[2rem]/[2rem];
   }
   ._header2 {
-    @apply font-medium text-[32px]/[32px];
+    @apply font-medium lg:text-[1.8rem]/[1.8rem] md:text-[1.7rem]/[1.7rem] text-[1.5rem]/[1.5rem];
   }
 
   .text {
@@ -39,5 +39,19 @@
 
   ._wrapper {
     @apply 2xl:container w-11/12;
+  }
+
+  /* Carousel css */
+  ._34sdf .alice-carousel__prev-btn,
+  ._34sdf .alice-carousel__next-btn,
+  ._3434ERR .alice-carousel__prev-btn,
+  ._3434ERR .alice-carousel__next-btn {
+    display: none;
+  }
+
+  ._34sdf .alice-carousel__dots-item,
+  ._3434ERR .alice-carousel__dots-item {
+    width: 1.2rem !important;
+    height: 1.2rem !important;
   }
 }
