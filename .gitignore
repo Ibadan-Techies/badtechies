@@ -5,7 +5,6 @@
 /.pnp
 .pnp.js
 /todo
-gitpassword.md
 
 # testing
 /coverage
