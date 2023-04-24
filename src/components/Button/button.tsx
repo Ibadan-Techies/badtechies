@@ -46,7 +46,7 @@ const Button = ({
 }: React.PropsWithChildren<Props>) => {
   const buttonClass = clsx(
     // Base style
-    `lg:py-3.5 lg:px-5 py-6 w-full px-6 rounded font-medium flex items-center justify-around ${
+    `lg:py-3.5 lg:px-5 py-6 w-full h-full px-6 rounded font-medium flex items-center justify-around ${
       style.hoverBg || ''
     } ${style.hoverColor || ''}`,
     {
