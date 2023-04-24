@@ -13,6 +13,7 @@ const NavigationBar = () => {
             {list.map((item, index) => (
               <li key={index}>
                 <Button
+                  href={'/#' + item.toLowerCase().replaceAll(' ', '-')}
                   style={{
                     color: 'text-white',
                     fontSize: 'text-[16px]/[16px]',
@@ -23,8 +24,8 @@ const NavigationBar = () => {
               </li>
             ))}
           </ul>
-          <div className="flex w-[14rem] gap-2 items-center">
-            <Button
+          <div className="flex w-[14rem] gap-2 items-center ">
+            {/* <Button
               outline
               style={{
                 border: 'border-transparent',
@@ -42,7 +43,7 @@ const NavigationBar = () => {
               }}
             >
               Sign In
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

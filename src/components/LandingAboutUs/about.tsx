@@ -17,6 +17,7 @@ const AboutUs = () => {
         // mobile
         ['gap-10']: true,
       })}
+      id="about-us"
     >
       <div className="flex-col _body">
         <div className="flex flex-col  _wrapper gap-5">

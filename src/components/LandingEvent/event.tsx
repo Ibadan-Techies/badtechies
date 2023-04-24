@@ -5,35 +5,21 @@ import { datax } from './datax'
 import { useWindowSize } from '@/utilities/hooks'
 import Carousel from '../GalleryCarousel/carousel'
 
-const BTN = (
-  <Button
-    outline
-    style={{
-      color: 'text-white',
-      border: 'text-white',
-      hoverBg: 'hover:bg-white',
-      hoverColor: 'hover:text-ibtc-black',
-    }}
-  >
-    View all
-  </Button>
-)
 const Events = () => {
-  const size = useWindowSize()
-  const max_table_screen = Number(size.width) < 1024 ? true : false
+  const { isMobile, isTablet } = useWindowSize()
   return (
-    <div className="_body bg-ibtc-black py-[70px]">
+    <div className="_body bg-ibtc-black py-[70px]" id="events">
       <div className="_wrapper flex flex-col gap-[66px]">
-        <Header max_table_screen={max_table_screen} />
-        <CardGroup max_table_screen={max_table_screen} />
-        {max_table_screen && BTN}
+        <Header isTablet={isTablet} />
+        <CardGroup isMobile={isMobile} />
+        {isMobile && BTN}
       </div>
     </div>
   )
 }
 
-const CardGroup = ({ max_table_screen }: { max_table_screen: boolean }) => {
-  if (max_table_screen) {
+const CardGroup = ({ isMobile }: { isMobile: boolean }) => {
+  if (isMobile) {
     return (
       <div className="_34sdf">
         <Carousel
@@ -53,11 +39,25 @@ const CardGroup = ({ max_table_screen }: { max_table_screen: boolean }) => {
   )
 }
 
-const Header = ({ max_table_screen }: { max_table_screen: boolean }) => (
+const Header = ({ isTablet }: { isTablet: boolean }) => (
   <div className="flex justify-between items-center">
     <header className="_header text-white">Events</header>
-    {!max_table_screen && <span>{BTN}</span>}
+    {isTablet && <span>{BTN}</span>}
   </div>
+)
+
+const BTN = (
+  <Button
+    outline
+    style={{
+      color: 'text-white',
+      border: 'text-white',
+      hoverBg: 'hover:bg-white',
+      hoverColor: 'hover:text-ibtc-black',
+    }}
+  >
+    View all
+  </Button>
 )
 
 export default Events

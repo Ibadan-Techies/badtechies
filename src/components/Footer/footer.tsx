@@ -5,8 +5,7 @@ import { useWindowSize } from '@/utilities/hooks'
 import clsx from 'clsx'
 
 const Footer = () => {
-  const size = useWindowSize()
-  const max_table_screen = Number(size.width) < 784 ? true : false
+  const { isMobile } = useWindowSize()
 
   return (
     <footer
@@ -34,10 +33,10 @@ const Footer = () => {
             />
             <MoreList />
           </div>
-          <Others max_table_screen={max_table_screen} />
+          <Others isMobile={isMobile} />
         </div>
       </div>
-      {max_table_screen && GetIntouch}
+      {isMobile && GetIntouch}
       <p className="text-center pt-6">
         &copy; Ibadan Tech Community is a registered non - profit backed by the
         Nigerian Law (2023)
@@ -46,7 +45,7 @@ const Footer = () => {
   )
 }
 
-function Others({ max_table_screen }: { max_table_screen: boolean }) {
+function Others({ isMobile }: { isMobile: boolean }) {
   return (
     <div
       className={clsx(
@@ -58,7 +57,7 @@ function Others({ max_table_screen }: { max_table_screen: boolean }) {
         This Human development is backed by Jason Palmer, Ije, Zakk, and Mark
         Techson.
       </p>
-      {!max_table_screen && GetIntouch}
+      {!isMobile && GetIntouch}
     </div>
   )
 }
@@ -95,7 +94,10 @@ function MoreList() {
 }
 
 const GetIntouch = (
-  <p className="flex flex-col gap-[16px] max-lg:items-center max-lg:pt-4">
+  <p
+    className="flex flex-col gap-[16px] max-lg:items-center max-lg:pt-4"
+    id="contact-us"
+  >
     <span className="text-xl leading-5 text-white">Want to get in touch?</span>
     <span className="flex gap-2">
       <Twitter className="fill-white hover:fill-ibtc-blue" />

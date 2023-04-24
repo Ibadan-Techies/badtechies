@@ -15,10 +15,6 @@
     @apply text-base leading-4;
   }
 
-  ._xer23_1212 {
-    min-height: calc(40rem - 5.7rem);
-  }
-
   ._bg-blur {
     background: linear-gradient(
       122.22deg,

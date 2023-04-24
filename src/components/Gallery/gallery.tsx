@@ -1,4 +1,4 @@
-import React, { Children } from 'react'
+import * as React from 'react'
 import Carousel from '../GalleryCarousel/carousel'
 import { ShortImage, LongImage } from '../GalleryCarousel/component'
 import { sources } from '../GalleryCarousel/sources'
@@ -13,7 +13,7 @@ const Items = sources.map((item, index) => {
 
 function GalleryGrid({ content }: { content: string[] }) {
   return (
-    <div className="h-[35rem] flex justify-center">
+    <div className="h-[35rem] flex justify-center" id="gallery">
       <div className="flex gap-[26px] max-2xl:w-full">
         <LongImage src={content[0]} />
         <div className="flex flex-col h-full gap-[26px]">
@@ -27,9 +27,8 @@ function GalleryGrid({ content }: { content: string[] }) {
 }
 
 const Gallery = () => {
-  const size = useWindowSize()
-  const max_table_screen = Number(size.width) < 764 ? true : false
-  if (max_table_screen) {
+  const { isMobile } = useWindowSize()
+  if (isMobile) {
     return (
       <GalleryWrapper>
         <div>

@@ -5,37 +5,34 @@ import { OvalOrnament } from '@/assets/svg'
 import { useWindowSize } from '@/utilities/hooks'
 import clsx from 'clsx'
 
-const UniqueWrapper = ({ mobile }: { mobile?: boolean }) => (
+const UniqueWrapper = ({ isMobile }: { isMobile?: boolean }) => (
   <div className="bg-[#F5FAFA] _body py-5">
     <div className="_wrapper flex flex-col gap-[30px]">
-      <Nav />
-      {mobile ? Img : null}
+      <Nav isMobile={!!isMobile} />
+      {isMobile ? Img : null}
       <Content />
-      {!mobile ? Img : null}
+      {!isMobile ? Img : null}
     </div>
   </div>
 )
 
 const Unique = () => {
-  const size = useWindowSize()
-  const max_table_screen = Number(size.width) < 1024 ? true : false
+  const { isMobile } = useWindowSize()
 
-  if (max_table_screen) {
-    return <UniqueWrapper mobile></UniqueWrapper>
+  if (isMobile) {
+    return <UniqueWrapper isMobile={isMobile}></UniqueWrapper>
   }
   return <UniqueWrapper></UniqueWrapper>
 }
 
-function Nav() {
-  const size = useWindowSize()
-  const max_table_screen = Number(size.width) < 1024 ? true : false
+function Nav({ isMobile }: { isMobile: boolean }) {
   return (
     <div className={clsx('flex items-center justify-between', 'pt-6')}>
       <span className="h-[9.5rem] w-[8.6rem] lg:block hidden"></span>
       <span className="flex justify-center items-center _header">
         What makes us Unique
       </span>
-      {!max_table_screen && <OvalOrnament className="h-[9.5rem] w-[8.6rem]" />}
+      {!isMobile && <OvalOrnament className="h-[9.5rem] w-[8.6rem]" />}
     </div>
   )
 }
