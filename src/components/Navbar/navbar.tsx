@@ -13,7 +13,7 @@ const NavigationBar = () => {
             {list.map((item, index) => (
               <li key={index}>
                 <Button
-                  href={'/#' + item.toLowerCase().replaceAll(' ', '-')}
+                  href={'/#' + item.toLowerCase()}
                   style={{
                     color: 'text-white',
                     fontSize: 'text-[16px]/[16px]',
