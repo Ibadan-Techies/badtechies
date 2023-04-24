@@ -5,10 +5,10 @@
 /* custom typography */
 @layer base {
   ._header {
-    @apply font-medium xl:text-[3.4rem]/[3.4rem] md:text-[2.5rem]/[2.5rem] text-[2rem]/[2rem];
+    @apply font-medium lg:text-[3.5rem]/[3.5rem] text-[2.5rem]/[2.5rem] font-oswald;
   }
   ._header2 {
-    @apply font-medium lg:text-[1.8rem]/[1.8rem] md:text-[1.7rem]/[1.7rem] text-[1.5rem]/[1.5rem];
+    @apply font-medium lg:text-[1.8rem]/[1.8rem] md:text-[1.7rem]/[1.7rem] text-[1.5rem]/[1.5rem] font-oswald;
   }
 
   .text {

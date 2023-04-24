@@ -44,7 +44,7 @@ function Content() {
   return (
     <div className="flex flex-col lg:flex-row lg:gap-4 w-full">
       {datax.map((data, index) => (
-        <section key={index} className="w-full lg:w-[33%] mb-10">
+        <section key={index} className="w-full lg:w-[32%] mb-10">
           <header className="_header2 text-ibtc-black md:mb-5 mb-4">
             {data[0]}
           </header>
