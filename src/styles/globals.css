@@ -24,29 +24,21 @@
     backdrop-filter: blur(25px);
   }
 
-  ._body {
-    @apply flex items-center justify-center;
-  }
-
   ._spexXtext {
     font-size: calc(1.7rem + 2vw);
     line-height: calc(1.7rem + 2vw);
   }
 
-  ._wrapper {
-    @apply 2xl:container w-11/12;
-  }
-
   /* Carousel css */
   ._34sdf .alice-carousel__prev-btn,
   ._34sdf .alice-carousel__next-btn,
-  ._3434ERR .alice-carousel__prev-btn,
-  ._3434ERR .alice-carousel__next-btn {
+  #_3434ERR .alice-carousel__prev-btn,
+  #_3434ERR .alice-carousel__next-btn {
     display: none;
   }
 
   ._34sdf .alice-carousel__dots-item,
-  ._3434ERR .alice-carousel__dots-item {
+  #_3434ERR .alice-carousel__dots-item {
     width: 1.2rem !important;
     height: 1.2rem !important;
   }

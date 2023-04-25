@@ -5,6 +5,8 @@ import { sources } from '../GalleryCarousel/sources'
 import { useWindowSize } from '@/utilities/hooks'
 import { random } from '@/utilities/util'
 
+import { Container } from '../Layout/Container'
+
 const r = random(sources)
 
 const Items = sources.map((item, index) => {
@@ -54,12 +56,10 @@ const Gallery = () => {
 
 function GalleryWrapper({ children }: React.PropsWithChildren) {
   return (
-    <div className="_body bg-[#FDF6F2] _3434ERR py-6">
-      <div className="_wrapper pt-14">
-        <header className="_header text-ibtc-black pb-10">Gallery</header>
-        {children}
-      </div>
-    </div>
+    <Container bg="bg-[#FDF6F2]" id="_3434ERR">
+      <header className="_header text-ibtc-black pb-10">Gallery</header>
+      {children}
+    </Container>
   )
 }
 

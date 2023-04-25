@@ -1,8 +1,9 @@
 import * as React from 'react'
-import { Logo } from '../Logo'
+import { Logo } from '../../Logo'
 import { LinkedIn, Twitter } from '@/assets/svg'
 import { useWindowSize } from '@/utilities/hooks'
 import clsx from 'clsx'
+import { Container } from '../Container'
 
 const Footer = () => {
   const { isMobile } = useWindowSize()
@@ -14,27 +15,28 @@ const Footer = () => {
         'text-[0.7rem]/[0.7rem]'
       )}
     >
-      <div className="_body border-y">
-        <div
-          className={clsx(
-            'flex flex-col gap-5 md:justify-between md:flex-row md:py-10 _wrapper',
-            'py-5'
-          )}
-        >
+      <div className=" border-y">
+        <Container>
           <div
             className={clsx(
-              'flex w-full md:w-[44%] md:justify-between',
-              'gap-6'
+              'flex flex-col gap-5 md:justify-between md:flex-row md:py-10'
             )}
           >
-            <Logo
-              width="lg:w-[120px] md:w-[100px] w-[39px]"
-              height="lg:h-[118.67px] md:h-[98.67px] h-[38.5px]"
-            />
-            <MoreList />
+            <div
+              className={clsx(
+                'flex w-full md:w-[44%] md:justify-between',
+                'gap-6'
+              )}
+            >
+              <Logo
+                width="lg:w-[120px] md:w-[100px] w-[39px]"
+                height="lg:h-[118.67px] md:h-[98.67px] h-[38.5px]"
+              />
+              <MoreList />
+            </div>
+            <Others isMobile={isMobile} />
           </div>
-          <Others isMobile={isMobile} />
-        </div>
+        </Container>
       </div>
       {isMobile && GetIntouch}
       <p className="text-center pt-6">

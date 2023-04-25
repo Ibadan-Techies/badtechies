@@ -1,19 +1,20 @@
 import * as React from 'react'
 import Image from 'next/image'
+import { Container } from '../Layout/Container'
 import { OvalOrnament } from '@/assets/svg'
 
 import { useWindowSize } from '@/utilities/hooks'
 import clsx from 'clsx'
 
 const UniqueWrapper = ({ isMobile }: { isMobile?: boolean }) => (
-  <div className="bg-[#F5FAFA] _body py-5">
-    <div className="_wrapper flex flex-col gap-[30px]">
+  <Container bg="bg-[#F5FAFA]">
+    <div className="flex flex-col gap-[30px]">
       <Nav isMobile={!!isMobile} />
       {isMobile ? Img : null}
       <Content />
       {!isMobile ? Img : null}
     </div>
-  </div>
+  </Container>
 )
 
 const Unique = () => {

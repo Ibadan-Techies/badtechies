@@ -1,20 +1,22 @@
 import { ArrowDecLeft, ArrowDecRight, LoveAnimation } from '@/assets/svg'
 import * as React from 'react'
+import { Container } from '../Layout/Container'
 import { ButtonGroup } from './parts'
 
 const Banner = () => {
   return (
-    <div className=" flex-col bg-ibtc-blue _body pt-[3rem]">
-      <div className="_wrapper h-full flex items-end">
-        <ArrowDecRight className="relative basis-[fit-content] bottom-[1.2rem] flex-shrink-0 hidden lg:block" />
-        <Main />
-        <ArrowDecLeft className="relative basis-[fit-content] bottom-[1.2rem] flex-shrink-0 hidden lg:block" />
-      </div>
-      <div className="w-full">
-        {' '}
+    <>
+      <Container bg="bg-ibtc-blue" treatAs={'banner'}>
+        <div className="h-full flex items-end">
+          <ArrowDecRight className="relative basis-[fit-content] bottom-[1.2rem] flex-shrink-0 hidden lg:block" />
+          <Main />
+          <ArrowDecLeft className="relative basis-[fit-content] bottom-[1.2rem] flex-shrink-0 hidden lg:block" />
+        </div>
+      </Container>
+      <div className="w-full bg-ibtc-blue">
         <LoveAnimation />
       </div>
-    </div>
+    </>
   )
 }
 

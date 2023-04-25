@@ -1,5 +1,6 @@
 import Button from '../Button/button'
 import EventCard from '../EventCard/eventcard'
+import { Container } from '../Layout/Container'
 import { datax } from './datax'
 
 import { useWindowSize } from '@/utilities/hooks'
@@ -8,13 +9,13 @@ import Carousel from '../GalleryCarousel/carousel'
 const Events = () => {
   const { isMobile, isTablet } = useWindowSize()
   return (
-    <div className="_body bg-ibtc-black py-[70px]" id="events">
-      <div className="_wrapper flex flex-col gap-[66px]">
+    <Container bg="bg-ibtc-black" id="events">
+      <div className="flex flex-col gap-[66px]">
         <Header isTablet={isTablet} />
         <CardGroup isMobile={isMobile} />
         {isMobile && BTN}
       </div>
-    </div>
+    </Container>
   )
 }
 

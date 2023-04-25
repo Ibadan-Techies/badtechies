@@ -1,10 +1,11 @@
 import { SquiggleLeft, SquiggleRight } from '@/assets/svg'
 import Button from '../Button/button'
+import { Container } from '../Layout/Container'
 
 function SubscribeNewsLetter() {
   return (
-    <div className="_body bg-ibtc-light-yellow relative">
-      <div className="_wrapper flex flex-col items-center justify-center min-h-[25rem] gap-[4rem]">
+    <Container bg="bg-ibtc-light-yellow">
+      <div className="flex flex-col items-center justify-center min-h-[25rem] gap-[4rem]">
         <div className="space-y-[1rem] lg:text-center">
           <h2 className="_header text-ibtc-black">Stay up to date with Us!</h2>
           <p className="text-ibtc-grey-2">
@@ -35,7 +36,7 @@ function SubscribeNewsLetter() {
       </div>
       <SquiggleLeft className="absolute left-0 bottom-0 hidden lg:block" />
       <SquiggleRight className="absolute right-0 bottom-0 hidden lg:block" />
-    </div>
+    </Container>
   )
 }
 
