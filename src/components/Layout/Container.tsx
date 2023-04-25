@@ -13,7 +13,7 @@ export const Container = ({
   return (
     <div
       className={`flex items-center justify-center w-full relative ${
-        treatAs === 'banner' ? '!top-8' : null
+        treatAs === 'banner' ? 'lg:!top-8' : null
       } ${bg}`}
       id={id}
     >
