@@ -1,16 +1,22 @@
-import { ArrowDecLeft, ArrowDecRight } from '@/assets/svg'
+import { ArrowDecLeft, ArrowDecRight, LoveAnimation } from '@/assets/svg'
 import * as React from 'react'
+import { Container } from '../Layout/Container'
 import { ButtonGroup } from './parts'
 
 const Banner = () => {
   return (
-    <div className="_xer23_1212 bg-ibtc-blue _body max-lg:py-16">
-      <div className="_wrapper flex items-end">
-        <ArrowDecRight className="relative basis-[fit-content] bottom-[1.2rem] flex-shrink-0 hidden lg:block" />
-        <Main />
-        <ArrowDecLeft className="relative basis-[fit-content] bottom-[1.2rem] flex-shrink-0 hidden lg:block" />
+    <>
+      <Container bg="bg-ibtc-blue" treatAs={'banner'}>
+        <div className="h-full flex items-end">
+          <ArrowDecRight className="relative basis-[fit-content] bottom-[1.2rem] flex-shrink-0 hidden lg:block" />
+          <Main />
+          <ArrowDecLeft className="relative basis-[fit-content] bottom-[1.2rem] flex-shrink-0 hidden lg:block" />
+        </div>
+      </Container>
+      <div className="w-full bg-ibtc-blue">
+        <LoveAnimation />
       </div>
-    </div>
+    </>
   )
 }
 
@@ -23,7 +29,7 @@ function Main() {
             Black Talents in Africa do not have an equal ground in tech
           </span>
         </p>
-        <p className="_spexXtext max-sm:text-3xl max-sm:leading-8 text-white">
+        <p className="_spexXtext max-md:text-3xl max-md:leading-8 text-white">
           We believe Black Tech Talents should be amplified, especially the
           works they are doing. Do You?
         </p>

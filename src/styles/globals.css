@@ -5,18 +5,14 @@
 /* custom typography */
 @layer base {
   ._header {
-    @apply font-medium xl:text-[3.4rem]/[3.4rem] md:text-[2.5rem]/[2.5rem] text-[2rem]/[2rem];
+    @apply font-medium lg:text-[3.5rem]/[3.5rem] text-[2.5rem]/[2.5rem] font-oswald;
   }
   ._header2 {
-    @apply font-medium lg:text-[1.8rem]/[1.8rem] md:text-[1.7rem]/[1.7rem] text-[1.5rem]/[1.5rem];
+    @apply font-medium lg:text-[1.8rem]/[1.8rem] md:text-[1.7rem]/[1.7rem] text-[1.5rem]/[1.5rem] font-oswald;
   }
 
   .text {
     @apply text-base leading-4;
-  }
-
-  ._xer23_1212 {
-    min-height: calc(40rem - 5.7rem);
   }
 
   ._bg-blur {
@@ -28,29 +24,21 @@
     backdrop-filter: blur(25px);
   }
 
-  ._body {
-    @apply flex items-center justify-center;
-  }
-
   ._spexXtext {
     font-size: calc(1.7rem + 2vw);
     line-height: calc(1.7rem + 2vw);
   }
 
-  ._wrapper {
-    @apply 2xl:container w-11/12;
-  }
-
   /* Carousel css */
   ._34sdf .alice-carousel__prev-btn,
   ._34sdf .alice-carousel__next-btn,
-  ._3434ERR .alice-carousel__prev-btn,
-  ._3434ERR .alice-carousel__next-btn {
+  #_3434ERR .alice-carousel__prev-btn,
+  #_3434ERR .alice-carousel__next-btn {
     display: none;
   }
 
   ._34sdf .alice-carousel__dots-item,
-  ._3434ERR .alice-carousel__dots-item {
+  #_3434ERR .alice-carousel__dots-item {
     width: 1.2rem !important;
     height: 1.2rem !important;
   }

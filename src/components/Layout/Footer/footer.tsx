@@ -1,12 +1,12 @@
 import * as React from 'react'
-import { Logo } from '../Logo'
+import { Logo } from '../../Logo'
 import { LinkedIn, Twitter } from '@/assets/svg'
 import { useWindowSize } from '@/utilities/hooks'
 import clsx from 'clsx'
+import { Container } from '../Container'
 
 const Footer = () => {
-  const size = useWindowSize()
-  const max_table_screen = Number(size.width) < 784 ? true : false
+  const { isMobile } = useWindowSize()
 
   return (
     <footer
@@ -15,29 +15,30 @@ const Footer = () => {
         'text-[0.7rem]/[0.7rem]'
       )}
     >
-      <div className="_body border-y">
-        <div
-          className={clsx(
-            'flex flex-col gap-5 md:justify-between md:flex-row md:py-10 _wrapper',
-            'py-5'
-          )}
-        >
+      <div className=" border-y">
+        <Container>
           <div
             className={clsx(
-              'flex w-full md:w-[44%] md:justify-between',
-              'gap-6'
+              'flex flex-col gap-5 md:justify-between md:flex-row md:py-10'
             )}
           >
-            <Logo
-              width="lg:w-[120px] md:w-[100px] w-[39px]"
-              height="lg:h-[118.67px] md:h-[98.67px] h-[38.5px]"
-            />
-            <MoreList />
+            <div
+              className={clsx(
+                'flex w-full md:w-[44%] md:justify-between',
+                'gap-6'
+              )}
+            >
+              <Logo
+                width="lg:w-[120px] md:w-[100px] w-[39px]"
+                height="lg:h-[118.67px] md:h-[98.67px] h-[38.5px]"
+              />
+              <MoreList />
+            </div>
+            <Others isMobile={isMobile} />
           </div>
-          <Others max_table_screen={max_table_screen} />
-        </div>
+        </Container>
       </div>
-      {max_table_screen && GetIntouch}
+      {isMobile && GetIntouch}
       <p className="text-center pt-6">
         &copy; Ibadan Tech Community is a registered non - profit backed by the
         Nigerian Law (2023)
@@ -46,7 +47,7 @@ const Footer = () => {
   )
 }
 
-function Others({ max_table_screen }: { max_table_screen: boolean }) {
+function Others({ isMobile }: { isMobile: boolean }) {
   return (
     <div
       className={clsx(
@@ -58,7 +59,7 @@ function Others({ max_table_screen }: { max_table_screen: boolean }) {
         This Human development is backed by Jason Palmer, Ije, Zakk, and Mark
         Techson.
       </p>
-      {!max_table_screen && GetIntouch}
+      {!isMobile && GetIntouch}
     </div>
   )
 }
@@ -95,7 +96,10 @@ function MoreList() {
 }
 
 const GetIntouch = (
-  <p className="flex flex-col gap-[16px] max-lg:items-center max-lg:pt-4">
+  <p
+    className="flex flex-col gap-[16px] max-lg:items-center max-lg:pt-4"
+    id="contact-us"
+  >
     <span className="text-xl leading-5 text-white">Want to get in touch?</span>
     <span className="flex gap-2">
       <Twitter className="fill-white hover:fill-ibtc-blue" />

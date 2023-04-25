@@ -22,6 +22,13 @@ module.exports = {
       fontSize: {
         'text-sm': '0.8125rem',
       },
+      fontFamily: {
+        sans: ['Manrope'],
+        oswald: ['Oswald'],
+      },
+      screens: {
+        '3xl': '2000px',
+      },
     },
   },
   plugins: [],

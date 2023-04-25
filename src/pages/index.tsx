@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Footer from '@/components/Footer/footer'
-import NavigationBar from '@/components/Navbar/navbar'
+import { Footer } from '@/components/Layout/Footer'
+import { Navbar } from '@/components/Layout/Navbar'
 import LandingBanner from '@/components/LandingBanner/banner'
 import AboutUs from '@/components/LandingAboutUs/about'
 import Events from '@/components/LandingEvent/event'
@@ -18,8 +18,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavigationBar />
-      <LandingBanner />
+      <div className="bg-ibtc-blue">
+        <Navbar />
+        <LandingBanner />
+      </div>
       <AboutUs />
       <Events />
       <Gallery />

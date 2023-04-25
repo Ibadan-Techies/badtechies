@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Button from '../Button/button'
 import { OceanOrnament } from '@/assets/svg'
+import { Container } from '../Layout/Container'
 
 // parts
 import MainContent from './main'
@@ -12,14 +13,14 @@ const AboutUs = () => {
     <div
       className={clsx({
         // desktop
-        ['pt-[4rem] relative flex flex-col lg:gap-60 min-h-[43rem] overflow-hidden']:
-          true,
+        [' relative flex flex-col min-h-[43rem] overflow-hidden']: true,
         // mobile
         ['gap-10']: true,
       })}
+      id="about-us"
     >
-      <div className="flex-col _body">
-        <div className="flex flex-col  _wrapper gap-5">
+      <Container>
+        <div className="flex flex-col gap-5">
           <span className="w-fit">
             <Button
               label
@@ -33,7 +34,7 @@ const AboutUs = () => {
           </span>
           <MainContent />
         </div>
-      </div>
+      </Container>
       <OceanOrnament className="text-2xl absolute left-0 bottom-0 mt-10 hidden lg:block" />
       <Frame />
     </div>

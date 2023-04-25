@@ -28,5 +28,9 @@ export function useWindowSize() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  return windowSize
+  const isMobile = Number(windowSize.width) < 625 ? true : false
+  const isTablet = Number(windowSize.width) > 770 ? true : false
+  const isDesktop = Number(windowSize.width) > 1024 ? true : false
+
+  return { windowSize, isMobile, isTablet, isDesktop }
 }
