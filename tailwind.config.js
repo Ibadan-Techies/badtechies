@@ -26,6 +26,9 @@ module.exports = {
         sans: ['Manrope'],
         oswald: ['Oswald'],
       },
+      screens: {
+        '3xl': '2000px',
+      },
     },
   },
   plugins: [],

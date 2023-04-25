@@ -18,7 +18,7 @@ export const Container = ({
       id={id}
     >
       <div
-        className={`2xl:w-[60%] lg:w-[88%] w-11/12 md:py-12 py-10 ${
+        className={`3xl:w-[60%] lg:w-[88%] w-11/12 md:py-12 py-10 ${
           treatAs === 'nav' ? '!py-0' : null
         } ${treatAs === 'banner' ? '!py-7' : null}`}
       >
