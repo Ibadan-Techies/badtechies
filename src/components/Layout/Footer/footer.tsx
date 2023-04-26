@@ -1,6 +1,5 @@
 import * as React from 'react'
-import { Logo } from '../../Logo'
-import { LinkedIn, Twitter } from '@/assets/svg'
+import { LinkedIn, Twitter, IBTCLogo } from '@/assets/svg'
 import { useWindowSize } from '@/utilities/hooks'
 import clsx from 'clsx'
 import { Container } from '../Container'
@@ -28,10 +27,7 @@ const Footer = () => {
                 'gap-6'
               )}
             >
-              <Logo
-                width="lg:w-[120px] md:w-[100px] w-[39px]"
-                height="lg:h-[118.67px] md:h-[98.67px] h-[38.5px]"
-              />
+              <IBTCLogo className="lg:w-[120px] md:w-[100px] w-[49px] lg:h-[118.67px] md:h-[98.67px] h-[48.5px] fill-white" />
               <MoreList />
             </div>
             <Others isMobile={isMobile} />
