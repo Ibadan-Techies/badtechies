@@ -7,18 +7,18 @@ const Frame = () => {
       <div className="relative -bottom-10">
         <OvalImageFrame
           bgColor="green"
-          src="https://res.cloudinary.com/dfliypjzt/image/upload/v1681297044/gallery/ogb1_kxukql.png"
+          src="https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681297044/gallery/ogb1_kxukql"
         />
       </div>
       <div className="relative bottom-10">
         <OvalImageFrame
           bgColor="red"
-          src="https://res.cloudinary.com/dfliypjzt/image/upload/v1681297044/gallery/thegangshit_bqixgy.png"
+          src="https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681297044/gallery/thegangshit_bqixgy"
         />
       </div>
       <OvalImageFrame
         bgColor="yellow"
-        src="https://res.cloudinary.com/dfliypjzt/image/upload/v1681297043/gallery/meku_d8ruqd.png"
+        src="https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681297043/gallery/meku_d8ruqd"
       />
     </div>
   )

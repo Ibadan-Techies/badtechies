@@ -1,9 +1,40 @@
 import { ArrowDecLeft, ArrowDecRight, LoveAnimation } from '@/assets/svg'
 import * as React from 'react'
-import { Container } from '../Layout/Container'
-import { ButtonGroup } from './parts'
+import { Container } from '../Container'
+import Button from '../../Button/button'
+import clsx from 'clsx'
 
-const Banner = () => {
+const datax = [
+  'Yes, Let me empower Black Talents',
+  'Let me in, I want to be empowered',
+]
+
+const ButtonGroup = () => {
+  return (
+    <div
+      className={clsx(
+        'flex self-center gap-10 lg:w-[45rem]',
+        'max-md:flex-col max-md:gap-6 w-full items-center'
+      )}
+    >
+      {datax.map((data, index) => (
+        <Button
+          key={index}
+          style={{
+            color: 'text-ibtc-black',
+            background: 'bg-[#F3D6A5]',
+            hoverBg: 'hover:bg-[#EAB862]',
+            hoverColor: 'hover:text-white',
+          }}
+        >
+          {data}
+        </Button>
+      ))}
+    </div>
+  )
+}
+
+export const Banner = () => {
   return (
     <>
       <Container bg="bg-ibtc-blue" treatAs={'banner'}>
@@ -42,5 +73,3 @@ function Main() {
     </div>
   )
 }
-
-export default Banner

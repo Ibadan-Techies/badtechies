@@ -1,9 +1,8 @@
 import * as React from 'react'
-import { Logo } from '../../Logo'
 import { list } from './datax'
 import Button from '../../Button/button'
 
-import { Hamburger, X } from '@/assets/svg'
+import { Hamburger, X, IBTCLogo } from '@/assets/svg'
 import { Container } from '../Container'
 // @ts-ignore
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
@@ -34,14 +33,14 @@ const NavigationBar = () => {
     >
       <Container treatAs={'nav'}>
         <div className="_wrapper flex items-center justify-between">
-          <Logo width="w-[70px]" height="h-[69.22px]" />
+          <IBTCLogo className="lg:w-[90px] w-14 lg:h-[89.22px] h-14 fill-white" />
 
           {!isDesktop ? (
             <button onClick={() => setIsOpen((pre) => !pre)}>
               {isOpen ? (
-                <X className="fill-white w-[50px] h-[49.22px]" />
+                <X className="fill-white lg:w-[50px] w-8 h-8 lg:h-[49.22px]" />
               ) : (
-                <Hamburger className="w-[60px] h-[59.22px]" />
+                <Hamburger className="lg:w-[60px] w-10 h-10 lg:h-[59.22px]" />
               )}
             </button>
           ) : (
