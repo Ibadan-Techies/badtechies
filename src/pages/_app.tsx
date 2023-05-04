@@ -6,7 +6,7 @@ import { DefaultSeo } from 'next-seo'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <div>
       <Head>
         <meta name="viewport" content="width=device-width" />
         <link
@@ -35,6 +35,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <DefaultSeo {...SEO} />
         <Component {...pageProps} />
       </div>
-    </>
+    </div>
   )
 }
