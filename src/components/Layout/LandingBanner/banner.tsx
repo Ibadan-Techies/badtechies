@@ -5,8 +5,8 @@ import Button from '../../Button/button'
 import clsx from 'clsx'
 
 const datax = [
-  'Yes, Let me empower Black Talents',
-  'Let me in, I want to be empowered',
+  ['Yes, Let me empower Black Talents', 'https://forms.gle/d6XDGm68t42o9ZjK7'],
+  ['Let me in, I want to be empowered', 'https://forms.gle/YUFNtMk1b1i6iUcg9'],
 ]
 
 const ButtonGroup = () => {
@@ -19,6 +19,7 @@ const ButtonGroup = () => {
     >
       {datax.map((data, index) => (
         <Button
+          href={data[1]}
           key={index}
           style={{
             color: 'text-ibtc-black',
@@ -27,7 +28,7 @@ const ButtonGroup = () => {
             hoverColor: 'hover:text-white',
           }}
         >
-          {data}
+          {data[0]}
         </Button>
       ))}
     </div>
