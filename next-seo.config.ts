@@ -1,7 +1,7 @@
 import { DefaultSeoProps } from 'next-seo'
 
 const config: DefaultSeoProps = {
-  titleTemplate: '%s | Ibadan Techies Club',
+  titleTemplate: '%s - The Community that amplifies Africa Tech Talents',
   defaultTitle: 'Ibadan Techies Club',
   canonical: 'https://ibadantc.org',
   openGraph: {

@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="Home"
+        title="Welcome Badtechies"
         description="A community of tech enthusiasts. We are a non-profit. Our vision is to amplify tech talents from Africa and the work they're doing. we do this by supporting, educating & bringing us together."
       />
       <div className="bg-ibtc-blue">
