@@ -20,7 +20,7 @@ export default function Document() {
         ></link>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className="* box-border m-0 p-0 overflow-wrap break-word focus:shadow-outline-gray">
+      <body className="* box-border m-0 p-0 overflow-wrap break-word focus:shadow-outline-gray antialiased">
         <Main />
         <NextScript />
       </body>
