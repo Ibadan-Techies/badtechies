@@ -23,6 +23,7 @@ const AboutUs = () => {
         <div className="flex flex-col gap-5">
           <span className="w-fit">
             <Button
+              href="https://forms.gle/YUFNtMk1b1i6iUcg9"
               label
               style={{
                 color: 'text-ibtc-blue',
