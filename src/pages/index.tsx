@@ -1,7 +1,7 @@
 import { Footer } from '@/components/Layout/Footer'
 import { Navbar } from '@/components/Layout/Navbar'
 import { Banner as LandingBanner } from '@/components/Layout/LandingBanner'
-import AboutUs from '@/components/LandingAboutUs/about'
+import AboutUs from '@/components/Layout/LandingAboutUs/about'
 import Events from '@/components/LandingEvent/event'
 import Gallery from '@/components/Gallery/gallery'
 import Unique from '@/components/LandingUnique/unique'

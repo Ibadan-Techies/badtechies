@@ -1,4 +1,4 @@
-import OvalImageFrame from '../OvalFrame/oval-frame'
+import OvalImageFrame from '../../OvalFrame/oval-frame'
 
 const Frame = () => {
   return (

@@ -1,6 +1,13 @@
-import Button from '../Button/button'
+import * as React from 'react'
+import Button from '../../Button/button'
+import { OceanOrnament } from '@/assets/svg'
+import { Container } from '../Container'
 
-const Main = () => (
+// parts
+import Frame from './frame'
+import clsx from 'clsx'
+
+const MainContent = (
   <div className="flex lg:gap-16 gap-4 max-lg:flex-col">
     <p className="_header text-ibtc-black">
       A community of tech enthusiasts based in the heart of Ibadan, Nigeria.
@@ -21,6 +28,7 @@ const Main = () => (
       </p>
       <span className="lg:w-fit">
         <Button
+          href="https://forms.gle/YUFNtMk1b1i6iUcg9"
           style={{
             background: 'bg-ibtc-blue',
             color: 'text-white',
@@ -35,4 +43,37 @@ const Main = () => (
   </div>
 )
 
-export default Main
+const AboutUs = () => {
+  return (
+    <div
+      className={clsx({
+        // desktop
+        [' relative flex flex-col min-h-[43rem] overflow-hidden']: true,
+        // mobile
+        ['gap-10']: true,
+      })}
+      id="about-us"
+    >
+      <Container>
+        <div className="flex flex-col gap-5">
+          <span className="w-fit">
+            <Button
+              label
+              style={{
+                color: 'text-ibtc-blue',
+                background: 'bg-ibtc-blue-light',
+              }}
+            >
+              ABOUT US
+            </Button>
+          </span>
+          {MainContent}
+        </div>
+      </Container>
+      <OceanOrnament className="text-2xl absolute left-0 bottom-0 mt-10 hidden lg:block" />
+      <Frame />
+    </div>
+  )
+}
+
+export default AboutUs
