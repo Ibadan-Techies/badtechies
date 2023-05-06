@@ -23,14 +23,14 @@ interface WithOutBorder extends TStyleProps {
 type Props =
   | {
       outline: true
-      onClick: (e: any) => any
+      onClick?: (e: any) => any
       href?: string
       label?: boolean
       type?: 'button' | 'submit'
       style: WithBorder
     }
   | {
-      onClick: (e: any) => any
+      onClick?: (e: any) => any
       outline?: never | false
       href?: string
       label?: boolean

@@ -3,55 +3,25 @@ import { SquiggleLeft, SquiggleRight } from '@/assets/svg'
 import Button from '../Button/button'
 import { Container } from '../Layout/Container'
 
-const headers = {
-  Authorization: 'Token df8cf218-3976-4e75-9ee6-017a6ffe2d4f',
-}
-const BASE_URL = 'https://api.buttondown.email'
-const ENDPOINT = '/v1/subscribers'
-
 const { useState } = React
 function SubscribeNewsLetter() {
-  const [formState, setFormState] = useState('submit')
   const [email, setEmail] = useState('')
-  const [dis, setDis] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const target = e.target
     setEmail(target.value)
   }
-
-  // function encode(data: string[]) {
-  //   return Object.keys(data)
-  //     .map(
-  //       (key: number) =>
-  //         encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-  //     )
-  //     .join('&')
-  // }
-
-  const handleSubmit = (e: Event) => {
-    setFormState('processing...')
-    setDis(true)
-    const form = e.target
-    fetch(BASE_URL + ENDPOINT, {
-      method: 'POST',
-      headers: {
-        Authorization: 'Token df8cf218-3976-4e75-9ee6-017a6ffe2d4f',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email: `${email}` }),
-    })
-      .then((res) => {
-        if (!res.ok) throw new Error()
-        alert(
-          'Wait a sec, your data is collected. Sharpview will reach back to you soon. Bye!!!'
-        )
-      })
-      .catch((err) => alert(err))
-  }
   return (
     <Container bg="bg-ibtc-light-yellow">
-      <div className="flex flex-col items-center justify-center min-h-[25rem] gap-[4rem]">
+      <form
+        action="https://buttondown.email/api/emails/embed-subscribe/BadTechyes"
+        method="post"
+        target="popupwindow"
+        onSubmit={() => {
+          window.open('https://buttondown.email/BadTechyes', 'popupwindow')
+        }}
+        className="flex flex-col items-center justify-center min-h-[25rem] gap-[4rem]"
+      >
         <div className="space-y-[1rem] lg:text-center">
           <h2 className="_header text-ibtc-black">Stay up to date with Us!</h2>
           <p className="text-ibtc-grey-2">
@@ -71,8 +41,7 @@ function SubscribeNewsLetter() {
           />
           <span className="w-full lg:w-fit h-[3rem] lg:h-[3.5rem]">
             <Button
-              onClick={handleSubmit}
-              type="button"
+              type="submit"
               style={{
                 color: 'text-ibtc-grey',
                 background: 'bg-ibtc-black',
@@ -82,7 +51,7 @@ function SubscribeNewsLetter() {
             </Button>
           </span>
         </div>
-      </div>
+      </form>
       <SquiggleLeft className="absolute left-0 bottom-0 hidden lg:block" />
       <SquiggleRight className="absolute right-0 bottom-0 hidden lg:block" />
     </Container>
