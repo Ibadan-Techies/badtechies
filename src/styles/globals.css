@@ -42,4 +42,16 @@
     width: 1.2rem !important;
     height: 1.2rem !important;
   }
+
+  ._stroke_dash_300 {
+    stroke-dasharray: 400;
+  }
+  ._stroke-white {
+    stroke: white;
+    fill: white;
+  }
+  ._stroke-grey {
+    stroke: #cad9f2;
+    fill: #cad9f2;
+  }
 }
