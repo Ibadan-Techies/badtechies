@@ -31,7 +31,7 @@ function Nav({ isMobile }: { isMobile: boolean }) {
     <div className={clsx('flex items-center justify-between', 'pt-6')}>
       <span className="h-[9.5rem] w-[8.6rem] lg:block hidden"></span>
       <span className="flex justify-center items-center _header">
-        What makes us Unique
+        What makes us Unique?
       </span>
       {!isMobile && <OvalOrnament className="h-[9.5rem] w-[8.6rem]" />}
     </div>
