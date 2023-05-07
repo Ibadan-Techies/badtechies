@@ -15,7 +15,7 @@ const Items = sources.map((item, index) => {
 
 function GalleryGrid({ content }: { content: string[] }) {
   return (
-    <div className="h-[35rem] flex justify-center" id="gallery">
+    <div className="h-[35rem] lg:h-[35rem] flex justify-center" id="gallery">
       <div className="flex gap-[26px] max-2xl:w-full">
         <LongImage src={content[0]} />
         <div className="flex flex-col h-full gap-[26px]">
@@ -36,7 +36,7 @@ const Gallery = () => {
         <div>
           <Carousel
             items={sources[r].map((item, index) => (
-              <div key={index} className="h-[25rem] w-full">
+              <div key={index} className="h-[23rem] w-full">
                 <div className="flex w-full h-full">
                   <ShortImage src={item} />
                 </div>
