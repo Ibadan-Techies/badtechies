@@ -29,6 +29,18 @@ module.exports = {
       screens: {
         '3xl': '2000px',
       },
+      animation: {
+        strok: 'strok 2s',
+        'strok-reverse': 'strok 2s reverse',
+      },
+      keyframes: {
+        strok: {
+          '100%': {
+            'stroke-dashoffset': 400,
+            fill: 'transparent',
+          },
+        },
+      },
     },
   },
   plugins: [],

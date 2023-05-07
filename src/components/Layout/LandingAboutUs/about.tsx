@@ -70,7 +70,7 @@ const AboutUs = () => {
           {MainContent}
         </div>
       </Container>
-      <OceanOrnament className="text-2xl absolute left-0 bottom-0 mt-10 hidden lg:block" />
+      <OceanOrnament className="text-2xl absolute left-0 bottom-0 mt-10 hidden lg:block _stroke-grey" />
       <Frame />
     </div>
   )

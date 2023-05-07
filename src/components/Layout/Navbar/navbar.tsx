@@ -36,7 +36,10 @@ const NavigationBar = () => {
           <IBTCLogo className="lg:w-[90px] w-14 lg:h-[89.22px] h-14 fill-white" />
 
           {!isDesktop ? (
-            <button onClick={() => setIsOpen((pre) => !pre)}>
+            <button
+              onClick={() => setIsOpen((pre) => !pre)}
+              className="lg:hidden"
+            >
               {isOpen ? (
                 <X className="fill-white lg:w-[50px] w-8 h-8 lg:h-[49.22px]" />
               ) : (
