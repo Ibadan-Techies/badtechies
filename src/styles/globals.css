@@ -55,3 +55,5 @@
     fill: #cad9f2;
   }
 }
+
+@import url(./../components//StackedPhotos/stackedPhotos.css);

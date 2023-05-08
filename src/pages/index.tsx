@@ -1,4 +1,5 @@
-import { Footer } from '@/components/Layout/Footer'
+/**
+ * import { Footer } from '@/components/Layout/Footer'
 import { Navbar } from '@/components/Layout/Navbar'
 import { Banner as LandingBanner } from '@/components/Layout/LandingBanner'
 import AboutUs from '@/components/Layout/LandingAboutUs/about'
@@ -8,11 +9,17 @@ import Unique from '@/components/LandingUnique/unique'
 import FAQ from '@/components/FAQ/faq-index'
 import SubscribeNewsLetter from '@/components/SubscribeNewsletter/subscribe-newsletter'
 import Seo from '@/components/Seo/Seo'
+*/
+
+import { StackedPhotos } from '@/components/StackedPhotos'
 
 export default function Home() {
   return (
     <>
-      <Seo
+      <div className="flex justify-center items-center h-screen">
+        <StackedPhotos />
+      </div>
+      {/* <Seo
         title="Welcome Badtechies"
         description="A community of tech enthusiasts. We are a non-profit. Our vision is to amplify tech talents from Africa and the work they're doing. we do this by supporting, educating & bringing us together."
       />
@@ -26,7 +33,7 @@ export default function Home() {
       <Unique />
       <SubscribeNewsLetter />
       <FAQ />
-      <Footer />
+      <Footer /> */}
     </>
   )
 }

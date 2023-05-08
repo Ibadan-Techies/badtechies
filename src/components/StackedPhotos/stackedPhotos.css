@@ -1,0 +1,31 @@
+._9123_imageWrapper {
+  width: 20rem;
+  height: 20rem;
+  border: 10px solid red;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+._9123_imageWrapper:hover .img {
+  color: red;
+}
+._9123_imageWrapper .img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 5px solid white;
+  border-bottom-width: 15px;
+  box-shadow: 0px 20px 50px rgba(23, 23, 34, 0.23);
+  z-index: 2;
+  transition: transform 0.3s ease-in-out;
+}
+._9123_imageWrapper .slide-right {
+  transform: rotate(50deg) translateX(250px) !important;
+}
+._9123_imageWrapper .slide-left {
+  transform: rotate(-100deg) translateX(-250px);
+}
+
+._9123_imageWrapper .back {
+  z-index: 1;
+}
