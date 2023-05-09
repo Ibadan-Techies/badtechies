@@ -58,7 +58,7 @@ function Main() {
       <div className="flex flex-col gap-[22px] lg:gap-6 text-lg leading-[1.125rem]">
         <p className="text-white">
           <span className="py-2.5 px-4 bg-ibtc-blue-dark max-lg:text-xs max-lg:leading-3 lg:w-fit max-sm:block">
-            Black Talents in Africa do not have an equal ground in tech
+            Talents in Africa do not have an equal ground in tech
           </span>
         </p>
         <p className="_spexXtext max-md:text-3xl max-md:leading-8 text-white">
@@ -66,8 +66,8 @@ function Main() {
           works they are doing. Do You?
         </p>
         <p className="text-ibtc-offwhite max-lg:text-base max-lg:leading-[22.4px]">
-          Since 2022, People who believe in giving Blacks an equal chance and
-          ground in tech have joined us
+          Since 2022, People who believe in giving Africa's Talents an equal
+          chance and ground in tech have joined us.
         </p>
       </div>
       <ButtonGroup />

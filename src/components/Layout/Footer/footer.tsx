@@ -62,7 +62,7 @@ function Others({ isMobile }: { isMobile: boolean }) {
 
 function MoreList() {
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6 max:sm:w-[75%]">
       <header
         className={clsx(
           'h-6 md:text-2xl md:leading-6 text-white font-semibold',
@@ -71,21 +71,24 @@ function MoreList() {
       >
         Learn More
       </header>
-      <ul className="flex flex-col gap-4">
-        {[
-          'About Us',
-          'Why this work matters',
-          'FAQs',
-          'Terms and Disclaimer',
-          'Transparency',
-        ].map((item, index) => (
-          <li
-            key={index}
-            className="hover:text-ibtc-brown-light cursor-pointer"
-          >
-            {item}
+      <ul className="flex md:flex-col flex-wrap gap-4 w-full max-sm:justify-between">
+        <div className="space-y-4">
+          <li className="hover:text-ibtc-brown-light cursor-pointer">
+            About Us
           </li>
-        ))}
+          <li className="hover:text-ibtc-brown-light cursor-pointer">FAQ</li>
+          <li className="hover:text-ibtc-brown-light cursor-pointer">
+            Transparency
+          </li>
+        </div>
+        <div className="space-y-4">
+          <li className="hover:text-ibtc-brown-light cursor-pointer">
+            Terms and Disclaimer
+          </li>
+          <li className="hover:text-ibtc-brown-light cursor-pointer">
+            Why this work mstters
+          </li>
+        </div>
       </ul>
     </div>
   )

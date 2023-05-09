@@ -11,8 +11,9 @@
     @apply font-medium lg:text-[1.8rem]/[1.8rem] md:text-[1.7rem]/[1.7rem] text-[1.5rem]/[1.5rem] font-oswald;
   }
 
-  .text {
-    @apply text-base leading-4;
+  .text,
+  p {
+    @apply md:text-base lg:leading-[1.4rem] md:leading-4 text-sm;
   }
 
   ._bg-blur {

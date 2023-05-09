@@ -46,7 +46,7 @@ function Content() {
           <header className="_header2 text-ibtc-black md:mb-5 mb-4">
             {data[0]}
           </header>
-          <p className="text-[#4F4F4F] text-base leading-[22.4px]">{data[1]}</p>
+          <p className="text-[#4F4F4F]">{data[1]}</p>
         </section>
       ))}
     </div>

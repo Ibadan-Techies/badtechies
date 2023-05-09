@@ -13,18 +13,21 @@ const MainContent = (
       A community of tech enthusiasts based in the heart of Ibadan, Nigeria.
     </p>
     <div className="lg:gap-[2.3rem] gap-7 flex flex-col text-[#4F4F4F]">
-      <p className="text leading-[22.4px]">
+      <p>
         We are a diverse group of professionals, students, entrepreneurs, and
         hobbyists who share a common passion for all things tech.
       </p>
 
-      <p className="text leading-[22.4px]">
-        Our mission is to create a platform where individuals can come together
-        to learn, share knowledge, and collaborate on projects that have the
-        potential to make a significant impact in our community and beyond. We
-        believe that technology has the power to solve some of the world's most
-        pressing challenges, and we are committed to leveraging our skills and
-        expertise to create positive change.
+      <p>
+        <b className="opacity-80 text-[#2f3549]">
+          Our mission is to be the platform that truly supports Africa's talents
+          to co-learn, share knowledge, research and collaborate on projects
+          that have the potential to make a significant impact in our community
+          and beyond.
+        </b>
+        We believe that technology has the power to solve some of the world's
+        most pressing challenges, and we are committed to leveraging our skills
+        and expertise to create positive change.
       </p>
       <span className="lg:w-fit">
         <Button
