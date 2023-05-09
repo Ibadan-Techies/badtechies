@@ -11,7 +11,7 @@ function FAQ() {
   return (
     <div className="text-white lg:p-[2.8rem] md:p-[14px] lg:w-11/12 flex flex-col gap-[13px] w-full">
       {FAQs.map((faq, index) => (
-        <div
+        <section
           className="bg-ibtc-blue rounded w-full py-[25px] lg:px-[50px] px-4"
           key={index}
         >
@@ -25,11 +25,9 @@ function FAQ() {
             </span>
           </button>
           {activeIndex == index && (
-            <div className="mt-[25px] rounded-lg text-[18px]/[25.56px]">
-              {faq.answer}
-            </div>
+            <p className="mt-[25px] rounded-lg">{faq.answer}</p>
           )}
-        </div>
+        </section>
       ))}
     </div>
   )

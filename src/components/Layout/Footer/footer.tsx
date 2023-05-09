@@ -62,7 +62,7 @@ function Others({ isMobile }: { isMobile: boolean }) {
 
 function MoreList() {
   return (
-    <div className="flex flex-col gap-6 w-[75%]">
+    <div className="flex flex-col gap-6 max:sm:w-[75%]">
       <header
         className={clsx(
           'h-6 md:text-2xl md:leading-6 text-white font-semibold',
