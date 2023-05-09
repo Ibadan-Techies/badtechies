@@ -1,7 +1,6 @@
 import * as React from 'react'
 import Image from 'next/image'
 import { sources } from '../GalleryCarousel/sources'
-import { TimerOptions } from 'timers'
 
 const get_img_degree = (total: number, index: number) => {
   if (index === 0) return total + total * 1.5
@@ -44,15 +43,30 @@ export function StackedPhotos() {
     }
   }, [])
 
-  const handleOnClick = () => {
+  const handleOnClick = (event: React.MouseEvent<HTMLDivElement>) => {
     if (!active) {
       setActive(true)
-      last?.add('slide-right')
+
+      const clickTarget = imagesRef.current
+      // What side of the element was clicked. Read more
+      // https://stackoverflow.com/questions/15685708/determining-if-mouse-click-happened-in-left-or-right-half-of-div
+      const clickTargetWidth = clickTarget?.offsetWidth,
+        xCoordInClickTarget = event.clientX - Number(clickTarget?.offsetLeft)
+
+      let sideClicked = ''
+      if (Number(clickTargetWidth) / 2 > xCoordInClickTarget) {
+        // clicked left
+        sideClicked = 'slide-left'
+        last?.add('slide-left')
+      } else {
+        // clicked right
+        sideClicked = 'slide-right'
+        last?.add('slide-right')
+      }
 
       timerRef1.current = setTimeout(function () {
-        last?.remove('slide-right')
+        last?.remove(sideClicked)
         last?.add('back')
-        console.log(last)
 
         timerRef2.current = setTimeout(function () {
           imagesRef.current?.insertBefore(

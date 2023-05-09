@@ -1,14 +1,11 @@
 ._9123_imageWrapper {
   width: 20rem;
   height: 20rem;
-  border: 10px solid red;
+  border: 10px solid rgb(147, 127, 127, 0.35);
   position: relative;
   transition: transform 0.3s ease-in-out;
 }
 
-._9123_imageWrapper:hover .img {
-  color: red;
-}
 ._9123_imageWrapper .img {
   width: 100%;
   height: 100%;
@@ -20,10 +17,10 @@
   transition: transform 0.3s ease-in-out;
 }
 ._9123_imageWrapper .slide-right {
-  transform: rotate(50deg) translateX(250px) !important;
+  transform: rotate(45deg) translateX(150px) !important;
 }
 ._9123_imageWrapper .slide-left {
-  transform: rotate(-100deg) translateX(-250px);
+  transform: rotate(-45deg) translateX(-150px) !important;
 }
 
 ._9123_imageWrapper .back {
