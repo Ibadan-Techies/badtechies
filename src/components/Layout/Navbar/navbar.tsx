@@ -49,6 +49,17 @@ const NavigationBar = () => {
           ) : (
             <div className="flex items-center text text-white gap-20">
               <ul className="flex gap-2 items-center">
+                <li>
+                  <Button
+                    href={'/about'}
+                    style={{
+                      color: 'text-white',
+                      fontSize: 'text-[16px]/[16px]',
+                    }}
+                  >
+                    About Us
+                  </Button>
+                </li>
                 {list.map((item, index) => (
                   <li key={index}>
                     <Button

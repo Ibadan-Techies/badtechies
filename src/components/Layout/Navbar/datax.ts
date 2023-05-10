@@ -1,1 +1,1 @@
-export const list = ['About Us', 'Gallery', 'Events', 'Contact Us']
+export const list = ['Gallery', 'Events', 'Contact Us']
