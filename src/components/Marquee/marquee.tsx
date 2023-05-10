@@ -88,7 +88,9 @@ export function IBTCMarquee({
     >
       <div
         className={`w-full py-6 lg:py-12 whitespace-nowrap flex flex-row ${
-          reverse ? 'animate-marqueeReverse' : 'animate-marquee'
+          reverse
+            ? 'animate-marqueeReverse lg:animate-large-marqueeReverse'
+            : 'animate-marquee lg:animate-large-marquee'
         }`}
         style={{
           animationPlayState: shouldPlay ? 'running' : 'paused',
@@ -99,7 +101,9 @@ export function IBTCMarquee({
       <div
         aria-hidden="true"
         className={`w-full absolute top-0 py-6 lg:py-12 whitespace-nowrap flex flex-row ${
-          reverse ? 'animate-marqueeReverse2' : 'animate-marquee2'
+          reverse
+            ? 'animate-marqueeReverse2 lg:animate-large-marqueeReverse2'
+            : 'animate-marquee2 lg:animate-large-marquee2'
         }`}
         style={{
           animationPlayState: shouldPlay ? 'running' : 'paused',
@@ -124,7 +128,7 @@ const CommunityImages = memo(function Images({
         <div
           key={i}
           className={clsx(
-            `group flex justify-center px-5 min-w-[40%] lg:min-w-[25%] rounded-2xl relative`
+            `group flex justify-center px-5 min-w-[50%] lg:min-w-[25%] rounded-2xl relative`
           )}
         >
           <div

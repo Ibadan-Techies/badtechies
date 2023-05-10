@@ -32,12 +32,22 @@ module.exports = {
       animation: {
         strok: 'strok 2s',
         'strok-reverse': 'strok 2s reverse',
-        marquee: 'marquee 40s linear infinite',
-        marquee2: 'marquee2 40s linear infinite',
+        marquee: 'marquee 42s linear infinite',
+        marquee2: 'marquee2 42s linear infinite',
         marqueeReverse: 'marquee 45s reverse infinite',
         marqueeReverse2: 'marquee2 45s reverse infinite',
+
+        'large-marquee': 'large-marquee 70s linear infinite',
+        'large-marquee2': 'large-marquee2 70s linear infinite',
+        'large-marqueeReverse': 'large-marquee 75s reverse infinite',
+        'large-marqueeReverse2': 'large-marquee2 75s reverse infinite',
       },
       keyframes: {
+        shimmer: {
+          '100%': {
+            transform: 'translateX(100%)',
+          },
+        },
         strok: {
           '100%': {
             'stroke-dashoffset': 400,
@@ -46,9 +56,17 @@ module.exports = {
         },
         marquee: {
           '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-140%)' },
+          '100%': { transform: 'translateX(-260%)' },
         },
         marquee2: {
+          '0%': { transform: 'translateX(260%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
+        'large-marquee': {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-140%)' },
+        },
+        'large-marquee2': {
           '0%': { transform: 'translateX(140%)' },
           '100%': { transform: 'translateX(0%)' },
         },
