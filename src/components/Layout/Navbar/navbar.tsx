@@ -105,6 +105,20 @@ const NavigationBar = () => {
       {!isDesktop && isOpen && (
         <div className="flex flex-col w-full" ref={scrollParentRef}>
           <ul className="flex flex-col gap-2 items-center w-full">
+            <li
+              className="border-b w-full"
+              onClick={() => setIsOpen((pre) => !pre)}
+            >
+              <Button
+                href={'/about'}
+                style={{
+                  color: 'text-white',
+                  fontSize: 'text-[16px]/[16px]',
+                }}
+              >
+                About Us
+              </Button>
+            </li>
             {list.map((item, index) => (
               <li
                 key={index}
