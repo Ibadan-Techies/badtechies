@@ -128,7 +128,7 @@ const CommunityImages = memo(function Images({
         <div
           key={i}
           className={clsx(
-            `group flex justify-center px-5 min-w-[50%] lg:min-w-[25%] rounded-2xl relative`
+            `group flex justify-center px-5 min-w-[55%] lg:min-w-[25%] rounded-2xl relative`
           )}
         >
           <div

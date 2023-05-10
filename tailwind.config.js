@@ -56,10 +56,10 @@ module.exports = {
         },
         marquee: {
           '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-260%)' },
+          '100%': { transform: 'translateX(-280%)' },
         },
         marquee2: {
-          '0%': { transform: 'translateX(260%)' },
+          '0%': { transform: 'translateX(280%)' },
           '100%': { transform: 'translateX(0%)' },
         },
         'large-marquee': {
