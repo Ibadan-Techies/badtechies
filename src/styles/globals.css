@@ -12,8 +12,22 @@
   }
 
   .text,
-  p {
+  p,
+  div,
+  li {
     @apply md:text-base lg:leading-[1.4rem] md:leading-4 text-sm;
+  }
+
+  ._ccd li {
+    list-style-type: none;
+  }
+  ._ccd li:before {
+    padding: 0.2rem;
+    line-height: 20px;
+    vertical-align: top;
+    content: '\2022';
+    font-size: 3rem;
+    color: #2d65bc;
   }
 
   ._bg-blur {

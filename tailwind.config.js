@@ -32,6 +32,10 @@ module.exports = {
       animation: {
         strok: 'strok 2s',
         'strok-reverse': 'strok 2s reverse',
+        marquee: 'marquee 40s linear infinite',
+        marquee2: 'marquee2 40s linear infinite',
+        marqueeReverse: 'marquee 45s reverse infinite',
+        marqueeReverse2: 'marquee2 45s reverse infinite',
       },
       keyframes: {
         strok: {
@@ -39,6 +43,14 @@ module.exports = {
             'stroke-dashoffset': 400,
             fill: 'transparent',
           },
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-140%)' },
+        },
+        marquee2: {
+          '0%': { transform: 'translateX(140%)' },
+          '100%': { transform: 'translateX(0%)' },
         },
       },
     },

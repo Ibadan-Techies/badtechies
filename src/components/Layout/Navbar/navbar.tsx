@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Link from 'next/link'
 import { list } from './datax'
 import Button from '../../Button/button'
 
@@ -33,7 +34,9 @@ const NavigationBar = () => {
     >
       <Container treatAs={'nav'}>
         <div className="_wrapper flex items-center justify-between">
-          <IBTCLogo className="lg:w-[90px] w-14 lg:h-[89.22px] h-14 fill-white" />
+          <Link href="/">
+            <IBTCLogo className="lg:w-[90px] w-14 lg:h-[89.22px] h-14 fill-white" />
+          </Link>
 
           {!isDesktop ? (
             <button
