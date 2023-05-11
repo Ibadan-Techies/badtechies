@@ -1,11 +1,11 @@
 import * as React from 'react'
-import Image from 'next/image'
 import SubscribeNewsLetter from '@/components/SubscribeNewsletter/subscribe-newsletter'
 import { IBTCMarquee } from '@/components/Marquee/marquee'
 import Seo from '@/components/Seo/Seo'
 import Layout from '@/components/Layout'
 import { Container } from '@/components/Layout/Container'
-import { sources } from '@/components/GalleryCarousel/sources'
+import Image from 'next/image'
+import clsx from 'clsx'
 
 const __wrapper =
   'flex lg:gap-16 gap-4 max-md:flex-col items-center max-md:justify-center'
@@ -25,14 +25,14 @@ export default function Home() {
       {Section4}
       {Section2}
       <SubscribeNewsLetter></SubscribeNewsLetter>
-      <MarqueeDesignTeam />
+      <DesignTeam />
     </Layout>
   )
 }
 
 /**section 1 */
 const BoldParagraph = ({ children }: React.PropsWithChildren) => (
-  <p className="lg:w-1/2 w-full text-[2.5rem] leading-[3.125rem] font-semibold">
+  <p className="lg:w-1/2 w-full text-[2.5rem] leading-[2.5rem] lg:text-[3.125rem] lg:leading-[3.125rem] font-semibold">
     {children}
   </p>
 )
@@ -58,7 +58,7 @@ const Section1 = (
         </section>
       </div>
     </div>
-    <div className="w-full h-96 relative mt-9">
+    <div className="w-full lg:h-96 h-40 relative mt-9">
       <Image
         src={
           'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681297044/gallery/thegangshit_bqixgy'
@@ -207,6 +207,137 @@ const Section4 = (
   </Container>
 )
 
-const MarqueeDesignTeam = () => {
-  return <IBTCMarquee images={sources[0]}></IBTCMarquee>
+const srcs = [
+  'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681138097/gallery/grid3_1_zugtwq',
+  'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681138284/gallery/grid3_2_fxfuo2',
+  'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681138067/gallery/grid3_3_rfvy9d',
+  'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681138316/gallery/grid3_4_govmis',
+  'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681138175/gallery/grid1_2d36_eqhbcn',
+]
+
+const { useState, useRef } = React
+const DesignTeam = () => {
+  const [hidden, setHidden] = useState(true)
+  const ref = useRef<HTMLDivElement>(null)
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setHidden(false)
+          console.log('I am on the screen')
+        } else {
+          setHidden(true)
+          console.log('I left')
+        }
+      })
+    })
+    console.log(ref.current)
+    observer.observe(ref.current as Element)
+    return () => observer.disconnect()
+  })
+
+  return (
+    <Container bg="bg-[#444]">
+      <div ref={ref}>
+        <div className="flex gap-4 justify-center max-md:flex-wrap">
+          <div
+            style={{ transition: 'all 1s' }}
+            className={clsx(
+              `w-[8rem] h-[8rem] lg:w-[12rem] lg:h-[12rem] relative blur-sm delay-[0ms] -translate-x-[100px]`,
+              {
+                'opacity-0': hidden,
+                ['opacity-100 !translate-x-0 !blur-0']: !hidden,
+              }
+            )}
+          >
+            <Image
+              fill
+              alt=""
+              src={srcs[4]}
+              className={clsx(
+                'object-cover rounded-3xl border-8 border-[#333]'
+              )}
+            />
+          </div>
+          <div
+            style={{ transition: 'all 1s' }}
+            className={clsx(
+              `w-[8rem] h-[8rem] lg:w-[12rem] lg:h-[12rem] relative blur-sm delay-[200ms] -translate-x-[100px]`,
+              {
+                'opacity-0': hidden,
+                ['opacity-100 !translate-x-0 !blur-0']: !hidden,
+              }
+            )}
+          >
+            <Image
+              fill
+              alt=""
+              src={srcs[3]}
+              className={clsx(
+                'object-cover rounded-3xl border-8 border-[#333]'
+              )}
+            />
+          </div>
+          <div
+            style={{ transition: 'all 1.6s' }}
+            className={clsx(
+              `w-[8rem] h-[8rem] lg:w-[12rem] lg:h-[12rem] relative blur-sm -translate-x-[100px]`,
+              {
+                'opacity-0': hidden,
+                ['opacity-100 !translate-x-0 !blur-0']: !hidden,
+              }
+            )}
+          >
+            <Image
+              fill
+              alt=""
+              src={srcs[2]}
+              className={clsx(
+                'object-cover rounded-3xl border-8 border-[#333]'
+              )}
+            />
+          </div>
+          <div
+            style={{ transition: 'all 1.2s' }}
+            className={clsx(
+              `w-[8rem] h-[8rem] lg:w-[12rem] lg:h-[12rem] relative blur-sm -translate-x-[100px]`,
+              {
+                'opacity-0': hidden,
+                ['opacity-100 !translate-x-0 !blur-0 !delay-10']: !hidden,
+              }
+            )}
+          >
+            <Image
+              fill
+              alt=""
+              src={srcs[1]}
+              className={clsx(
+                'object-cover rounded-3xl border-8 border-[#333]'
+              )}
+            />
+          </div>
+          <div
+            style={{ transition: 'all 2.1s' }}
+            className={clsx(
+              `w-[8rem] h-[8rem] lg:w-[12rem] lg:h-[12rem] relative blur-sm -translate-x-[100px]`,
+              {
+                'opacity-0': hidden,
+                ['opacity-100 !translate-x-0 !blur-0 ']: !hidden,
+              }
+            )}
+          >
+            <Image
+              fill
+              alt=""
+              src={srcs[0]}
+              className={clsx(
+                'object-cover rounded-3xl border-8 border-[#333]'
+              )}
+            />
+          </div>
+        </div>
+      </div>
+    </Container>
+  )
 }

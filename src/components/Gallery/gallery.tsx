@@ -6,7 +6,9 @@ const Gallery = () => {
   return (
     <>
       <Container>
-        <p className="_header" id="gallery">Gallery</p>
+        <p className="_header" id="gallery">
+          Gallery
+        </p>
       </Container>
       <IBTCMarquee images={sources}></IBTCMarquee>
       <IBTCMarquee images={sources2} reverse></IBTCMarquee>

@@ -6,6 +6,10 @@
  * If you will ever use this code, attribute the original owners mentioned as attributes above
  */
 
+// TO DO!!
+// Make this an interface so that there are exposing parameters to
+// to use this.
+
 import * as React from 'react'
 import clsx from 'clsx'
 
@@ -128,7 +132,7 @@ const CommunityImages = memo(function Images({
         <div
           key={i}
           className={clsx(
-            `group flex justify-center px-5 min-w-[55%] lg:min-w-[25%] rounded-2xl relative`
+            `group flex flex-col items-center justify-center px-5 min-w-[55%] lg:min-w-[25%] rounded-2xl relative`
           )}
         >
           <div
