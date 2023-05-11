@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Link from 'next/link'
 import { list } from './datax'
 import Button from '../../Button/button'
 
@@ -33,7 +34,9 @@ const NavigationBar = () => {
     >
       <Container treatAs={'nav'}>
         <div className="_wrapper flex items-center justify-between">
-          <IBTCLogo className="lg:w-[90px] w-14 lg:h-[89.22px] h-14 fill-white" />
+          <Link href="/">
+            <IBTCLogo className="lg:w-[90px] w-14 lg:h-[89.22px] h-14 fill-white" />
+          </Link>
 
           {!isDesktop ? (
             <button
@@ -49,6 +52,17 @@ const NavigationBar = () => {
           ) : (
             <div className="flex items-center text text-white gap-20">
               <ul className="flex gap-2 items-center">
+                <li>
+                  <Button
+                    href={'/#about-us'}
+                    style={{
+                      color: 'text-white',
+                      fontSize: 'text-[16px]/[16px]',
+                    }}
+                  >
+                    About Us
+                  </Button>
+                </li>
                 {list.map((item, index) => (
                   <li key={index}>
                     <Button
@@ -91,6 +105,20 @@ const NavigationBar = () => {
       {!isDesktop && isOpen && (
         <div className="flex flex-col w-full" ref={scrollParentRef}>
           <ul className="flex flex-col gap-2 items-center w-full">
+            <li
+              className="border-b w-full"
+              onClick={() => setIsOpen((pre) => !pre)}
+            >
+              <Button
+                href={'/#about-us'}
+                style={{
+                  color: 'text-white',
+                  fontSize: 'text-[16px]/[16px]',
+                }}
+              >
+                About Us
+              </Button>
+            </li>
             {list.map((item, index) => (
               <li
                 key={index}

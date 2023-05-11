@@ -32,13 +32,43 @@ module.exports = {
       animation: {
         strok: 'strok 2s',
         'strok-reverse': 'strok 2s reverse',
+        marquee: 'marquee 42s linear infinite',
+        marquee2: 'marquee2 42s linear infinite',
+        marqueeReverse: 'marquee 45s reverse infinite',
+        marqueeReverse2: 'marquee2 45s reverse infinite',
+
+        'large-marquee': 'large-marquee 70s linear infinite',
+        'large-marquee2': 'large-marquee2 70s linear infinite',
+        'large-marqueeReverse': 'large-marquee 72s reverse infinite',
+        'large-marqueeReverse2': 'large-marquee2 72s reverse infinite',
       },
       keyframes: {
+        shimmer: {
+          '100%': {
+            transform: 'translateX(100%)',
+          },
+        },
         strok: {
           '100%': {
             'stroke-dashoffset': 400,
             fill: 'transparent',
           },
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-280%)' },
+        },
+        marquee2: {
+          '0%': { transform: 'translateX(280%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
+        'large-marquee': {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-140%)' },
+        },
+        'large-marquee2': {
+          '0%': { transform: 'translateX(140%)' },
+          '100%': { transform: 'translateX(0%)' },
         },
       },
     },

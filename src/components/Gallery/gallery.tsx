@@ -1,66 +1,35 @@
 import * as React from 'react'
-import Carousel from '../GalleryCarousel/carousel'
-import { ShortImage, LongImage } from '../GalleryCarousel/component'
-import { sources } from '../GalleryCarousel/sources'
-import { useWindowSize } from '@/utilities/hooks'
-import { random } from '@/utilities/util'
-
 import { Container } from '../Layout/Container'
-
-const r = random(sources)
-
-const Items = sources.map((item, index) => {
-  return <GalleryGrid content={item} key={index} data-value={index + 1} />
-})
-
-function GalleryGrid({ content }: { content: string[] }) {
-  return (
-    <div className="h-[35rem] lg:h-[35rem] flex justify-center" id="gallery">
-      <div className="flex gap-[26px] max-2xl:w-full">
-        <LongImage src={content[0]} />
-        <div className="flex flex-col h-full gap-[26px]">
-          <ShortImage src={content[1]} />
-          <ShortImage src={content[2]} />
-        </div>
-        <LongImage src={content[3]} />
-      </div>
-    </div>
-  )
-}
+import { IBTCMarquee } from '../Marquee/marquee'
 
 const Gallery = () => {
-  const { isMobile } = useWindowSize()
-  if (isMobile) {
-    return (
-      <GalleryWrapper>
-        <div>
-          <Carousel
-            items={sources[r].map((item, index) => (
-              <div key={index} className="h-[23rem] w-full">
-                <div className="flex w-full h-full">
-                  <ShortImage src={item} />
-                </div>
-              </div>
-            ))}
-          />
-        </div>
-      </GalleryWrapper>
-    )
-  }
   return (
-    <GalleryWrapper>
-      <Carousel items={Items} />
-    </GalleryWrapper>
+    <>
+      <Container>
+        <p className="_header" id="gallery">
+          Gallery
+        </p>
+      </Container>
+      <IBTCMarquee images={sources}></IBTCMarquee>
+      <IBTCMarquee images={sources2} reverse></IBTCMarquee>
+    </>
   )
 }
 
-function GalleryWrapper({ children }: React.PropsWithChildren) {
-  return (
-    <Container bg="bg-[#FDF6F2]" id="_3434ERR">
-      <header className="_header text-ibtc-black pb-10">Gallery</header>
-      {children}
-    </Container>
-  )
-}
+const sources = [
+  'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681138097/gallery/grid3_1_zugtwq',
+  'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681138284/gallery/grid3_2_fxfuo2',
+  'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681138067/gallery/grid3_3_rfvy9d',
+  'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681138316/gallery/grid3_4_govmis',
+  'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681138175/gallery/grid1_2d36_eqhbcn',
+]
+
+const sources2 = [
+  'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681138086/gallery/grid1_9354f93_bvmxhg',
+  'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681138078/gallery/grid1_10195_qoarum',
+  'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681138081/gallery/grid1_8f83_fhykhf',
+  'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681138071/gallery/grid2_1_mjvlnd',
+  'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681138089/gallery/grid2_2_i7jxdb',
+]
 
 export default Gallery
