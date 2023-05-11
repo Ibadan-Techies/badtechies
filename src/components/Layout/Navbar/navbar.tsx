@@ -54,7 +54,7 @@ const NavigationBar = () => {
               <ul className="flex gap-2 items-center">
                 <li>
                   <Button
-                    href={'/about'}
+                    href={'/#about-us'}
                     style={{
                       color: 'text-white',
                       fontSize: 'text-[16px]/[16px]',
@@ -110,7 +110,7 @@ const NavigationBar = () => {
               onClick={() => setIsOpen((pre) => !pre)}
             >
               <Button
-                href={'/about'}
+                href={'/#about-us'}
                 style={{
                   color: 'text-white',
                   fontSize: 'text-[16px]/[16px]',

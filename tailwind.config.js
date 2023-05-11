@@ -39,8 +39,8 @@ module.exports = {
 
         'large-marquee': 'large-marquee 70s linear infinite',
         'large-marquee2': 'large-marquee2 70s linear infinite',
-        'large-marqueeReverse': 'large-marquee 75s reverse infinite',
-        'large-marqueeReverse2': 'large-marquee2 75s reverse infinite',
+        'large-marqueeReverse': 'large-marquee 72s reverse infinite',
+        'large-marqueeReverse2': 'large-marquee2 72s reverse infinite',
       },
       keyframes: {
         shimmer: {
