@@ -2,12 +2,14 @@ import * as React from 'react'
 import { Container } from '../Layout/Container'
 import Image from 'next/image'
 import clsx from 'clsx'
+import { useWindowSize } from '@/utilities/hooks'
 
 import ReactStackedPhotos from 'react-stacked-photos'
 import { RoundArrow } from '@/assets/svg'
 
 const { useRef, useState } = React
 export function Backers() {
+  const { isMobile } = useWindowSize()
   const childRef = useRef<
     HTMLDivElement & {
       swipeLeft: (e: any) => void
@@ -39,8 +41,8 @@ export function Backers() {
         <header className="_header">Meet our Backers</header>
         <ReactStackedPhotos
           ref={childRef}
-          width={376}
-          height={270}
+          width={isMobile ? 270 : 376}
+          height={isMobile ? 200 : 270}
           onClick={handleClick}
         >
           <div
