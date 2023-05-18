@@ -12,7 +12,7 @@ export const Container = ({
 }>) => {
   return (
     <div
-      className={`flex items-center justify-center w-full relative ${
+      className={`flex items-center justify-center w-full relative overflow-hidden ${
         treatAs === 'banner' ? 'lg:!top-8' : null
       } ${bg}`}
       id={id}
