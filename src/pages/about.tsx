@@ -1,8 +1,8 @@
 import * as React from 'react'
 import SubscribeNewsLetter from '@/components/SubscribeNewsletter/subscribe-newsletter'
-import { IBTCMarquee } from '@/components/Marquee/marquee'
 import Seo from '@/components/Seo/Seo'
 import Layout from '@/components/Layout'
+import { Backers } from '@/components/BackersSlide/backers-slide'
 import { Container } from '@/components/Layout/Container'
 import Image from 'next/image'
 import clsx from 'clsx'
@@ -10,7 +10,7 @@ import clsx from 'clsx'
 const __wrapper =
   'flex lg:gap-16 gap-4 max-md:flex-col items-center max-md:justify-center'
 
-export default function Home() {
+export default function About() {
   return (
     <Layout
       Seo={
@@ -20,11 +20,12 @@ export default function Home() {
         />
       }
     >
-      {Section1}
+      <Section1 />
       {Section3}
       {Section4}
       {Section2}
       <SubscribeNewsLetter></SubscribeNewsLetter>
+      <Backers />
       <DesignTeam />
     </Layout>
   )
@@ -36,7 +37,8 @@ const BoldParagraph = ({ children }: React.PropsWithChildren) => (
     {children}
   </p>
 )
-const Section1 = (
+
+const Section1 = () => (
   <Container>
     <div className={__wrapper}>
       <BoldParagraph>
@@ -222,17 +224,21 @@ const DesignTeam = () => {
 
   React.useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setHidden(false)
-          console.log('I am on the screen')
-        } else {
-          setHidden(true)
-          console.log('I left')
+      entries.forEach(
+        (entry) => {
+          if (entry.isIntersecting) {
+            setHidden(false)
+          } else {
+            setHidden(true)
+          }
+        },
+        {
+          root: null,
+          threshold: 0.5,
+          rootMargin: '40px 0px',
         }
-      })
+      )
     })
-    console.log(ref.current)
     observer.observe(ref.current as Element)
     return () => observer.disconnect()
   })
