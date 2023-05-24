@@ -18,9 +18,14 @@ module.exports = {
 
         'ibtc-black': '#121212',
         'ibtc-light-yellow': '#FDF7E7',
+        'ibtc-green-cyan': '#ADDDC8',
+        'ibtc-azure': '#F5FAFA',
       },
       fontSize: {
         'text-sm': '0.8125rem',
+      },
+      margin: {
+        18: '4.375rem',
       },
       fontFamily: {
         sans: ['Manrope'],
