@@ -7,6 +7,23 @@ import { useWindowSize } from '@/utilities/hooks'
 import ReactStackedPhotos from 'react-stacked-photos'
 import { RoundArrow } from '@/assets/svg'
 
+const backers = [
+  {
+    name: 'Jason Palmer',
+    title: 'Product Manager, Netflix',
+  },
+  {
+    name: 'Mark Techson',
+    title: 'Senior Developer Advocate, Google',
+  },
+  {
+    name: 'Ijeoma',
+    title: 'Senior Project Manager, SThree',
+  },
+]
+
+const Bgs = ['ibtc-light-yellow', 'ibtc-green-cyan', 'ibtc-azure']
+
 const { useRef, useState } = React
 export function Backers() {
   const { isMobile } = useWindowSize()
@@ -21,24 +38,10 @@ export function Backers() {
     setIndex((i) => (i + 1 >= backers.length ? 0 : i + 1))
   }
 
-  const backers = [
-    {
-      name: 'Jason Palmer',
-      title: 'Product Manager, Netflix',
-    },
-    {
-      name: 'Mark Techson',
-      title: 'Senior Developer Advocate, Google',
-    },
-    {
-      name: 'Ijeoma',
-      title: 'Senior Project Manager, SThree',
-    },
-  ]
   return (
-    <Container>
+    <Container bg={`bg-${Bgs[i]}`}>
       <div className="flex flex-col items-center gap-[54px]">
-        <header className="_header">Meet our Backers</header>
+        <header className="_header text-center">Meet our Backers</header>
         <ReactStackedPhotos
           ref={childRef}
           width={isMobile ? 270 : 376}
@@ -46,23 +49,33 @@ export function Backers() {
           onClick={handleClick}
         >
           <div
-            style={{ transform: 'rotate(4deg)' }}
+            style={{ transform: 'rotate(4deg)', borderRadius: '8px' }}
             data-ishovering={{ transform: 'rotate(2deg) translateX(30px)' }}
           >
-            <Image fill alt="" src={srcs[4]} className={clsx('object-cover')} />
+            <Image
+              fill
+              alt=""
+              src={srcs[4]}
+              className={clsx('object-cover rounded-lg')}
+            />
           </div>
           <div
-            style={{ transform: 'rotate(-10deg)' }}
+            style={{ transform: 'rotate(-10deg)', borderRadius: '8px' }}
             data-ishovering={{ transform: 'rotate(-5deg) translateX(-30px)' }}
           >
-            <Image fill alt="" src={srcs[0]} className={clsx('object-cover')} />
+            <Image
+              fill
+              alt=""
+              src={srcs[0]}
+              className={clsx('object-cover rounded-lg')}
+            />
           </div>
-          <div>
+          <div style={{ borderRadius: '8px' }}>
             <Image
               fill
               alt="z"
               src={srcs[3]}
-              className={clsx('object-cover')}
+              className={clsx('object-cover rounded-lg')}
             />
           </div>
         </ReactStackedPhotos>
@@ -72,13 +85,13 @@ export function Backers() {
         </div>
       </div>
       <RoundArrow
-        className="text-4xl absolute left-32 top-[40%] hidden lg:block"
+        className="text-4xl absolute left-32 top-[40%] z-40 max-md:left-8"
         onClick={(e: any) => {
           childRef.current?.swipeLeft(e)
         }}
       />
       <RoundArrow
-        className="text-4xl absolute right-32 top-[40%] rotate-180 hidden lg:block"
+        className="text-4xl absolute right-32 top-[40%] rotate-180 z-40 max-md:right-8"
         onClick={() => {
           childRef.current?.swipeRight()
         }}

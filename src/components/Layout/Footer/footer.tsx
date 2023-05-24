@@ -71,25 +71,25 @@ function MoreList() {
       >
         Learn More
       </header>
-      <ul className="flex md:flex-col flex-wrap gap-4 w-full max-sm:justify-between">
+      <div role="list" className="flex md:flex-col flex-wrap gap-4 w-full max-sm:justify-between">
         <div className="space-y-4">
-          <li className="hover:text-ibtc-brown-light cursor-pointer">
+          <div role="listitem"  className="hover:text-ibtc-brown-light cursor-pointer space-t-4">
             About Us
-          </li>
-          <li className="hover:text-ibtc-brown-light cursor-pointer">FAQ</li>
-          <li className="hover:text-ibtc-brown-light cursor-pointer">
+          </div>
+          <div role="listitem" className="hover:text-ibtc-brown-light cursor-pointer">FAQ</div>
+          <div role="listitem" className="hover:text-ibtc-brown-light cursor-pointer space-b-4">
             Transparency
-          </li>
+          </div>
         </div>
         <div className="space-y-4">
-          <li className="hover:text-ibtc-brown-light cursor-pointer">
+          <div role="listitem" className="hover:text-ibtc-brown-light cursor-pointer">
             Terms and Disclaimer
-          </li>
-          <li className="hover:text-ibtc-brown-light cursor-pointer">
+          </div>
+          <div role="listitem" className="hover:text-ibtc-brown-light cursor-pointer">
             Why this work mstters
-          </li>
+          </div>
         </div>
-      </ul>
+      </div>
     </div>
   )
 }

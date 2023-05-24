@@ -34,8 +34,8 @@ const NavigationBar = () => {
     >
       <Container treatAs={'nav'}>
         <div className="_wrapper flex items-center justify-between">
-          <Link href="/">
-            <IBTCLogo className="lg:w-[90px] w-14 lg:h-[89.22px] h-14 fill-white" />
+          <Link href="/" aria-label="home">
+            <IBTCLogo className="lg:w-[90px] w-14 lg:h-[89.22px] h-14 fill-white" aria-label="Ibadan Techies Logo"> </IBTCLogo>
           </Link>
 
           {!isDesktop ? (
@@ -44,9 +44,9 @@ const NavigationBar = () => {
               className="lg:hidden"
             >
               {isOpen ? (
-                <X className="fill-white lg:w-[50px] w-8 h-8 lg:h-[49.22px]" />
+                <X className="fill-white lg:w-[50px] w-8 h-8 lg:h-[49.22px]" aria-label="close modal" />
               ) : (
-                <Hamburger className="lg:w-[60px] w-10 h-10 lg:h-[59.22px]" />
+                <Hamburger className="lg:w-[60px] w-10 h-10 lg:h-[59.22px]" aria-label="open modal" />
               )}
             </button>
           ) : (

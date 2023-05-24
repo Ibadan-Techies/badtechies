@@ -69,4 +69,9 @@
     stroke: #cad9f2;
     fill: #cad9f2;
   }
+
+  .img,
+  ._9123_imageWrapper {
+    border: none !important;
+  }
 }
