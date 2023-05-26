@@ -10,7 +10,7 @@ import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import { useWindowSize } from '@/utilities/hooks'
 
 const { useState, useEffect, useRef } = React
-const NavigationBar = () => {
+export const NavigationBar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const { isDesktop } = useWindowSize()
   const scrollParentRef = useRef<HTMLDivElement>(null)
@@ -143,4 +143,3 @@ const NavigationBar = () => {
   )
 }
 
-export default NavigationBar
