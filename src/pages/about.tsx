@@ -21,9 +21,9 @@ export default function About() {
       }
     >
       <Section1 />
-      {Section3}
-      {Section4}
-      {Section2}
+      <OurStory_Part1 />
+      <OurStory_Part2 />
+      <What_we_offer /> 
       <Backers />
       <DesignTeam />
       <SubscribeNewsLetter></SubscribeNewsLetter>
@@ -73,7 +73,7 @@ const Section1 = () => (
 )
 
 /**section 2 */
-const Section2 = (
+const What_we_offer = ()=> (
   <div className="bg-[#F5FAFA]">
     <Container>
       <div className={__wrapper}>
@@ -114,8 +114,8 @@ const Section2 = (
   </div>
 )
 
-/**Section 3 */
-const Section3 = (
+
+const OurStory_Part1 = ()=> (
   <Container>
     <div
       className={
@@ -167,8 +167,8 @@ const Section3 = (
   </Container>
 )
 
-/**Section 4 */
-const Section4 = (
+
+const OurStory_Part2 = ()=> (
   <Container>
     <div className={__wrapper}>
       <div className="w-1/2 lg:block hidden h-[25rem] relative mt-9">

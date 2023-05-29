@@ -5,7 +5,7 @@ import clsx from 'clsx'
 import { useWindowSize } from '@/utilities/hooks'
 
 import ReactStackedPhotos from 'react-stacked-photos'
-import { RoundArrow } from '@/assets/svg'
+import { RoundArrow, OceanOrnament } from '@/assets/svg'
 
 const backers = [
   {
@@ -39,7 +39,7 @@ export function Backers() {
   }
 
   return (
-    <Container bg={`bg-${Bgs[i]}`}>
+    <Container bg={`bg-${Bgs[i]} pb-20`}>
       <div className="flex flex-col items-center gap-[54px]">
         <header className="_header text-center">Meet our Backers</header>
         <ReactStackedPhotos
@@ -96,6 +96,8 @@ export function Backers() {
           childRef.current?.swipeRight()
         }}
       />
+      <OceanOrnament className="lg:block hidden absolute right-0 fill-ibtc-blue-cyan h-fit" />
+      <OceanOrnament className="lg:block hidden absolute left-0 fill-ibtc-blue-cyan h-fit" />
     </Container>
   )
 }
