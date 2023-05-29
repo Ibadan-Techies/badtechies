@@ -32,8 +32,8 @@ export default function About() {
 }
 
 /**section 1 */
-const BoldParagraph = ({ children }: React.PropsWithChildren) => (
-  <p className="lg:w-1/2 w-full text-[2.5rem] leading-[2.5rem] lg:text-[3.125rem] lg:leading-[3.125rem] font-semibold">
+const BoldParagraph = ({ children, className }: React.PropsWithChildren<{className?: string}>) => (
+  <p className={"lg:w-1/2 w-full text-[2.5rem] leading-[2.5rem] lg:text-[3.125rem] lg:leading-[3.125rem] font-semibold " + className}>
     {children}
   </p>
 )
@@ -41,14 +41,13 @@ const BoldParagraph = ({ children }: React.PropsWithChildren) => (
 const Section1 = () => (
   <Container>
     <div className={__wrapper}>
-      <BoldParagraph>
-        Ibadan Techies Club, popular as The Badtechys, is the relay for tech
-        talents in Africa.
+      <BoldParagraph className="lg:text-left text-center">
+        We are the relay for tech talents in Africa.
       </BoldParagraph>
       <div className="flex flex-col lg:w-1/2 w-full">
-        <p className="mb-4">
-          We are a non-profit organization with the vision to amplify tech
-          talents in Africa and the works they are doing.
+        <p className="mb-4 lg:w-full lg:text-left self-center w-11/12 text-center">
+          Ibadan Techies is a non-profit organization with the vision to amplify tech
+          talents in the continent and the works they are doing.
         </p>
         <section>
           <header className="text-xl space-y-[0.5] font-medium">Mission</header>
@@ -63,7 +62,7 @@ const Section1 = () => (
     <div className="w-full lg:h-96 h-40 relative mt-9">
       <Image
         src={
-          'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1684944291/may-group_lmg7ye'
+          'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1685364956/happy-members-of-the-fastest-growing-tech-community-in-nigeria_lojhgf'
         }
         fill
         alt=""
@@ -126,7 +125,7 @@ const Section3 = (
       <div className="w-1/2 lg:block hidden h-[25rem] relative mt-9">
         <Image
           src={
-		'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1684945218/happy_two_tcsehu'
+		'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1685366111/gozinne-of-ibadan-techies-dapo-having-a-fueled-experience-at-a-tech-meetup-in-nigeria_ayshai'
           }
           fill
           alt=""
@@ -175,7 +174,7 @@ const Section4 = (
       <div className="w-1/2 lg:block hidden h-[25rem] relative mt-9">
         <Image
           src={
-          	"https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1684947073/mickIMG_9968_ryrbae"
+          	"https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1685367452/mickey-of-badtechys-and-another-member-of-ibadan-techies-during-one-of-our-tech-meetup_cgqzqw"
 	  }
           fill
           alt=""
