@@ -8,6 +8,12 @@
     @apply font-medium lg:text-[3.5rem]/[3.5rem] text-[2.5rem]/[2.5rem] font-oswald max-sm:w-10/12;
   }
   ._header2 {
+    @apply font-medium lg:text-[2.5rem]/[2.5rem] text-[1.5rem]/[1.5rem] font-oswald max-sm:w-10/12;
+  }
+  ._header3 {
+    @apply font-medium lg:text-[1.88rem]/[1.88rem] text-[1rem]/[1rem] font-oswald max-sm:w-10/12;
+  }
+  ._header4 {
     @apply font-medium lg:text-[1.8rem]/[1.8rem] md:text-[1.7rem]/[1.7rem] text-[1.5rem]/[1.5rem] font-oswald;
   }
 

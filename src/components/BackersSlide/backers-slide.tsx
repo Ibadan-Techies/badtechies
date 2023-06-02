@@ -9,20 +9,33 @@ import { RoundArrow, OceanOrnament } from '@/assets/svg'
 
 const backers = [
   {
-    name: 'Jason Palmer',
-    title: 'Product Manager, Netflix',
+    name: 'Ijeoma',
+    title: 'Senior Project Manager, SThree',
+    img: 'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1685681053/ije_a_backer_at_a_ibadan_techies_oinpxj',
   },
   {
     name: 'Mark Techson',
     title: 'Senior Developer Advocate, Google',
+    img: 'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1685681053/Marktechsoon_fmeqsd',
   },
   {
-    name: 'Ijeoma',
-    title: 'Senior Project Manager, SThree',
+    name: 'Jason Palmer',
+    title: 'Senior Product Manager, Netflix',
+    img: 'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1685681053/Jason_palmer_a_backer_at_ibadan_techies_club_ygf91l',
+  },
+  {
+    name: 'Zakk',
+    title: 'Senior Engineer, Gitcoin',
+    img: 'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1685681053/Zakk_one_of_the_backers_at_ibadan_tech_comunity_ajq8qu',
   },
 ]
 
-const Bgs = ['ibtc-light-yellow', 'ibtc-green-cyan', 'ibtc-azure']
+const Bgs = [
+  'ibtc-light-yellow',
+  'ibtc-green-cyan',
+  'ibtc-azure',
+  'ibtc-blue-light',
+]
 
 const { useRef, useState } = React
 export function Backers() {
@@ -41,7 +54,7 @@ export function Backers() {
   return (
     <Container bg={`bg-${Bgs[i]} pb-20`}>
       <div className="flex flex-col items-center gap-[54px]">
-        <header className="_header text-center">Meet our Backers</header>
+        <header className="_header text-center mb-6">Meet our Backers</header>
         <ReactStackedPhotos
           ref={childRef}
           width={isMobile ? 270 : 376}
@@ -54,8 +67,8 @@ export function Backers() {
           >
             <Image
               fill
-              alt=""
-              src={srcs[4]}
+              alt="Zakk, a backer at Ibadan Tech Community"
+              src={backers[3].img}
               className={clsx('object-cover rounded-lg')}
             />
           </div>
@@ -65,17 +78,25 @@ export function Backers() {
           >
             <Image
               fill
-              alt=""
-              src={srcs[0]}
+              alt="Jason Palmer, a backer at Ibadan Techies Club"
+              src={backers[2].img}
               className={clsx('object-cover rounded-lg')}
             />
           </div>
           <div style={{ borderRadius: '8px' }}>
             <Image
               fill
-              alt="z"
-              src={srcs[3]}
+              alt="Mark Techson, a backer at Ibadan Tech Community"
+              src={backers[1].img}
               className={clsx('object-cover rounded-lg')}
+            />
+          </div>
+          <div>
+            <Image
+              fill
+              alt="Ijeoma, a backer at Ibadan Tech Community"
+              src={backers[0].img}
+              className="object-cover rounded-lg"
             />
           </div>
         </ReactStackedPhotos>
@@ -101,11 +122,3 @@ export function Backers() {
     </Container>
   )
 }
-
-const srcs = [
-  'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681138097/gallery/grid3_1_zugtwq',
-  'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681138284/gallery/grid3_2_fxfuo2',
-  'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681138067/gallery/grid3_3_rfvy9d',
-  'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681138316/gallery/grid3_4_govmis',
-  'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1681138175/gallery/grid1_2d36_eqhbcn',
-]
