@@ -109,7 +109,7 @@ function MoreList() {
             role="listitem"
             className="hover:text-ibtc-brown-light cursor-pointer"
           >
-            Why this work mstters
+            Why this work matters
           </div>
         </div>
       </div>
