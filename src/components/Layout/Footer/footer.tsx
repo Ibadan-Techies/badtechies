@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Link from 'next/link'
 import { LinkedIn, Twitter, IBTCLogo } from '@/assets/svg'
 import { useWindowSize } from '@/utilities/hooks'
 import clsx from 'clsx'
@@ -71,21 +72,43 @@ function MoreList() {
       >
         Learn More
       </header>
-      <div role="list" className="flex md:flex-col flex-wrap gap-4 w-full max-sm:justify-between">
+      <div
+        role="list"
+        className="flex md:flex-col flex-wrap gap-4 w-full max-sm:justify-between"
+      >
         <div className="space-y-4">
-          <div role="listitem"  className="hover:text-ibtc-brown-light cursor-pointer space-t-4">
+          <Link
+            href={'/about'}
+            role="listitem"
+            className="hover:text-ibtc-brown-light cursor-pointer space-t-4 block"
+          >
             About Us
-          </div>
-          <div role="listitem" className="hover:text-ibtc-brown-light cursor-pointer">FAQ</div>
-          <div role="listitem" className="hover:text-ibtc-brown-light cursor-pointer space-b-4">
+          </Link>
+          <Link
+            href={'#faq'}
+            role="listitem"
+            className="hover:text-ibtc-brown-light cursor-pointer block"
+          >
+            FAQ
+          </Link>
+          <div
+            role="listitem"
+            className="hover:text-ibtc-brown-light cursor-pointer space-b-4"
+          >
             Transparency
           </div>
         </div>
         <div className="space-y-4">
-          <div role="listitem" className="hover:text-ibtc-brown-light cursor-pointer">
+          <div
+            role="listitem"
+            className="hover:text-ibtc-brown-light cursor-pointer"
+          >
             Terms and Disclaimer
           </div>
-          <div role="listitem" className="hover:text-ibtc-brown-light cursor-pointer">
+          <div
+            role="listitem"
+            className="hover:text-ibtc-brown-light cursor-pointer"
+          >
             Why this work mstters
           </div>
         </div>
@@ -101,8 +124,12 @@ const GetIntouch = (
   >
     <span className="text-xl leading-5 text-white">Want to get in touch?</span>
     <span className="flex gap-2">
-      <Twitter className="fill-white hover:fill-ibtc-blue" />
-      <LinkedIn className="fill-white hover:fill-ibtc-blue" />
+      <a href={'https://twitter.com/badtechys'}>
+        <Twitter className="fill-white hover:fill-ibtc-blue" />
+      </a>
+      <a href="https://www.linkedin.com/company/the-ibadan-techies-club/">
+        <LinkedIn className="fill-white hover:fill-ibtc-blue" />
+      </a>
     </span>
   </p>
 )
