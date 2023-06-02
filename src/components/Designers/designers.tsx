@@ -77,7 +77,12 @@ export const DesignTeam = () => {
 
   return (
     <Container bg="bg-white">
-      <p className="_header text-center w-full mb-18">Meet our Design Team</p>
+      <p
+        className="_header text-center w-full mb-18"
+        id="ibadan-techies-designers"
+      >
+        Meet our Design Team
+      </p>
       <div ref={ref}>
         <div className="flex gap-4 justify-center max-md:flex-wrap mb-28">
           {team.map((designer, index) => (

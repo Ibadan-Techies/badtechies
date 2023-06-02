@@ -54,7 +54,12 @@ export function Backers() {
   return (
     <Container bg={`bg-${Bgs[i]} pb-20`}>
       <div className="flex flex-col items-center gap-[54px]">
-        <header className="_header text-center mb-6">Meet our Backers</header>
+        <header
+          className="_header text-center mb-6"
+          id="ibadan-techies-backers"
+        >
+          Meet our Backers
+        </header>
         <ReactStackedPhotos
           ref={childRef}
           width={isMobile ? 270 : 376}
