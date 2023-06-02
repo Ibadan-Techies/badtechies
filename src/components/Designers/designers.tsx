@@ -90,7 +90,7 @@ export const DesignTeam = () => {
               key={index}
               style={{ transition: 'all 1s' }}
               className={clsx(
-                `w-[8rem] h-[8rem] lg:w-[12rem] lg:h-[12rem] relative blur-sm delay-[0ms] -translate-x-[100px]`,
+                `w-[8rem] h-[8rem] lg:w-[12rem] lg:h-[12rem] relative blur-sm delay-[0ms] -translate-x-[100px] mb-8`,
                 {
                   'opacity-0': hidden,
                   ['opacity-100 !translate-x-0 !blur-0']: !hidden,
@@ -102,7 +102,7 @@ export const DesignTeam = () => {
                 src={designer.img}
                 alt={designer.alt}
               />
-              <div className="z-40">
+              <div className="z-[200] relative">
                 <p
                   className={clsx(
                     `_header3 text-center lg:text-left transition-opacity delay-[1500ms]`,
