@@ -66,7 +66,7 @@ export const DesignTeam = () => {
         },
         {
           root: null,
-          threshold: 0.7,
+          threshold: 1,
           rootMargin: '10px 0px',
         }
       )

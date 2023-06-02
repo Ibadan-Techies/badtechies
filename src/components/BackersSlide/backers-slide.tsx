@@ -105,9 +105,9 @@ export function Backers() {
             />
           </div>
         </ReactStackedPhotos>
-        <div className="flex flex-col gap-4 items-center">
-          <p className="_header2">{backers[i].name}</p>
-          <p className="text-ibtc-grey-2">{backers[i].title}</p>
+        <div className="flex flex-col gap-4">
+          <p className="_header2 text-center">{backers[i].name}</p>
+          <p className="text-ibtc-grey-2 text-center">{backers[i].title}</p>
         </div>
       </div>
       <RoundArrow
