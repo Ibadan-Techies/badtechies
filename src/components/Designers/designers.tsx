@@ -102,28 +102,30 @@ export const DesignTeam = () => {
                 src={designer.img}
                 alt={designer.alt}
               />
-              <p
-                className={clsx(
-                  `_header3 text-center lg:text-left transition-opacity delay-[1500ms]`,
-                  {
-                    'opacity-0': hidden,
-                    ['opacity-100']: !hidden,
-                  }
-                )}
-              >
-                {designer.name}
-              </p>
-              <p
-                className={clsx(
-                  `text-center lg:text-left transition-opacity delay-[2500ms]`,
-                  {
-                    'opacity-0': hidden,
-                    ['opacity-100']: !hidden,
-                  }
-                )}
-              >
-                {designer.title}
-              </p>
+              <div className="z-40">
+                <p
+                  className={clsx(
+                    `_header3 text-center lg:text-left transition-opacity delay-[1500ms]`,
+                    {
+                      'opacity-0': hidden,
+                      ['opacity-100']: !hidden,
+                    }
+                  )}
+                >
+                  {designer.name}
+                </p>
+                <p
+                  className={clsx(
+                    `text-center lg:text-left transition-opacity delay-[2500ms]`,
+                    {
+                      'opacity-0': hidden,
+                      ['opacity-100']: !hidden,
+                    }
+                  )}
+                >
+                  {designer.title}
+                </p>
+              </div>
             </div>
           ))}
         </div>
