@@ -85,7 +85,7 @@ function MoreList() {
             About Us
           </Link>
           <Link
-            href={'#faq'}
+            href={'/#faq'}
             role="listitem"
             className="hover:text-ibtc-brown-light cursor-pointer block"
           >
