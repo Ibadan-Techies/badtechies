@@ -1,7 +1,7 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import SEO from '../next-seo.config'
+import SEO from '../../next-seo.config'
 import { DefaultSeo } from 'next-seo'
 
 import { Manrope, Oswald } from 'next/font/google'
@@ -14,7 +14,7 @@ const manrope = Manrope({
 
 const oswald = Oswald({
   subsets: ['latin'],
-  weight: ['500'],
+  weight: ['600'],
   variable: '--font-oswald',
 })
 

@@ -23,7 +23,7 @@ export default function About() {
       <Section1 />
       <OurStory_Part1 />
       <OurStory_Part2 />
-      <What_we_offer /> 
+      <What_we_offer />
       <Backers />
       <DesignTeam />
       <SubscribeNewsLetter></SubscribeNewsLetter>
@@ -32,10 +32,18 @@ export default function About() {
 }
 
 /**section 1 */
-const BoldParagraph = ({ children, className }: React.PropsWithChildren<{className?: string}>) => (
-  <p className={"lg:w-1/2 w-full text-[2.5rem] leading-[2.5rem] lg:text-[3.125rem] lg:leading-[3.125rem] font-semibold " + className}>
+const BoldParagraph = ({
+  children,
+  className = '',
+}: React.PropsWithChildren<{ className?: string }>) => (
+  <header
+    className={
+      'lg:w-1/2 w-full text-[1.5rem] leading-[2.5rem] lg:text-[3.125rem]  lg:leading-[3.125rem] font-semibold ' +
+      className
+    }
+  >
     {children}
-  </p>
+  </header>
 )
 
 const Section1 = () => (
@@ -46,8 +54,8 @@ const Section1 = () => (
       </BoldParagraph>
       <div className="flex flex-col lg:w-1/2 w-full">
         <p className="mb-4 lg:w-full lg:text-left self-center w-11/12 text-center">
-          Ibadan Techies is a non-profit organization with the vision to amplify tech
-          talents in the continent and the works they are doing.
+          Ibadan Techies is a non-profit organization with the vision to amplify
+          tech talents in the continent and the works they are doing.
         </p>
         <section>
           <header className="text-xl space-y-[0.5] font-medium">Mission</header>
@@ -73,7 +81,7 @@ const Section1 = () => (
 )
 
 /**section 2 */
-const What_we_offer = ()=> (
+const What_we_offer = () => (
   <div className="bg-[#F5FAFA]">
     <Container>
       <div className={__wrapper}>
@@ -114,8 +122,7 @@ const What_we_offer = ()=> (
   </div>
 )
 
-
-const OurStory_Part1 = ()=> (
+const OurStory_Part1 = () => (
   <Container>
     <div
       className={
@@ -125,7 +132,7 @@ const OurStory_Part1 = ()=> (
       <div className="w-1/2 lg:block hidden h-[25rem] relative mt-9">
         <Image
           src={
-		'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1685366111/gozinne-of-ibadan-techies-dapo-having-a-fueled-experience-at-a-tech-meetup-in-nigeria_ayshai'
+            'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1685366111/gozinne-of-ibadan-techies-dapo-having-a-fueled-experience-at-a-tech-meetup-in-nigeria_ayshai'
           }
           fill
           alt=""
@@ -167,15 +174,14 @@ const OurStory_Part1 = ()=> (
   </Container>
 )
 
-
-const OurStory_Part2 = ()=> (
+const OurStory_Part2 = () => (
   <Container>
     <div className={__wrapper}>
       <div className="w-1/2 lg:block hidden h-[25rem] relative mt-9">
         <Image
           src={
-          	"https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1685367452/mickey-of-badtechys-and-another-member-of-ibadan-techies-during-one-of-our-tech-meetup_cgqzqw"
-	  }
+            'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1685367452/mickey-of-badtechys-and-another-member-of-ibadan-techies-during-one-of-our-tech-meetup_cgqzqw'
+          }
           fill
           alt=""
           className="object-cover object-top rounded-2xl"
