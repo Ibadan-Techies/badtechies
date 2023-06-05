@@ -38,7 +38,7 @@ const BoldParagraph = ({
 }: React.PropsWithChildren<{ className?: string }>) => (
   <header
     className={
-      'lg:w-1/2 w-full text-[1.5rem] leading-[2.5rem] lg:text-[3.125rem]  lg:leading-[3.125rem] font-semibold ' +
+      'lg:w-1/2 w-full text-[2.5rem] leading-[2.5rem] lg:text-[3.125rem]  lg:leading-[3.125rem] font-semibold ' +
       className
     }
   >
