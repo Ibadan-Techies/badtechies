@@ -11,12 +11,12 @@ const backers = [
   {
     name: 'Ijeoma',
     title: 'Senior Project Manager, SThree',
-    img: 'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1685681053/ije_a_backer_at_a_ibadan_techies_oinpxj',
+    img: 'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1685927315/ijeoma_a_backer_at_ibadan_techies_d5if9y',
   },
   {
     name: 'Mark Techson',
     title: 'Senior Developer Advocate, Google',
-    img: 'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1685681053/Marktechsoon_fmeqsd',
+    img: 'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1685927314/mark_a_backer_at_ibadan_techies_semgty',
   },
   {
     name: 'Jason Palmer',
@@ -26,7 +26,7 @@ const backers = [
   {
     name: 'Zakk',
     title: 'Senior Engineer, Gitcoin',
-    img: 'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1685681053/Zakk_one_of_the_backers_at_ibadan_tech_comunity_ajq8qu',
+    img: 'https://res.cloudinary.com/dfliypjzt/image/upload/q_auto,f_auto,fl_lossy/v1685927315/zakk_a_backers_at_ibadan_techies_uwoqgl',
   },
 ]
 
