@@ -14,7 +14,7 @@ const manrope = Manrope({
 
 const oswald = Oswald({
   subsets: ['latin'],
-  weight: ['600'],
+  weight: ['500'],
   variable: '--font-oswald',
 })
 

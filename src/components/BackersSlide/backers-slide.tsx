@@ -55,7 +55,7 @@ export function Backers() {
     <Container bg={`bg-${Bgs[i]} pb-20`}>
       <div className="flex flex-col items-center gap-[54px]">
         <header
-          className="_header text-center mb-6"
+          className="_header text-center mb-6 w-full"
           id="ibadan-techies-backers"
         >
           Meet our Backers
