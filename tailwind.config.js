@@ -20,18 +20,18 @@ module.exports = {
         'ibtc-light-yellow': '#FDF7E7',
         'ibtc-green-cyan': '#ADDDC8',
         'ibtc-azure': '#F5FAFA',
-	'ibtc-blue-cyan':'#c4d9f2'
+        'ibtc-blue-cyan': '#c4d9f2',
       },
       fontSize: {
-        'sm': '0.8125rem',
-	'xl': ['20px', '29.64px'],
+        sm: '0.8125rem',
+        xl: ['20px', '29.64px'],
       },
       margin: {
         18: '4.375rem',
       },
       fontFamily: {
-        sans: ['Manrope'],
-        oswald: ['Oswald'],
+        manrope: ['var(--font-manrope)'],
+        oswald: ['var(--font-oswald)'],
       },
       screens: {
         '3xl': '2000px',

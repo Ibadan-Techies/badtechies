@@ -4,6 +4,13 @@
 
 /* custom typography */
 @layer base {
+  .text,
+  p,
+  div,
+  li {
+    @apply md:text-base lg:leading-[1.4rem] md:leading-4 text-sm font-manrope;
+  }
+
   ._header {
     @apply font-medium lg:text-[3.5rem]/[3.5rem] text-[2.5rem]/[2.5rem] font-oswald max-sm:w-10/12;
   }
@@ -15,13 +22,6 @@
   }
   ._header4 {
     @apply font-medium lg:text-[1.8rem]/[1.8rem] md:text-[1.7rem]/[1.7rem] text-[1.5rem]/[1.5rem] font-oswald;
-  }
-
-  .text,
-  p,
-  div,
-  li {
-    @apply md:text-base lg:leading-[1.4rem] md:leading-4 text-sm;
   }
 
   ._ccd li {
