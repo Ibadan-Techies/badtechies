@@ -1,5 +1,5 @@
 import { Banner as LandingBanner } from '@/components/Layout/LandingBanner'
-import AboutUs from '@/components/Layout/LandingAboutUs/about'
+import {default as AboutSection} from '@/components/Layout/LandingAboutUs/about'
 import Events from '@/components/LandingEvent/event'
 import Gallery from '@/components/Gallery/gallery'
 import Unique from '@/components/LandingUnique/unique'
@@ -23,7 +23,7 @@ export default function Home() {
         <div className="bg-ibtc-blue">
           <LandingBanner />
         </div>
-        <AboutUs />
+        <AboutSection />
         <Events />
         <Gallery />
         <Unique />

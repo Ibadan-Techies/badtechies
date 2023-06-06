@@ -22,7 +22,7 @@ function SubscribeNewsLetter() {
         }}
         className="flex flex-col items-center justify-center min-h-[25rem] gap-[4rem]"
       >
-        <div className="space-y-[1rem] lg:text-center">
+        <div className="space-y-[1rem] md:text-center">
           <h2 className="_header text-ibtc-black">Stay up to date with Us!</h2>
           <p className="text-ibtc-grey-2">
             Subscribe to our newsletter for latest news, projects and updates

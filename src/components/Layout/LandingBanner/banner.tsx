@@ -13,8 +13,8 @@ const ButtonGroup = () => {
   return (
     <div
       className={clsx(
-        'flex self-center gap-10 lg:w-[45rem]',
-        'max-md:flex-col max-md:gap-6 w-full items-center'
+        'flex self-center gap-10 lg:w-[45rem] h-[4rem]',
+        'max-md:flex-col max-md:gap-6 w-full max-md:h-[8.3rem] items-center'
       )}
     >
       {datax.map((data, index) => (

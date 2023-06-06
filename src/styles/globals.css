@@ -8,6 +8,12 @@
     @apply font-medium lg:text-[3.5rem]/[3.5rem] text-[2.5rem]/[2.5rem] font-oswald max-sm:w-10/12;
   }
   ._header2 {
+    @apply font-medium lg:text-[2.5rem]/[2.5rem] text-[1.5rem]/[1.5rem] font-oswald max-sm:w-10/12;
+  }
+  ._header3 {
+    @apply font-medium lg:text-[1.88rem]/[1.88rem] text-[1rem]/[1rem] font-oswald max-sm:w-10/12;
+  }
+  ._header4 {
     @apply font-medium lg:text-[1.8rem]/[1.8rem] md:text-[1.7rem]/[1.7rem] text-[1.5rem]/[1.5rem] font-oswald;
   }
 
@@ -15,7 +21,7 @@
   p,
   div,
   li {
-    @apply md:text-base lg:leading-[1.4rem] md:leading-4 text-sm;
+    @apply md:text-base lg:leading-[1.4rem] md:leading-4 text-sm font-manrope;
   }
 
   ._ccd li {
@@ -68,5 +74,10 @@
   ._stroke-grey {
     stroke: #cad9f2;
     fill: #cad9f2;
+  }
+
+  .img,
+  ._9123_imageWrapper {
+    border: none !important;
   }
 }
