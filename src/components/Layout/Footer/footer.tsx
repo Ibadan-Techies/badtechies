@@ -36,7 +36,7 @@ const Footer = () => {
         </Container>
       </div>
       {isMobile && GetIntouch}
-      <p className="text-center pt-6">
+      <p className="text-center pt-6 leading-4">
         &copy; Ibadan Tech Community is a registered non - profit backed by the
         Nigerian Law (2023)
       </p>
@@ -52,7 +52,7 @@ function Others({ isMobile }: { isMobile: boolean }) {
         'max-md:text-center max-md:self-center'
       )}
     >
-      <p className="md:pb-10">
+      <p className="md:pb-10 leading-4 md:leading-5">
         This Human development is backed by Jason Palmer, Ije, Zakk, and Mark
         Techson.
       </p>

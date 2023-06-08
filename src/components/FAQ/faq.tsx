@@ -16,11 +16,15 @@ function FAQ() {
           key={index}
         >
           <button
-            className="flex lg:items-center justify-between w-full lg:text-[29px] lg:leading-[29px] text-left font-semibold text-base leading-4"
+            className="flex lg:items-center justify-between w-full lg:text-[29px] lg:leading-[29px] text-left font-semibold text-base leading-4 lg:tracking-wide"
             onClick={() => handleClick(index)}
           >
             <span>{faq.question}</span>
-            <span className="ml-2 max-lg:relative max-lg:top-1">
+            <span
+              className={`ml-2 max-lg:relative max-lg:top-1 duration-150 ease-in ${
+                activeIndex == index ? 'transform -rotate-180' : ''
+              }`}
+            >
               <ArrowDown />
             </span>
           </button>
