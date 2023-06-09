@@ -12,7 +12,7 @@ const nextConfig = {
     ],
   },
   reactStrictMode: true,
-/**  webpack(config) {
+  webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
       rule.test?.test?.('.svg')
@@ -38,7 +38,7 @@ const nextConfig = {
     fileLoaderRule.exclude = /\.svg$/i
 
     return config
-  },*/
+  },
 }
 
 module.exports = nextConfig

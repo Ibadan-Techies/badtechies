@@ -1,25 +1,6 @@
-const path = require('path')
+import React from 'react'
 
-module.exports = {
-  process(src, filePath) {
-    if (path.extname(filePath) !== '.svg') {
-      return src
-    }
+const SvgrMock = React.forwardRef((props, ref) => <span ref={ref} {...props} />)
 
-    const name = `svg-${path.basename(filePath, '.svg')}`
-      .split(/\W+/)
-      .map((x) => `${x.charAt(0).toUpperCase()}${x.slice(1)}`)
-      .join('')
-
-    return `
-const React = require('react');
-function ${name}(props) {
-  return React.createElement(
-    'svg',
-    Object.assign({}, props, {'data-file-name': ${name}.name})
-  )
-}
-module.exports = ${name}
-            `
-  },
-}
+export const ReactComponent = SvgrMock
+export default SvgrMock
