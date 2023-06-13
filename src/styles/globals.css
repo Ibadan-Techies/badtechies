@@ -5,7 +5,7 @@
 /* custom typography */
 @layer base {
   ._header {
-    @apply font-medium lg:text-[3.5rem]/[3.5rem] text-[2.5rem]/[2.5rem] font-oswald max-sm:w-10/12;
+    @apply font-medium lg:text-[3.5rem]/[3.5rem] text-[2.5rem]/[2.5rem] font-oswald max-sm:w-10/12 py-6;
   }
   ._header2 {
     @apply font-medium lg:text-[2.5rem]/[2.5rem] text-[1.5rem]/[1.5rem] font-oswald max-sm:w-10/12;
@@ -21,7 +21,7 @@
   p,
   div,
   li {
-    @apply md:text-base lg:leading-[1.4rem] md:leading-4 text-sm font-manrope;
+    @apply md:text-base lg:leading-[1.4rem] leading-4 text-sm font-manrope;
   }
 
   ._ccd li {

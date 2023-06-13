@@ -23,7 +23,7 @@ module.exports = {
         'ibtc-blue-cyan': '#c4d9f2',
       },
       fontSize: {
-        sm: '0.8125rem',
+        sm: '0.8825rem',
         xl: ['20px', '29.64px'],
       },
       margin: {

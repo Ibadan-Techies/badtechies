@@ -31,7 +31,7 @@ const MainContent = (
       </p>
       <span className="lg:w-fit">
         <Button
-          href="https://forms.gle/YUFNtMk1b1i6iUcg9"
+          href="/about"
           style={{
             background: 'bg-ibtc-blue',
             color: 'text-white',
@@ -39,7 +39,7 @@ const MainContent = (
             hoverColor: 'hover:text-ibtc-grey',
           }}
         >
-          Join Now
+          Deep Dive about Us
         </Button>
       </span>
     </div>
