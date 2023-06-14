@@ -12,6 +12,7 @@
 
 import * as React from 'react'
 import clsx from 'clsx'
+import {getSrcSets} from "../../utilities/util"
 
 const { useRef, useState, memo, useEffect } = React
 
@@ -145,8 +146,10 @@ const CommunityImages = memo(function Images({
           >
             <img
               loading={isLazy ? 'lazy' : 'eager'}
-              src={src}
+              sizes="(min-width: 30em) 28em, 100vw"
+              srcSet= {getSrcSets(src)}
               alt={'alt'}
+              src={src}
               className="aspect-[4/3] h-full w-full flex object-cover rounded-2xl bg-ibtc-blue-10"
             />
           </div>
@@ -155,3 +158,4 @@ const CommunityImages = memo(function Images({
     </>
   )
 })
+

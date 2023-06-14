@@ -1,6 +1,8 @@
-import { Banner as LandingBanner } from '@/components/Layout/LandingBanner'
+import Head from 'next/head'
+
+import { default as LandingBanner } from '@/components/Layout/LandingBanner'
 import {default as AboutSection} from '@/components/Layout/LandingAboutUs/about'
-import Events from '@/components/LandingEvent/event'
+import Events from '@/components/Layout/LandingEvent/event'
 import Gallery from '@/components/Gallery/gallery'
 import Unique from '@/components/LandingUnique/unique'
 import FAQ from '@/components/FAQ/faq-index'
@@ -8,7 +10,6 @@ import SubscribeNewsLetter from '@/components/SubscribeNewsletter/subscribe-news
 import Seo from '@/components/Seo'
 
 import Layout from '@/components/Layout'
-import Head from 'next/head'
 
 export default function Home() {
   return (
@@ -48,6 +49,13 @@ export default function Home() {
     </>
   )
 }
+
+
+
+
+
+
+
 
 // SEO
 const DATA = {
