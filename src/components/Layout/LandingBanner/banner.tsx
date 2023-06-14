@@ -13,8 +13,8 @@ const ButtonGroup = () => {
   return (
     <div
       className={clsx(
-        'flex self-center gap-10 lg:w-[45rem] h-[4rem]',
-        'max-md:flex-col max-md:gap-6 w-full max-md:h-[8.3rem] items-center'
+        'flex self-center mt-6 md:gap-10 lg:w-[45rem] h-[4rem] mx-auto',
+        'max-md:flex-col gap-6 w-full max-md:h-[8.3rem] items-center'
       )}
     >
       {datax.map((data, index) => (
@@ -35,7 +35,7 @@ const ButtonGroup = () => {
   )
 }
 
-export const Banner = () => {
+export default function Banner () {
   return (
     <>
       <Container bg="bg-ibtc-blue" treatAs={'banner'}>
@@ -54,14 +54,14 @@ export const Banner = () => {
 
 function Main() {
   return (
-    <div className="flex-shrink-1 font-medium self-center text-center flex flex-col gap-[25px] lg:gap-[3.685rem]">
-      <div className="flex flex-col gap-[22px] lg:gap-6 text-lg leading-[1.125rem]">
-        <p className="text-white">
-          <span className="py-2.5 px-4 bg-ibtc-blue-dark max-lg:text-xs max-lg:leading-3 lg:w-fit max-sm:block">
+    <div className="font-medium self-center text-center">
+      <div className="flex items-center flex-col gap-6 text-lg leading-[1.125rem] text-white">
+        <p>
+          <span className="py-2.5 px-4 bg-ibtc-blue-dark max-lg:leading-3 w-fit max-sm:block">
             Talents in Africa do not have an equal ground in tech
           </span>
         </p>
-        <p className="_spexXtext max-md:text-3xl max-md:leading-8 text-white">
+        <p className="text-3xl leading-8 md:text-5xl md:leading-10">
           We believe Black Tech Talents should be amplified, especially the
           works they are doing. Do You?
         </p>

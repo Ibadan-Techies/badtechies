@@ -45,11 +45,6 @@
     backdrop-filter: blur(25px);
   }
 
-  ._spexXtext {
-    font-size: calc(1.7rem + 2vw);
-    line-height: calc(1.7rem + 2vw);
-  }
-
   /* Carousel css */
   ._34sdf .alice-carousel__prev-btn,
   ._34sdf .alice-carousel__next-btn,

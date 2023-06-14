@@ -1,12 +1,11 @@
-import Button from '../Button/button'
-import EventCard from '../EventCard/eventcard'
-import { Container } from '../Layout/Container'
-import { datax } from './datax'
+import Button from '../../Button/button'
+import EventCard from '../../EventCard/eventcard'
+import { Container } from '../Container'
 
 import { useWindowSize } from '@/utilities/hooks'
-import Carousel from '../GalleryCarousel/carousel'
+import Carousel from '../../GalleryCarousel/carousel'
 
-const Events = () => {
+export default function Events (){
   const { isMobile, isTablet } = useWindowSize()
   return (
     <Container bg="bg-ibtc-black" id="events">
@@ -61,4 +60,30 @@ const BTN = (
   </Button>
 )
 
-export default Events
+const datax = [
+  {
+    imgSrc: '/EventCard/event11.png',
+    topic: 'What developers need to know about JWTs',
+    date: 'March 4',
+    speaker: 'Dan Moore',
+  },
+  {
+    imgSrc: '/EventCard/event12.png',
+    topic: 'Design SCC Technical Meetup',
+    date: 'October 22',
+    speaker: 'Jude',
+  },
+  {
+    imgSrc: '/EventCard/event13.png',
+    topic: 'Deploying resilient systems with Kubernetes on Google Cloud',
+    date: 'October 22',
+    speaker: 'Micheal',
+  },
+  {
+    imgSrc: '/EventCard/event14.jpg',
+    topic: 'Being a black woman in Tech',
+    date: 'November 22',
+    speaker: 'Ije',
+  },
+]
+
