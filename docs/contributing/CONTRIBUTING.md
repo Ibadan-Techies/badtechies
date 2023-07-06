@@ -18,11 +18,32 @@ git clone https://github.com/Ibadan-Techies/badtechies.git
 cd badtechies
 // see the package.json for how to run the code
 ```
-
+Run this command to install all dependencies:
+```bash
+-npm install
+```
+Run this command to run on your local environment:
+```bash
+-npm run dev
+```
 2. Create a branch with your name followed by what you are implementing.
    - use descriptive text like 'bug' or 'feature' in the branch name. For example sekx-bug-XXXx.
+ To create a new branch run this command
+  ```bash
+-git checkout -b branchname  
+```
+Add changes to the code then run this command
+```bash
+-git status 
+-git add . (to add new changes)
+-git status (to confirm if changes have been added)
+```
 3. Make commits to your branch (preferably on every successful working code completion).
    - again use a descriptive text describing what you've done.
+Run the following command on your terminal to commit
+```bash
+-git commit -m "your text"
+```
 4. When you've finished with your fix or feature, bug, or whatever:
    ```bash
      git pull --rebase origin main
