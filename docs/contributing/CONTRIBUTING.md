@@ -20,11 +20,11 @@ cd badtechies
 ```
 Run this command to install all dependencies:
 ```bash
--npm install
+$:npm install
 ```
 Run this command to run on your local environment:
 ```bash
--npm run dev
+$:npm run dev
 ```
 2. Create a branch with your name followed by what you are implementing.
    - use descriptive text like 'bug' or 'feature' in the branch name. For example sekx-bug-XXXx.
