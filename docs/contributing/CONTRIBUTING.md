@@ -14,19 +14,40 @@ If you've been assigned to an issue:
 1. Clone down the main branch to your local machine (there are other alternatives like cloud, codespaces, codesanbox, etc we do not care where).
 
 ```bash
-git clone https://github.com/Ibadan-Techies/badtechies.git
-cd badtechies
+$: git clone https://github.com/Ibadan-Techies/badtechies.git
+$: cd badtechies
 // see the package.json for how to run the code
 ```
-
+Run this command to install all dependencies:
+```bash
+$: npm install
+```
+Run this command to run on your local environment:
+```bash
+$: npm run dev
+```
 2. Create a branch with your name followed by what you are implementing.
    - use descriptive text like 'bug' or 'feature' in the branch name. For example sekx-bug-XXXx.
+ To create a new branch run this command
+  ```bash
+$: git checkout -b branchname  
+```
+Add changes to the code then run this command
+```bash
+$: git status 
+$: git add . (to add new changes)
+$: git status (to confirm if changes have been added)
+```
 3. Make commits to your branch (preferably on every successful working code completion).
    - again use a descriptive text describing what you've done.
+Run the following command on your terminal to commit
+```bash
+$: git commit -m "your text"
+```
 4. When you've finished with your fix or feature, bug, or whatever:
-   ```bash
-     git pull --rebase origin main
-   ```
+```bash
+$: git pull --rebase origin main
+```
    - fix any merge conflicts before pushing to origin
 5. Your pull request will be reviewed by another maintainer. The point of code reviews is to help keep the codebase clean and of high quality and, equally as important, to help you grow as a programmer. If your code reviewer requests you make a change you don't understand, ask them why.
    - Fix any issues raised by your code reviewer, and push your fixes as a single new commit.
@@ -46,7 +67,7 @@ changes of the main branch into yours by running this command
 from your branch:
 
 ```bash
-git pull --rebase origin main
+$: git pull --rebase origin main
 ```
 
 _This will start the rebase process. You must commit all of your changes
@@ -69,7 +90,7 @@ rebase.
 Once you are done fixing conflicts for a specific commit, run:
 
 ```bash
-git rebase --continue
+$: git rebase --continue
 ```
 
 This will continue the rebasing process. Once you are done fixing all
