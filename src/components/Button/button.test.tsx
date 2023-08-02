@@ -9,17 +9,18 @@ describe('multi-purpose button', () => {
     const background = 'bg-green'
     render(
       <Button
-        children="Hi"
         style={{
           color,
           background,
         }}
-      />
+      >
+        <span>Hi</span>
+      </Button>
     )
 
     expect(screen.getByText('Hi')).toBeInTheDocument()
-    expect(screen.getByText('Hi')).toHaveClass(color)
-    expect(screen.getByText('Hi')).toHaveClass(background)
+    expect(screen.getByRole('button')).toHaveClass(color)
+    expect(screen.getByRole('button')).toHaveClass(background)
   })
 
   it('should outline be true, border class is true and background is false', () => {
@@ -27,18 +28,19 @@ describe('multi-purpose button', () => {
     const border = 'text-green'
     render(
       <Button
-        children="Hi"
         outline
         style={{
           color,
           border,
         }}
-      />
+      >
+        <span>Hi</span>
+      </Button>
     )
 
     expect(screen.getByRole('button')).toBeInTheDocument()
-    expect(screen.getByText('Hi')).toHaveClass(color)
-    expect(screen.getByText('Hi')).toHaveClass(border)
+    expect(screen.getByRole('button')).toHaveClass(color)
+    expect(screen.getByRole('button')).toHaveClass(border)
   })
 
   it('should not be a button when href is true', () => {
@@ -46,18 +48,19 @@ describe('multi-purpose button', () => {
     const border = 'text-green'
     render(
       <Button
-        children="Hi"
         href="/"
         outline
         style={{
           color,
           border,
         }}
-      />
+      >
+        <span>Hi</span>
+      </Button>
     )
 
     expect(screen.queryByRole('button')).not.toBeInTheDocument()
-    expect(screen.getByText('Hi')).toHaveClass(color)
-    expect(screen.getByText('Hi')).toHaveClass(border)
+    expect(screen.getByRole('link')).toHaveClass(color)
+    expect(screen.getByRole('link')).toHaveClass(border)
   })
 })
