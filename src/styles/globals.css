@@ -24,10 +24,10 @@
     @apply md:text-base lg:leading-[1.4rem] leading-4 text-sm font-manrope;
   }
 
-  ._ccd li {
+  li {
     list-style-type: none;
   }
-  ._ccd li:before {
+  li:before {
     padding: 0.2rem;
     line-height: 16px;
     vertical-align: top;

@@ -38,7 +38,9 @@ const Bgs = [
 ]
 
 const { useRef, useState } = React
-export function Backers() {
+export const Backers: React.FunctionComponent<{
+  title: React.ReactNode
+}> = ({ title }) => {
   const { isMobile } = useWindowSize()
   const childRef = useRef<
     HTMLDivElement & {
@@ -58,7 +60,7 @@ export function Backers() {
           className="_header text-center mb-6 w-full"
           id="ibadan-techies-backers"
         >
-          Meet our Backers
+          {title}
         </header>
         <ReactStackedPhotos
           ref={childRef}

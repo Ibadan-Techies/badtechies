@@ -10,12 +10,14 @@ import clsx from 'clsx'
 const MainContent = (
   <div className="flex lg:gap-16 gap-4 max-lg:flex-col">
     <p className="_header text-ibtc-black">
-      A community of tech enthusiasts based in the heart of Ibadan, Nigeria.
+      Behind the next people to shape tech from Africa you will find our
+      efforts.
     </p>
     <div className="lg:gap-[2.3rem] gap-7 flex flex-col text-[#4F4F4F]">
       <p>
-        We are a diverse group of professionals, students, entrepreneurs, and
-        hobbyists who share a common passion for all things tech.
+        From first timers writing their first line of code, to experts across
+        all facets of tech, we provide equal opportunity, experience and
+        privileges.
       </p>
 
       <p>
