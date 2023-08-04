@@ -11,6 +11,7 @@ import Seo from '@/components/Seo'
 
 import Layout from '@/components/Layout'
 import { Backers } from '@/components/BackersSlide/backers-slide'
+import { PrideComponent } from '@/components/IBTCPride/pride'
 
 export default function Home() {
   return (
@@ -51,6 +52,7 @@ export default function Home() {
               </span>
             }
           />
+          <PrideComponent />
           <Events />
           <Gallery />
           <Unique />

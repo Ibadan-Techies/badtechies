@@ -57,7 +57,7 @@ export const Backers: React.FunctionComponent<{
     <Container bg={`bg-${Bgs[i]} pb-20`}>
       <div className="flex flex-col items-center gap-[54px]">
         <header
-          className="_header text-center mb-6 w-full"
+          className="text-2xl md:text-4xl font-bold text-center h-[10rem] w-full"
           id="ibadan-techies-backers"
         >
           {title}
