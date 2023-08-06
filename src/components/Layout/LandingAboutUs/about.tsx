@@ -55,9 +55,8 @@ export default function AboutUs() {
     <div
       className={clsx({
         // desktop
-        [' relative flex flex-col min-h-[43rem] overflow-hidden']: true,
-        // mobile
-        ['md:gap-10']: true,
+        [' relative flex flex-col min-h-[43rem] lg:min-h-[47rem] overflow-hidden']:
+          true,
       })}
       id="about-us"
     >
