@@ -1,14 +1,14 @@
-import { getSrcSets } from '@/utilities/util';
+import { getSrcSets } from '@/utilities/util'
 
 const OvalImageFrame = ({ bgColor, src }: { bgColor: string; src: string }) => (
-  <div className="relative rounded-[15%] xl:w-[10rem] xl:h-[20rem] w-[7rem] h-[18rem] flex justify-center items-center transform -rotate-[13deg]">
+  <div className="relative rounded-[15%] xl:w-[10rem] xl:h-[16rem] w-[7rem] h-[12rem] flex justify-center items-center transform -rotate-[13deg]">
     <div className="absolute bottom-0 w-[95%] h-[100%] bg-cover bg-center bg-no-repeat rounded-[100px] bg-blend-multiply">
       <img
         src={src}
         alt=""
         className="object-cover object-center h-full w-full rounded-[inherit]"
         sizes="(min-width: 30em) 28em, 100vw"
-        srcSet= {getSrcSets(src)}
+        srcSet={getSrcSets(src)}
       />
     </div>
     <div

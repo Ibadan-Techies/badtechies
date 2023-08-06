@@ -27,6 +27,8 @@ const MainContent = (
           that have the potential to make a significant impact in our community
           and beyond.
         </b>
+        <br />
+        <br />
         We believe that technology has the power to solve some of the world's
         most pressing challenges, and we are committed to leveraging our skills
         and expertise to create positive change.

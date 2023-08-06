@@ -24,7 +24,7 @@ export const PrideComponent: React.FC = () => {
               </li>
               <li>
                 <Pride_b>100%</Pride_b> of backers are non-nigerian and unbiased
-                about our internal Politics, tribe or religion.
+                about our internal politics, tribe or religion.
               </li>
               <li>
                 <Pride_b>8+ in-person meetups</Pride_b> held within 12 months of
