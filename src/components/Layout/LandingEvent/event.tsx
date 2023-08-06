@@ -49,6 +49,7 @@ const Header = ({ isTablet }: { isTablet: boolean }) => (
 const BTN = (
   <Button
     outline
+    href="https://twitter.com/badtechys"
     style={{
       color: 'text-white',
       border: 'text-white',

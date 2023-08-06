@@ -9,7 +9,7 @@ export default function Gallery() {
         <p className="_header md:text-center" id="gallery">
           We put <span className="text-ibtc-blue">our members</span> first.
         </p>
-        <ul className="flex flex-col max-md:gap-4 md:flex-row md:justify-between lg:w-4/5 m-auto mt-8 text-2xl">
+        <ul className="flex flex-col max-md:gap-4 md:flex-row md:justify-between md:w-4/5 xl:w-2/3 m-auto mt-8 text-2xl">
           <div className="flex flex-col gap-4">
             <li>We intentionally keep us small.</li>
             <li>We intentionally foster bond.</li>

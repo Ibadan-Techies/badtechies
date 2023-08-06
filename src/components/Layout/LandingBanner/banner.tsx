@@ -35,7 +35,7 @@ const ButtonGroup = () => {
   )
 }
 
-export default function Banner () {
+export default function Banner() {
   return (
     <>
       <Container bg="bg-ibtc-blue" treatAs={'banner'}>
@@ -62,7 +62,7 @@ function Main() {
           </span>
         </p>
         <p className="text-3xl leading-8 md:text-5xl md:leading-10">
-          We believe Black Tech Talents should be amplified, especially the
+          We believe Africa's Tech Talents should be amplified, especially the
           works they are doing. Do You?
         </p>
         <p className="text-ibtc-offwhite max-lg:text-base max-lg:leading-[22.4px]">

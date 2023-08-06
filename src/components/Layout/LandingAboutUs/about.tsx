@@ -13,7 +13,7 @@ const MainContent = (
       Behind the next people to shape tech from Africa you will find our
       efforts.
     </p>
-    <div className="lg:gap-[2.3rem] gap-7 flex flex-col text-[#4F4F4F]">
+    <div className="lg:gap-[2.3rem] text-lg gap-7 flex flex-col text-[#2f3549]">
       <p>
         From first timers writing their first line of code, to experts across
         all facets of tech, we provide equal opportunity, experience and
@@ -21,7 +21,7 @@ const MainContent = (
       </p>
 
       <p>
-        <b className="opacity-80 text-[#2f3549]">
+        <b className="opacity-70 text-[#2f3549]">
           Our mission is to be the platform that truly supports Africa's talents
           to co-learn, share knowledge, research and collaborate on projects
           that have the potential to make a significant impact in our community
@@ -50,14 +50,14 @@ const MainContent = (
   </div>
 )
 
-const AboutUs = () => {
+export default function AboutUs() {
   return (
     <div
       className={clsx({
         // desktop
         [' relative flex flex-col min-h-[43rem] overflow-hidden']: true,
         // mobile
-        ['gap-10']: true,
+        ['md:gap-10']: true,
       })}
       id="about-us"
     >
@@ -82,5 +82,3 @@ const AboutUs = () => {
     </div>
   )
 }
-
-export default AboutUs
