@@ -10,21 +10,25 @@ import clsx from 'clsx'
 const MainContent = (
   <div className="flex lg:gap-16 gap-4 max-lg:flex-col">
     <p className="_header text-ibtc-black">
-      A community of tech enthusiasts based in the heart of Ibadan, Nigeria.
+      Behind the next people to shape tech from Africa you will find our
+      efforts.
     </p>
-    <div className="lg:gap-[2.3rem] gap-7 flex flex-col text-[#4F4F4F]">
+    <div className="lg:gap-[2.3rem] text-lg gap-7 flex flex-col text-[#2f3549]">
       <p>
-        We are a diverse group of professionals, students, entrepreneurs, and
-        hobbyists who share a common passion for all things tech.
+        From first timers writing their first line of code, to experts across
+        all facets of tech, we provide equal opportunity, experience and
+        privileges.
       </p>
 
       <p>
-        <b className="opacity-80 text-[#2f3549]">
+        <b className="opacity-70 text-[#2f3549]">
           Our mission is to be the platform that truly supports Africa's talents
           to co-learn, share knowledge, research and collaborate on projects
           that have the potential to make a significant impact in our community
           and beyond.
         </b>
+        <br />
+        <br />
         We believe that technology has the power to solve some of the world's
         most pressing challenges, and we are committed to leveraging our skills
         and expertise to create positive change.
@@ -46,14 +50,13 @@ const MainContent = (
   </div>
 )
 
-const AboutUs = () => {
+export default function AboutUs() {
   return (
     <div
       className={clsx({
         // desktop
-        [' relative flex flex-col min-h-[43rem] overflow-hidden']: true,
-        // mobile
-        ['gap-10']: true,
+        [' relative flex flex-col min-h-[43rem] lg:min-h-[47rem] overflow-hidden']:
+          true,
       })}
       id="about-us"
     >
@@ -78,5 +81,3 @@ const AboutUs = () => {
     </div>
   )
 }
-
-export default AboutUs

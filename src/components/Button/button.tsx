@@ -2,23 +2,23 @@ import * as React from 'react'
 import Link from 'next/link'
 import clsx from 'clsx'
 
-type TString = `${string}-${string}`
+type TString<t extends string> = `${t}-${string}`
 
 interface TStyleProps {
-  color: TString
+  color: TString<'text'>
   hoverColor?: `hover:${string}-${string}`
   hoverBg?: `hover:${string}-${string}`
-  fontSize?: TString
+  fontSize?: TString<'text'>
 }
 
 interface WithBorder extends TStyleProps {
-  border: TString
+  border: TString<'text'>
   background?: never
 }
 
 interface WithOutBorder extends TStyleProps {
   border?: never
-  background?: TString
+  background?: TString<'bg'>
 }
 type Props =
   | {
@@ -38,7 +38,7 @@ type Props =
       style: WithOutBorder
     }
 
-const Button = ({
+export default function Button({
   href,
   onClick,
   outline = undefined,
@@ -46,7 +46,7 @@ const Button = ({
   label,
   style,
   type = 'button',
-}: React.PropsWithChildren<Props>) => {
+}: React.PropsWithChildren<Props>) {
   const buttonClass = clsx(
     // Base style
     `lg:py-3.5 lg:px-5 py-4 w-full h-full px-6 rounded font-medium flex items-center justify-around ${
@@ -78,5 +78,3 @@ const Button = ({
     </button>
   )
 }
-
-export default Button

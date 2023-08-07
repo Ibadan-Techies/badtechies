@@ -38,7 +38,9 @@ const Bgs = [
 ]
 
 const { useRef, useState } = React
-export function Backers() {
+export const Backers: React.FunctionComponent<{
+  title: React.ReactNode
+}> = ({ title }) => {
   const { isMobile } = useWindowSize()
   const childRef = useRef<
     HTMLDivElement & {
@@ -53,12 +55,12 @@ export function Backers() {
 
   return (
     <Container bg={`bg-${Bgs[i]} pb-20`}>
-      <div className="flex flex-col items-center gap-[54px]">
+      <div className="flex flex-col items-center gap-[54px] relative">
         <header
-          className="_header text-center mb-6 w-full"
+          className="text-2xl md:text-4xl font-bold text-center h-[10rem] w-full"
           id="ibadan-techies-backers"
         >
-          Meet our Backers
+          {title}
         </header>
         <ReactStackedPhotos
           ref={childRef}
@@ -111,13 +113,13 @@ export function Backers() {
         </div>
       </div>
       <RoundArrow
-        className="text-4xl absolute left-32 top-[40%] z-40 max-md:left-8"
+        className="text-4xl absolute left-32 2xl:left-[40rem] top-[40%] z-40 max-md:left-8"
         onClick={(e: any) => {
           childRef.current?.swipeLeft(e)
         }}
       />
       <RoundArrow
-        className="text-4xl absolute right-32 top-[40%] rotate-180 z-40 max-md:right-8"
+        className="text-4xl absolute right-32 2xl:right-[40rem] top-[40%] rotate-180 z-40 max-md:right-8"
         onClick={() => {
           childRef.current?.swipeRight()
         }}

@@ -24,10 +24,10 @@
     @apply md:text-base lg:leading-[1.4rem] leading-4 text-sm font-manrope;
   }
 
-  ._ccd li {
+  li {
     list-style-type: none;
   }
-  ._ccd li:before {
+  li:before {
     padding: 0.2rem;
     line-height: 16px;
     vertical-align: top;
@@ -47,16 +47,17 @@
 
   /* Carousel css */
   ._34sdf .alice-carousel__prev-btn,
-  ._34sdf .alice-carousel__next-btn,
-  #_3434ERR .alice-carousel__prev-btn,
-  #_3434ERR .alice-carousel__next-btn {
+  ._34sdf .alice-carousel__next-btn {
     display: none;
   }
 
-  ._34sdf .alice-carousel__dots-item,
-  #_3434ERR .alice-carousel__dots-item {
+  ._34sdf .alice-carousel__dots-item {
     width: 1.2rem !important;
     height: 1.2rem !important;
+  }
+
+  ._34sdf .alice-carousel__dots li:before {
+    color: transparent !important;
   }
 
   ._stroke_dash_300 {

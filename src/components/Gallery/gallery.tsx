@@ -2,13 +2,25 @@ import * as React from 'react'
 import { Container } from '../Layout/Container'
 import { IBTCMarquee } from '../Marquee/marquee'
 
-export default function Gallery () {
+export default function Gallery() {
   return (
     <>
       <Container>
-        <p className="_header" id="gallery">
-          Gallery
+        <p className="_header md:text-center" id="gallery">
+          We put <span className="text-ibtc-blue">our members</span> first.
         </p>
+        <ul className="flex flex-col max-md:gap-4 md:flex-row md:justify-between md:w-4/5 xl:w-2/3 m-auto mt-8 text-2xl">
+          <div className="flex flex-col gap-4">
+            <li>We intentionally keep us small.</li>
+            <li>We intentionally foster bond.</li>
+            <li>We intentionally support one another.</li>
+          </div>
+          <div className="flex flex-col gap-4">
+            <li>We don't charge you.</li>
+            <li>We don't control or influence your views.</li>
+            <li>We don't make it rigid to join us.</li>
+          </div>
+        </ul>
       </Container>
       <IBTCMarquee images={sources}></IBTCMarquee>
       <IBTCMarquee images={sources2} reverse></IBTCMarquee>
@@ -31,4 +43,3 @@ const sources2 = [
   'https://res.cloudinary.com/dfliypjzt/image/upload/q_50,f_auto,fl_lossy,w_auto,c_scale/v1681138071/gallery/grid2_1_mjvlnd',
   'https://res.cloudinary.com/dfliypjzt/image/upload/q_50,f_auto,fl_lossy,w_auto,c_scale/v1686715907/a_room_filled_with_members_at_ibadan_techies_vac5fo',
 ]
-

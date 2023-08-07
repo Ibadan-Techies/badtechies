@@ -24,7 +24,7 @@ export default function About() {
       <OurStory_Part1 />
       <OurStory_Part2 />
       <What_we_offer />
-      <Backers />
+      <Backers title="Meet our Backers" />
       <DesignTeam />
       <SubscribeNewsLetter></SubscribeNewsLetter>
     </Layout>
@@ -89,7 +89,7 @@ const What_we_offer = () => (
           This initiative is built by tech talents in Africa for talents all
           over the world.
         </BoldParagraph>
-        <section className="flex flex-col lg:w-1/2 w-full _ccd">
+        <section className="flex flex-col lg:w-1/2 w-full">
           <header className="text-xl mb-6 font-medium">
             To achieve this, we offer a range of programs and resources,
             including:
