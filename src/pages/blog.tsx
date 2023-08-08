@@ -26,6 +26,7 @@ const BlogFixedNav: React.FC = () => {
           return (
             <Link
               href="#"
+              key={index}
               className={`${
                 index == 0 &&
                 'text-ibtc-blog-blue border-b-2 border-ibtc-blog-blue'
@@ -81,6 +82,7 @@ const Navigation: React.FC = () => {
           return (
             <Link
               href="#"
+              key={index}
               className={`${
                 index == 0 && 'text-white rounded-3xl bg-ibtc-blog-blue'
               } py-4 px-4`}
@@ -173,7 +175,7 @@ const Footer: React.FC = () => {
         <ul className="flex justify-center gap-18 text-base">
           {['About', 'Help', 'FAQ', 'Terms', 'Privacy'].map((text, index) => {
             return (
-              <Link href="#" className={`p-2 text-ibtc-blue`}>
+              <Link href="#" className={`p-2 text-ibtc-blue`} key={index}>
                 {text}
               </Link>
             )
