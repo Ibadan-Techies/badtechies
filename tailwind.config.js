@@ -6,12 +6,15 @@ module.exports = {
       colors: {
         'ibtc-grey': '#E0E0E0',
         'ibtc-grey-2': '#4F4F4F',
+        'ibtc-grey-light': '#888888',
         'ibtc-offwhite': '#EAF1FA',
 
         'ibtc-blue': '#2D65BC',
         'ibtc-blue-dark': '#1E427B',
         'ibtc-blue-darker': '#235094',
         'ibtc-blue-light': '#EFF3FB',
+        'ibtc-blue-cyan': '#c4d9f2',
+        'ibtc-blog-blue': '#407bff',
 
         'ibtc-brown': '#D09F44',
         'ibtc-brown-light': '#F3D6A5',
@@ -20,13 +23,15 @@ module.exports = {
         'ibtc-light-yellow': '#FDF7E7',
         'ibtc-green-cyan': '#ADDDC8',
         'ibtc-azure': '#F5FAFA',
-        'ibtc-blue-cyan': '#c4d9f2',
       },
       fontSize: {
         sm: '0.8825rem',
         xl: ['20px', '29.64px'],
+        '3.2xl': ['32px', '44.8px'],
+        '4.5xl': ['40px', '49px'],
       },
       margin: {
+        6.5: '1.625rem',
         18: '4.375rem',
       },
       fontFamily: {
@@ -35,6 +40,12 @@ module.exports = {
       },
       screens: {
         '3xl': '2000px',
+      },
+      spacing: {
+        88: '22rem',
+      },
+      gap: {
+        18: '4.4rem',
       },
       animation: {
         strok: 'strok 2s',
