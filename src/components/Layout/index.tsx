@@ -4,20 +4,16 @@ import * as React from 'react'
 
 export default function Layout({
   children,
-  Nav,
   Seo,
-  Foot,
 }: React.PropsWithChildren<{
-  Seo?: React.ReactElement
-  Nav?: React.ReactNode
-  Foot?: React.ReactNode
+  Seo: React.ReactElement
 }>) {
   return (
     <>
       {Seo}
-      {Nav || <Navbar />}
+      <Navbar />
       {children}
-      {Foot || <Footer />}
+      <Footer />
     </>
   )
 }

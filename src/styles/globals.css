@@ -27,7 +27,7 @@
   li {
     list-style-type: none;
   }
-  ._li:before {
+  li:before {
     padding: 0.2rem;
     line-height: 16px;
     vertical-align: top;
