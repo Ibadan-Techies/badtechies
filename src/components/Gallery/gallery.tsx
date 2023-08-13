@@ -6,22 +6,19 @@ export default function Gallery() {
   return (
     <>
       <Container>
-        <p
-          className="_header mx-auto text-center max-sm:w-[60%] md:text-center"
-          id="gallery"
-        >
+        <p className="_header md:text-center" id="gallery">
           We put <span className="text-ibtc-blue">our members</span> first.
         </p>
         <ul className="flex flex-col max-md:gap-4 md:flex-row md:justify-between md:w-4/5 xl:w-2/3 m-auto mt-8 text-2xl">
           <div className="flex flex-col gap-4">
-            <li className="_li">We intentionally keep us small.</li>
-            <li className="_li">We intentionally foster bond.</li>
-            <li className="_li">We intentionally support one another.</li>
+            <li>We intentionally keep us small.</li>
+            <li>We intentionally foster bond.</li>
+            <li>We intentionally support one another.</li>
           </div>
           <div className="flex flex-col gap-4">
-            <li className="_li">We don't charge you.</li>
-            <li className="_li">We don't control or influence your views.</li>
-            <li className="_li">We don't make it rigid to join us.</li>
+            <li>We don't charge you.</li>
+            <li>We don't control or influence your views.</li>
+            <li>We don't make it rigid to join us.</li>
           </div>
         </ul>
       </Container>
