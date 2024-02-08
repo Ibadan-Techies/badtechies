@@ -43,10 +43,13 @@ export function SignUpForm() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setLoading(true)
     try {
-      let res = await fetch('/api/register_visitor', {
-        method: 'POST',
-        body: JSON.stringify(values),
-      })
+      let res = await fetch(
+        process.env.NEXT_PUBLIC_BASE_URL + '/api/register_visitor',
+        {
+          method: 'POST',
+          body: JSON.stringify(values),
+        }
+      )
       const data = await res.json()
       setLoading(false)
       if (res.status === 200) {
