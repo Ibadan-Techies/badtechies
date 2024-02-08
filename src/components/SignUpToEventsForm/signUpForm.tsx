@@ -42,14 +42,20 @@ export function SignUpForm() {
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setLoading(true)
-    let res = await fetch('/api/register_visitor', {
-      method: 'POST',
-      body: JSON.stringify(values),
-    })
-    const data = await res.json()
-    setLoading(false)
-    if (res.status === 200) {
-      setState('success')
+    try {
+      let res = await fetch('/api/register_visitor', {
+        method: 'POST',
+        body: JSON.stringify(values),
+      })
+      const data = await res.json()
+      setLoading(false)
+      if (res.status === 200) {
+        setState('success')
+      }
+    } catch (err) {
+      console.log(err)
+      setLoading(false)
+      setState('unsuccessful')
     }
   }
 
@@ -152,6 +158,11 @@ export function SignUpForm() {
           >
             {loading ? `...sending resourses` : ' Submit'}
           </Button>
+        )}
+        {state === 'unsuccessful' && (
+          <p className="text-red-600">
+            we encountered an internal error...try again
+          </p>
         )}
       </form>
     </Form>
