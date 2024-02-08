@@ -39,7 +39,7 @@ export const NavigationBar = ({
     <nav
       className={`flex-col ${
         !isDesktop && isOpen && 'flex-col h-screen'
-      } items-center`}
+      } items-center bg-ibtc-blue`}
     >
       <JoinOneOfOurEvent
         active={active}
@@ -128,10 +128,7 @@ export const NavigationBar = ({
         </div>
       </Container>
       {!isDesktop && isOpen && (
-        <div
-          className="flex flex-col w-full bg-ibtc-blue"
-          ref={scrollParentRef}
-        >
+        <div className="flex flex-col w-full" ref={scrollParentRef}>
           <ul className="flex flex-col gap-2 items-center w-full">
             <li
               className="border-b w-full"
