@@ -12,7 +12,7 @@ function SubscribeNewsLetter() {
     setEmail(target.value)
   }
   return (
-    <Container bg="bg-ibtc-light-yellow">
+    <Container className="bg-ibtc-light-yellow">
       <form
         action="https://buttondown.email/api/emails/embed-subscribe/BadTechyes"
         method="post"

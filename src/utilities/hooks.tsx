@@ -34,3 +34,33 @@ export function useWindowSize() {
 
   return { windowSize, isMobile, isTablet, isDesktop }
 }
+
+export const useNotification = () => {
+  const getNotification = () =>
+    typeof window !== 'undefined'
+      ? window.localStorage.getItem('notificationMsg')
+      : ''
+
+  const [active, setActive] = React.useState(getNotification())
+  const [message, setMessage] = React.useState('')
+
+  const setNotification = (msg: string) => {
+    setMessage(msg)
+    if (localStorage.getItem('notificationMsg') === null) {
+      localStorage.setItem('notificationMsg', 'true')
+      setActive('true')
+    }
+  }
+
+  const toggleNotification = () => {
+    setMessage('')
+    localStorage.setItem('notificationMsg', '')
+    setActive('')
+  }
+  return {
+    active,
+    message,
+    setNotification,
+    toggleNotification,
+  }
+}

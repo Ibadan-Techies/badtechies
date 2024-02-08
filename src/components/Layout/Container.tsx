@@ -1,20 +1,24 @@
 import * as React from 'react'
+import { twMerge } from 'tailwind-merge'
 
 export const Container = ({
   children,
-  bg,
-  id,
   treatAs,
-}: React.PropsWithChildren<{
-  bg?: `${string}-${string}`
-  id?: string
-  treatAs?: 'nav' | 'banner'
-}>) => {
+  id,
+  className,
+}: React.PropsWithChildren<
+  React.ComponentPropsWithoutRef<'div'> & {
+    treatAs?: 'nav' | 'banner'
+  }
+>) => {
   return (
     <div
-      className={`flex items-center justify-center w-full relative overflow-hidden transition-colors duration-200 ease-linear ${
-        treatAs === 'banner' ? 'lg:!top-8' : null
-      } ${bg}`}
+      className={twMerge(
+        `flex items-center justify-center w-full relative overflow-hidden transition-colors duration-200 ease-linear ${
+          treatAs === 'banner' ? 'lg:!top-8' : null
+        }`,
+        className
+      )}
       id={id}
     >
       <div

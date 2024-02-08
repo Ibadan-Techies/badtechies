@@ -5,12 +5,21 @@ import Button from '../../Button/button'
 
 import { Hamburger, X, IBTCLogo } from '@/assets/svg'
 import { Container } from '../Container'
+import { JoinOneOfOurEvent } from './SignupForEvents'
 // @ts-ignore
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import { useWindowSize } from '@/utilities/hooks'
 
 const { useState, useEffect, useRef } = React
-export const NavigationBar = () => {
+export const NavigationBar = ({
+  active,
+  toggleNotification,
+  message,
+}: {
+  active: string | null
+  toggleNotification: () => void
+  message: string
+}) => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const { isDesktop } = useWindowSize()
   const scrollParentRef = useRef<HTMLDivElement>(null)
@@ -28,12 +37,17 @@ export const NavigationBar = () => {
 
   return (
     <nav
-      className={`py-3 flex ${
+      className={`flex-col ${
         !isDesktop && isOpen && 'flex-col h-screen'
       } items-center bg-ibtc-blue`}
     >
-      <Container treatAs={'nav'}>
-        <div className="_wrapper flex items-center justify-between">
+      <JoinOneOfOurEvent
+        active={active}
+        message={message}
+        toggleNotification={toggleNotification}
+      />
+      <Container treatAs={'nav'} className="bg-ibtc-blue">
+        <div className="_wrapper flex items-center justify-between ">
           <Link href="/" aria-label="home">
             <IBTCLogo
               className="lg:w-[90px] w-14 lg:h-[89.22px] h-14 fill-white"
@@ -153,4 +167,3 @@ export const NavigationBar = () => {
     </nav>
   )
 }
-

@@ -76,7 +76,7 @@ export const DesignTeam = () => {
   })
 
   return (
-    <Container bg="bg-white">
+    <Container className="bg-white">
       <p
         className="_header text-center w-full mb-18"
         id="ibadan-techies-designers"
