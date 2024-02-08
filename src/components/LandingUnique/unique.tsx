@@ -7,7 +7,7 @@ import { useWindowSize } from '@/utilities/hooks'
 import clsx from 'clsx'
 
 const UniqueWrapper = ({ isMobile }: { isMobile?: boolean }) => (
-  <Container bg="bg-[#F5FAFA]">
+  <Container className="bg-[#F5FAFA]">
     <div className="flex flex-col gap-[30px]">
       <Nav isMobile={!!isMobile} />
       {isMobile ? Img : null}

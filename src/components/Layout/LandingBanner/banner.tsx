@@ -38,7 +38,7 @@ const ButtonGroup = () => {
 export default function Banner() {
   return (
     <>
-      <Container bg="bg-ibtc-blue" treatAs={'banner'}>
+      <Container className="bg-ibtc-blue" treatAs={'banner'}>
         <div className="h-full flex items-end">
           <ArrowDecRight className="relative basis-[fit-content] bottom-[1.2rem] flex-shrink-0 hidden lg:block _stroke_dash_300 _stroke-white animate-strok-reverse" />
           <Main />

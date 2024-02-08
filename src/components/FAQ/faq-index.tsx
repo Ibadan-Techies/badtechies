@@ -2,7 +2,7 @@ import FAQ from './faq'
 import { Container } from '../Layout/Container'
 
 const Comp = () => (
-  <Container bg="bg-ibtc-black">
+  <Container className="bg-ibtc-black">
     <div className="flex text-white gap-[80px] items-center flex-col">
       <div className="flex flex-col lg:items-center rounded-[4px] gap-8">
         <header className="_header" id="faq">

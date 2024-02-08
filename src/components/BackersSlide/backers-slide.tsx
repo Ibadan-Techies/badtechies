@@ -54,7 +54,7 @@ export const Backers: React.FunctionComponent<{
   }
 
   return (
-    <Container bg={`bg-${Bgs[i]} pb-20`}>
+    <Container className={`bg-${Bgs[i]} pb-20`}>
       <div className="flex flex-col items-center gap-[54px] relative">
         <header
           className="text-2xl md:text-4xl font-bold text-center h-[10rem] w-full"

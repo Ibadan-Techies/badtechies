@@ -146,6 +146,7 @@ export function SignUpForm() {
               background: 'bg-black',
               color: 'text-white',
               fontSize: 'text-sm',
+              hoverBg: 'hover:bg-ibtc-black/70',
             }}
             type="submit"
           >

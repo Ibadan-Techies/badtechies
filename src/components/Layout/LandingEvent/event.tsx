@@ -8,7 +8,7 @@ import Carousel from '../../GalleryCarousel/carousel'
 export default function Events() {
   const { isMobile, isTablet } = useWindowSize()
   return (
-    <Container bg="bg-ibtc-black" id="events">
+    <Container className="bg-ibtc-black" id="events">
       <div className="flex flex-col gap-[66px]">
         <Header isTablet={isTablet} />
         <CardGroup isMobile={isMobile} />

@@ -1,7 +1,9 @@
+import React from 'react'
+
 import Layout from '@/components/Layout'
 import Seo from '@/components/Seo'
+import FAQ from '@/components/FAQ/faq-index'
 import { SignUpForm } from '@/components/SignUpToEventsForm/signUpForm'
-import React from 'react'
 
 export default function SIGNUP_TO_OUR_EVENTS() {
   return (
@@ -49,6 +51,7 @@ export default function SIGNUP_TO_OUR_EVENTS() {
           </div>
         </div>
       </div>
+      <FAQ />
     </Layout>
   )
 }
