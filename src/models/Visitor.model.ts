@@ -9,10 +9,6 @@ const VisitorSchema = new mongoose.Schema(
     name: {
       type: String,
     },
-    tech_stacks: {
-      type: String,
-      required: true,
-    },
     what_you_bring_to_table: {
       type: String,
       required: true,

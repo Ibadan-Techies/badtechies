@@ -21,7 +21,6 @@ const formSchema = z.object({
   email: z.string().email(),
   who_told_you: z.string().min(2).max(50),
   what_you_bring_to_table: z.string().min(2).max(50),
-  tech_stacks: z.string(),
 })
 
 export function SignUpForm() {
@@ -35,7 +34,6 @@ export function SignUpForm() {
       email: '',
       who_told_you: '',
       what_you_bring_to_table: '',
-      tech_stacks: '',
     },
   })
 
@@ -132,19 +130,6 @@ export function SignUpForm() {
                   placeholder="passionate about photography..."
                   {...field}
                 />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="tech_stacks"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Tell us about your tech stacks!</FormLabel>
-              <FormControl>
-                <Input placeholder="Vue, Deno..." {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
