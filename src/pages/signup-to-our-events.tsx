@@ -4,8 +4,10 @@ import Layout from '@/components/Layout'
 import Seo from '@/components/Seo'
 import FAQ from '@/components/FAQ/faq-index'
 import { SignUpForm } from '@/components/SignUpToEventsForm/signUpForm'
+import clsx from 'clsx'
 
 export default function SIGNUP_TO_OUR_EVENTS() {
+  const [index, setIndex] = React.useState(0)
   return (
     <Layout
       Seo={
@@ -31,15 +33,37 @@ export default function SIGNUP_TO_OUR_EVENTS() {
               Choose your event.
             </p>
             <div className="space-y-4">
-              <div className="rounded-md border border-ibtc-black/60 py-6 px-8 flex justify-between">
-                <span className="font-semibold text-ibtc-black">IBTC Meet</span>
+              <div
+                className={clsx(
+                  'rounded-md border border-ibtc-black py-6 px-8 flex justify-between cursor-default',
+                  { 'border-ibtc-blue border-2': index === 0 }
+                )}
+                onClick={() => setIndex(0)}
+              >
+                <span
+                  className={clsx('text-ibtc-black', {
+                    'font-semibold text-ibtc-blue': index === 0,
+                  })}
+                >
+                  IBTC Meet
+                </span>
                 <span className="">
                   <span className="block">Feb 24, 2024</span>
                   <span>UI hotels, Ibadan*</span>
                 </span>
               </div>
-              <div className="rounded-md border border-ibtc-black py-6 px-8 flex justify-between">
-                <span className="font-semibold text-ibtc-black">
+              <div
+                className={clsx(
+                  'rounded-md border border-ibtc-black py-6 px-8 flex justify-between cursor-default',
+                  { 'border-ibtc-blue border-2': index === 1 }
+                )}
+                onClick={() => setIndex(1)}
+              >
+                <span
+                  className={clsx('text-ibtc-black', {
+                    'font-semibold text-ibtc-blue': index === 1,
+                  })}
+                >
                   One-no-One with Tori
                 </span>
                 <span className="">

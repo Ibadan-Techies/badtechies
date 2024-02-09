@@ -24,7 +24,7 @@ export const JoinOneOfOurEvent = ({
                 fontSize: 'text-sm',
               }}
             >
-              {`🍿 Signup to one of events`}
+              {`🍿 Signup to join us`}
             </Button>
           </div>
           <button
