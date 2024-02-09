@@ -14,7 +14,8 @@ export default function Layout({
   const { active, message, setNotification, toggleNotification } =
     useNotification()
   React.useEffect(() => {
-    setNotification(' 🍕🍕 Join us on one of a kind techies experience')
+    setNotification(' 🍕🍕 Join us on one of a kind techies experience');
+    return ()=>localStorage.removeItem('notificationMsg')
   }, [])
   return (
     <>

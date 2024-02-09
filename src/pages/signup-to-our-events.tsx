@@ -15,14 +15,14 @@ export default function SIGNUP_TO_OUR_EVENTS() {
         />
       }
     >
-      <div className="grid md:grid-rows-1 max-md:items-center md:grid-cols-[2fr_1fr] gap-6 text-ibtc-black/90 py-12">
+      <div className="grid md:grid-rows-1 max-md:items-center md:grid-cols-[2fr_1fr] gap-12 md:gap-6 text-ibtc-black/90 py-12 px-4">
         <div className="max-md:order-2">
-          <div className="px-4 md:w-[70%] mx-auto">
+          <div className="md:w-[70%] mx-auto">
             <SignUpForm />
           </div>
         </div>
         <div className="text-ibtc-black/60 max-md:order-1">
-          <div className="w-[80%] mx-auto space-y-6">
+          <div className="w-[80%] md:mx-auto space-y-8 md:space-y-6">
             <p className="text-3xl font-bold tracking-tighter">
               Let's make an IBTC event personal to you!
             </p>
