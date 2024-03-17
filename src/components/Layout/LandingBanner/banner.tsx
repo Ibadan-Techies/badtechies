@@ -21,6 +21,8 @@ const ButtonGroup = () => {
         <Button
           href={data[1]}
           key={index}
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             color: 'text-ibtc-black',
             background: 'bg-[#F3D6A5]',

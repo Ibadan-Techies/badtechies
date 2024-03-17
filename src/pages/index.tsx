@@ -40,6 +40,7 @@ export default function Home() {
           <div className="bg-ibtc-blue">
             <LandingBanner />
           </div>
+          <Events />
           <AboutSection />
           <Backers
             title={
@@ -53,7 +54,6 @@ export default function Home() {
             }
           />
           <PrideComponent />
-          <Events />
           <Gallery />
           <Unique />
           <SubscribeNewsLetter />

@@ -2,17 +2,28 @@ import Button from '../../Button/button'
 import EventCard from '../../EventCard/eventcard'
 import { Container } from '../Container'
 
+import Image from 'next/image'
 import { useWindowSize } from '@/utilities/hooks'
 import Carousel from '../../GalleryCarousel/carousel'
 
 export default function Events() {
   const { isMobile, isTablet } = useWindowSize()
   return (
-    <Container className="bg-ibtc-black" id="events">
-      <div className="flex flex-col gap-[66px]">
-        <Header isTablet={isTablet} />
-        <CardGroup isMobile={isMobile} />
-        {isMobile && BTN}
+    <Container className="bg-white" id="events">
+      <div className=" space-y-14">
+        <div className="relative md:w-1/2 h-[30rem]">
+          <Image
+            alt=""
+            fill
+            src={'/feb-24-meet.png'}
+            className="object-contain"
+          />
+        </div>
+        <div className="flex flex-col gap-[66px] bg-ibtc-black p-8 rounded-[0.625rem]">
+          <Header isTablet={isTablet} />
+          <CardGroup isMobile={isMobile} />
+          {isMobile && BTN}
+        </div>
       </div>
     </Container>
   )
@@ -41,7 +52,7 @@ const CardGroup = ({ isMobile }: { isMobile: boolean }) => {
 
 const Header = ({ isTablet }: { isTablet: boolean }) => (
   <div className="flex justify-between items-center">
-    <header className="_header text-white">Events</header>
+    <header className="_header text-white">Previous Events</header>
     {isTablet && <span>{BTN}</span>}
   </div>
 )

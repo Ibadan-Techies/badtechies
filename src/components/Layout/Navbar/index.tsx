@@ -8,21 +8,19 @@ import { Container } from '../Container'
 import { JoinOneOfOurEvent } from './SignupForEvents'
 // @ts-ignore
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
-import { useWindowSize } from '@/utilities/hooks'
+import { useWindowSize, useNotification } from '@/utilities/hooks'
 
 const { useState, useEffect, useRef } = React
-export const NavigationBar = ({
-  active,
-  toggleNotification,
-  message,
-}: {
-  active: string | null
-  toggleNotification: () => void
-  message: string
-}) => {
+export const NavigationBar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const { isDesktop } = useWindowSize()
   const scrollParentRef = useRef<HTMLDivElement>(null)
+
+   const { active, message, setNotification, toggleNotification } =
+    useNotification()
+  React.useEffect(()=> {
+    setNotification()
+  }, [])
 
   // if the hamburger is open disable bodyscroll
   useEffect(() => {

@@ -91,14 +91,15 @@ function MoreList() {
           >
             FAQ
           </Link>
+        {/**
           <div
             role="listitem"
             className="hover:text-ibtc-brown-light cursor-pointer space-b-4"
           >
             Transparency
-          </div>
+          </div> */}
         </div>
-        <div className="space-y-4">
+        {/**<div className="space-y-4">
           <div
             role="listitem"
             className="hover:text-ibtc-brown-light cursor-pointer"
@@ -111,7 +112,7 @@ function MoreList() {
           >
             Why this work matters
           </div>
-        </div>
+        </div>*/}
       </div>
     </div>
   )
@@ -124,10 +125,10 @@ const GetIntouch = (
   >
     <span className="text-xl leading-5 text-white">Want to get in touch?</span>
     <span className="flex gap-2">
-      <a href={'https://twitter.com/badtechys'}>
+      <a href={'https://twitter.com/badtechys'} target="_blank" rel="noopener noreferrer">
         <Twitter className="fill-white hover:fill-ibtc-blue" />
       </a>
-      <a href="https://www.linkedin.com/company/the-ibadan-techies-club/">
+      <a href="https://www.linkedin.com/company/the-ibadan-techies-club/" target="_blank" rel="noopener noreferrer">
         <LinkedIn className="fill-white hover:fill-ibtc-blue" />
       </a>
     </span>

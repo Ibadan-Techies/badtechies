@@ -46,7 +46,9 @@ export default function Button({
   label,
   style,
   type = 'button',
-}: React.PropsWithChildren<Props>) {
+  rel,
+  target
+}: React.ComponentWithProps<'a', Props>) {
   const buttonClass = clsx(
     // Base style
     `lg:py-3.5 lg:px-5 py-4 w-full h-full px-6 rounded font-medium flex items-center justify-around ${
@@ -66,7 +68,7 @@ export default function Button({
 
   if (href) {
     return (
-      <Link href={href} className={buttonClass}>
+      <Link href={href} className={buttonClass} rel={rel} target={target} >
         {children}
       </Link>
     )
