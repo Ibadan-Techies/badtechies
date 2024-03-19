@@ -7,6 +7,7 @@ import { DefaultSeo } from 'next-seo'
 
 import { Manrope, Oswald } from 'next/font/google'
 
+// example
 const manrope = Manrope({
   subsets: ['latin'],
   weight: ['300'],
